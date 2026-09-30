@@ -1,0 +1,12 @@
+name: Korean
+parser_type: lute_korean
+character_substitutions: ''
+split_sentences: '.!?。！？'
+split_sentence_exceptions: ''
+word_chars: '가-힣ᄀ-ᇿㄱ-ㆎa-zA-ZÀ-ÖØ-öø-ÿ0-9'
+show_romanization: false
+right_to_left: false
+dictionaries:
+  - for: terms
+    type: popup
+    url: https://en.wiktionary.org/wiki/[LUTE]

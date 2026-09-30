@@ -1,0 +1,20 @@
+[build-system]
+requires = ["flit_core>=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.module]
+name = "lute_korean_parser"
+
+[project]
+name = "lute-korean"
+version = "0.1.0"
+description = "Lute Korean parser and independent Kiwi morphology analysis"
+requires-python = ">=3.10"
+readme = "README.md"
+dependencies = ["lute3>=3.4.2", "kiwipiepy>=0.23,<0.24"]
+
+[project.entry-points."lute.plugin.parse"]
+lute_korean = "lute_korean_parser.parser:KoreanParser"
+
+[project.scripts]
+lute-korean-install = "lute_korean_parser.install:main"
