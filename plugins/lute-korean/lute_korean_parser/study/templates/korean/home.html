@@ -1,21 +1,19 @@
-{% extends 'korean/base.html' %}
+{% extends 'korean/base.html' %}{% from 'korean/macros.html' import fit_badge, empty_state %}
 {% block study_body %}
-<h2>Seu espaço de estudos de coreano</h2>
-<p>Sincronize o histórico do Anki, consulte seu progresso e escolha um conteúdo para estudar.</p>
-<section class="study-summary">
-{% for kind, dimensions in overview.counts.items() %}
-<div><h3>{{ {'lexical':'Vocabulário','grammar':'Gramática','chunk':'Expressões'}.get(kind,kind) }} · sugestões de leitura</h3>
-{% for status, count in dimensions.reading.items() %}<p>{{ {'unknown':'Desconhecido','presented':'Apresentado','practicing':'Em prática','consolidated':'Consolidado','future':'Deixado para depois'}.get(status,status) }}: <strong>{{ count }}</strong></p>{% else %}<p>Nenhum item ainda.</p>{% endfor %}
-</div>{% endfor %}
+<div class="ks-page-heading"><div><h2>Visão geral</h2><p>Seu estado de estudo, a partir das evidências registradas.</p></div></div>
+<section class="ks-metrics" aria-label="Resumo do progresso">
+{% for kind, dimensions in overview.counts.items() %}{% if kind != 'chunk' or dimensions.reading.values()|sum > 0 %}
+  <div class="ks-metric"><h3>{{ {'lexical':'Vocabulário','grammar':'Gramática','chunk':'Expressões'}.get(kind,kind) }}</h3>
+  {% for status, count in dimensions.reading.items() %}<p><strong>{{ count }}</strong> {{ {'unknown':'desconhecidos','presented':'apresentados','practicing':'em prática','consolidated':'consolidados','future':'deixados para depois'}.get(status,status) }}</p>{% else %}<p class="ks-muted">Nenhum item acompanhado</p>{% endfor %}
+  </div>
+{% endif %}{% endfor %}
+<div class="ks-metric"><h3>Anki</h3><p><strong>{{ anki.counts.reviews }}</strong> revisões</p><p class="ks-muted">{{ anki.counts.notes }} notas · {{ anki.counts.cards }} cartões</p></div>
 </section>
-<p>Compreensão auditiva: {{ 'consulte as avaliações registradas' if overview.dimension_available.listening else 'ainda não há dados suficientes' }}.
-Produção: {{ 'consulte as avaliações registradas' if overview.dimension_available.production else 'ainda não há dados suficientes' }}.</p>
-<p>As avaliações manuais continuam valendo; os números acima são sugestões.</p>
-<p>Última sincronização do Anki: <strong>{{ anki.last_success or 'Ainda não sincronizado neste banco de dados' }}</strong>.
-{{ anki.counts.notes }} notas, {{ anki.counts.cards }} cartões e {{ anki.counts.reviews }} revisões.</p>
-<div class="study-actions"><a class="study-button" href="{{ url_for('korean_study.anki') }}">Sincronizar Anki</a><a class="study-button" href="{{ url_for('korean_study.analyze') }}">Analisar conteúdo</a></div>
-<h3>Conteúdos analisados recentemente</h3>
-<p>Estes conteúdos são temporários e ainda não foram estudados. Abra um para recalcular a análise com seu progresso atual.</p>
-<ul>{% for token, entry in recent %}<li><a href="{{ url_for('korean_study.candidate',token=token) }}">{{ entry.content.name }}</a> — {{ {'comfortable':'Confortável','stretch':'Desafiador','difficult':'Difícil'}.get(entry.summary.fit,entry.summary.fit) if entry.summary else 'ainda não analisado' }} (última análise)</li>{% else %}<li>Cole um texto ou envie um arquivo para começar. A análise, por si só, não registra contato com o conteúdo.</li>{% endfor %}</ul>
-<details><summary>Diagnóstico dos dados</summary><pre>{{ overview.snapshot|tojson(indent=2) }}</pre></details>
+<div class="ks-inline-note"><span>Compreensão auditiva <span class="ks-badge ks-status-unknown">{{ 'Consulte as avaliações' if overview.dimension_available.listening else 'Evidência insuficiente' }}</span></span><span>Produção <span class="ks-badge ks-status-unknown">{{ 'Consulte as avaliações' if overview.dimension_available.production else 'Evidência insuficiente' }}</span></span></div>
+<p class="ks-caption">Os números são sugestões de leitura. As avaliações manuais continuam valendo.</p>
+<section class="ks-section"><div class="ks-section-heading"><h3>Próximo passo</h3></div><div class="ks-action-panel"><div><strong>Escolha um conteúdo para analisar</strong><p>A análise é temporária e não registra estudo.</p><p class="ks-caption">Último sync do Anki: {{ anki.last_success or 'ainda não sincronizado neste banco de dados' }}</p></div><div class="ks-actions"><a class="ks-button ks-button-primary" href="{{ url_for('korean_study.analyze') }}">Analisar conteúdo</a><a class="ks-button ks-button-secondary" href="{{ url_for('korean_study.anki') }}">Sync Anki</a></div></div></section>
+<section class="ks-section"><div class="ks-section-heading"><h3>Conteúdos analisados recentemente</h3><p>Temporários. Abra para recalcular com seu progresso atual.</p></div>
+{% if recent %}<div class="ks-list">{% for token, entry in recent %}<div class="ks-list-row"><div><strong>{{ entry.content.name }}</strong><div class="ks-row-meta">{% if entry.summary %}{{ fit_badge(entry.summary.fit) }} <span>Confiança {{ {'high':'alta','medium':'média','low':'baixa'}.get(entry.summary.confidence,entry.summary.confidence) }}</span>{% else %}<span>Ainda não analisado</span>{% endif %}</div></div><a class="ks-button ks-button-ghost" href="{{ url_for('korean_study.candidate',token=token) }}">Abrir</a></div>{% endfor %}</div>
+{% else %}{{ empty_state('Nenhum conteúdo analisado recentemente', 'Analise um TPRS, transcript ou texto para começar.', url_for('korean_study.analyze'), 'Analisar conteúdo') }}{% endif %}</section>
+<details class="ks-technical"><summary>Diagnóstico dos dados</summary><pre>{{ overview.snapshot|tojson(indent=2) }}</pre></details>
 {% endblock %}

@@ -1,14 +1,13 @@
 {% extends 'korean/base.html' %}{% from 'korean/macros.html' import csrf with context %}
 {% block study_body %}
-<h2>Analisar conteúdo</h2>
-<p>A análise estima a dificuldade linguística de leitura ou da transcrição. Ela não comprova compreensão nem registra que o conteúdo foi estudado.</p>
-<form method="post" enctype="multipart/form-data">{{ csrf() }}
+<div class="ks-page-heading"><div><h2>Analisar conteúdo</h2><p>Estime a dificuldade linguística de leitura ou transcrição. A análise não registra estudo nem comprova compreensão.</p></div></div>
+<form method="post" enctype="multipart/form-data" class="ks-form-card">{{ csrf() }}
 <label>Nome do conteúdo<input name="name" placeholder="Diálogo, episódio TPRS…"></label>
-<label>Texto em coreano<textarea name="text" rows="7" lang="ko"></textarea></label>
-<label>Ou selecione arquivos do computador<input type="file" name="files" multiple accept=".txt,.srt,.vtt"></label>
-<p>Selecione vários arquivos para compará-los. Limite: 8 arquivos, até 2 MB cada, em UTF-8. Em arquivos TPRS, usamos a coluna original “Subtitle”.</p>
-<label>Formato<select name="format">{% for format in formats %}<option>{{ format }}</option>{% endfor %}</select></label>
-<label>Tipo de conteúdo<select name="kind">{% for kind in ['text','tprs','podcast','dialogue','subtitle'] %}<option value="{{ kind }}">{{ {'text':'Texto','tprs':'TPRS','podcast':'Podcast','dialogue':'Diálogo','subtitle':'Legenda'}.get(kind,kind) }}</option>{% endfor %}</select></label>
-<button>Analisar e comparar</button>
+<label>Texto em coreano<textarea name="text" rows="9" lang="ko" placeholder="Cole o texto em coreano aqui"></textarea></label>
+<div class="ks-form-divider">ou envie arquivos</div>
+<label class="ks-file-field">TXT, SRT, VTT ou TPRS<input type="file" name="files" multiple accept=".txt,.srt,.vtt"><small>Até 8 arquivos de 2 MB, em UTF-8. Vários arquivos serão comparados. Em TPRS, usamos a coluna original “Subtitle”.</small></label>
+<div class="ks-form-grid"><label>Formato<select name="format">{% for format in formats %}<option>{{ format }}</option>{% endfor %}</select></label>
+<label>Tipo de conteúdo<select name="kind">{% for kind in ['text','tprs','podcast','dialogue','subtitle'] %}<option value="{{ kind }}">{{ {'text':'Texto','tprs':'TPRS','podcast':'Podcast','dialogue':'Diálogo','subtitle':'Legenda'}.get(kind,kind) }}</option>{% endfor %}</select></label></div>
+<button class="ks-button ks-button-primary" data-busy-label="Analisando…">Analisar e comparar</button>
 </form>
 {% endblock %}
