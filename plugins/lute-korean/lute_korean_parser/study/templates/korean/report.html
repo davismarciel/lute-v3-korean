@@ -1,14 +1,6 @@
 {% extends 'korean/base.html' %}{% from 'korean/macros.html' import csrf, content_export with context %}
-{% block study_body %}
-<h2>{{ report.content.name }}</h2>
-{% if input_warnings %}<p role="alert">Verifique a formatação do conteúdo: {{ input_warnings|join("; ") }}</p>{% endif %}
+{% block study_body %}<div class="ks-page-heading"><div><a class="ks-back" href="{{ url_for('korean_study.analyze') }}">← Analisar outro conteúdo</a><h2>{{ report.content.name }}</h2><p>{{ report.segments|length }} trechos analisados</p></div></div>
+{% if input_warnings %}<p class="ks-banner ks-banner-error" role="alert">Verifique a formatação: {{ input_warnings|join('; ') }}</p>{% endif %}
 {% include 'korean/report_body.html' %}
-<div class="study-actions"><a href="{{ url_for('korean_study.home') }}">Fechar análise</a></div>
-<details open><summary>Iniciar sessão de estudo</summary>
-<p>Iniciar cria uma sessão, mas ainda não registra contato com o conteúdo nem reconhecimento. Ao terminar, marque somente os trechos que estudou.</p>
-<form method="post" action="{{ url_for('korean_study.start') }}">{{ csrf() }}<input type="hidden" name="candidate_token" value="{{ token }}"><input type="hidden" name="request_key" value="{{ event_key }}">
-<label>Atividade<select name="activity"><option value="reading">Leitura</option><option value="listening_with_transcript">Áudio com transcrição</option><option value="listening">Somente áudio</option><option value="mixed">Atividade mista</option></select></label>
-<label><input type="checkbox" name="transcript_read" value="yes">Na atividade mista, vou ler ou acompanhar o texto em coreano</label>
-<label>Referência opcional<input name="external_reference" placeholder="Referência do episódio"></label><button>Iniciar estudo</button></form></details>
-{{ content_export(url_for('korean_study.export_content',token=token)) }}
-{% endblock %}
+<section class="ks-section ks-panel"><h3>Iniciar sessão de estudo</h3><p class="ks-caption">Iniciar cria uma sessão, mas ainda não registra contato ou reconhecimento. Marque apenas os trechos realmente estudados.</p><form method="post" action="{{ url_for('korean_study.start') }}">{{ csrf() }}<input type="hidden" name="candidate_token" value="{{ token }}"><input type="hidden" name="request_key" value="{{ event_key }}"><div class="ks-form-grid"><label>Atividade<select name="activity"><option value="reading">Leitura</option><option value="listening_with_transcript">Áudio com transcrição</option><option value="listening">Somente áudio</option><option value="mixed">Atividade mista</option></select></label><label>Referência opcional<input name="external_reference" placeholder="Referência do episódio"></label></div><label><input type="checkbox" name="transcript_read" value="yes">Na atividade mista, vou ler ou acompanhar o texto em coreano</label><button class="ks-button ks-button-primary">Iniciar estudo</button></form></section>
+{{ content_export(url_for('korean_study.export_content',token=token)) }}{% endblock %}

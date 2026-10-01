@@ -1,7 +1,1 @@
-{% extends 'korean/base.html' %}{% block study_body %}
-<h2>Trecho {{ segment.index+1 }} · detalhes técnicos</h2>
-<p lang="ko">{{ segment.text }}</p>
-<p>Esta análise consulta seus dados atuais. Ela não registra estudo nem observações.</p>
-<ul>{% for item in segment.effective_items %}<li>{{ item.identity }} — {{ item.kind }}</li>{% endfor %}</ul>
-<pre>{{ {'raw_items':segment.raw_items,'effective_items':segment.effective_items,'suppressed_overlap':segment.suppressed_overlap,'morphology':segment.morphology,'foreign':segment.foreign_surfaces}|tojson(indent=2) }}</pre>
-{% endblock %}
+{% extends 'korean/base.html' %}{% block study_body %}<div class="ks-page-heading"><div><h2>Trecho {{ segment.index+1 }} · diagnóstico técnico</h2><p>Esta análise consulta seus dados atuais. Não registra estudo nem observações.</p></div></div><section class="ks-panel"><p lang="ko" class="ks-segment-text">{{ segment.text }}</p><h3>Itens efetivos</h3><ul class="ks-compact-list">{% for item in segment.effective_items %}<li><strong>{{ item.identity }}</strong><span>{{ item.kind }}</span></li>{% else %}<li>Nenhum item efetivo.</li>{% endfor %}</ul><details class="ks-technical"><summary>Morfologia e metadados brutos</summary><pre>{{ {'raw_items':segment.raw_items,'effective_items':segment.effective_items,'suppressed_overlap':segment.suppressed_overlap,'morphology':segment.morphology,'foreign':segment.foreign_surfaces}|tojson(indent=2) }}</pre></details></section>{% endblock %}
