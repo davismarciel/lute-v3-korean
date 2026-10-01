@@ -1,5 +1,5 @@
 {% extends 'base.html' %} {% block title %}Estudo de Coreano · Lute{% endblock
-%} {% block header %}Estudo de Coreano{% endblock %} {% block preloadassets %}
+%} {% block header %}{% endblock %} {% block preloadassets %}
 <link
   rel="stylesheet"
   href="{{ url_for('korean_study.static', filename='study.css') }}"
@@ -12,7 +12,6 @@
 <main class="korean-workspace">
   <header class="ks-header">
     <div>
-      <p class="ks-kicker">Espaço de estudo</p>
       <h1>Estudo de Coreano</h1>
       <p>Seu espaço de aquisição de coreano</p>
     </div>
