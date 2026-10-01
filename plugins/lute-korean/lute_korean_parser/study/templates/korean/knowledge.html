@@ -1,0 +1,13 @@
+{% extends 'korean/base.html' %}{% from 'korean/macros.html' import label %}
+{% block study_body %}
+<h2>Learner state & knowledge</h2>
+<form method="get" class="study-filters">
+<label>Search<input name="q" value="{{ query }}"></label>
+<label>Type<select name="kind">{% for value in ['','lexical','grammar','chunk'] %}<option value="{{ value }}" {{ 'selected' if value==kind }}>{{ value|title or 'All types' }}</option>{% endfor %}</select></label>
+<label>Reading state<select name="state">{% for value in ['','presented','practicing','consolidated','future','unknown','no_manual'] %}<option value="{{ value }}" {{ 'selected' if value==state }}>{{ value.replace('_',' ')|title or 'All states' }}</option>{% endfor %}</select></label><button>Filter</button>
+</form>
+<p>{{ items|length }} items. Suggested state is calculated from observed evidence, independently of manual assessment.</p>
+<div class="study-table"><table><thead><tr><th>Item</th><th>Manual reading</th><th>Suggested reading</th><th>Confidence</th><th>Occurrences / contexts</th><th>Surfaces & sources</th></tr></thead><tbody>
+{% for i in items %}<tr><td><a href="{{ url_for('korean_study.item',item_id=i.id) }}">{{ i.identity }}</a><small>{{ i.type }}</small></td><td>{{ label(i.manual_state.reading) }}</td><td>{{ label(i.suggested_state.reading.status) }}</td><td>{{ i.suggested_state.reading.confidence }}</td><td>{{ i.evidence.occurrences }} / {{ i.evidence.contexts }}</td><td>{{ i.evidence.surfaces[:5]|join(', ') }}<small>{{ i.evidence.source_types|join(', ') }}; {{ i.evidence.events }} events; {{ i.evidence.anki_reviews }} indirect Anki reviews</small></td></tr>{% else %}<tr><td colspan="6">No matching items. Sync Anki or explicitly complete study to record exposure.</td></tr>{% endfor %}
+</tbody></table></div>
+{% endblock %}

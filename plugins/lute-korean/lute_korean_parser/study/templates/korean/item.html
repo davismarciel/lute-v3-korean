@@ -1,0 +1,16 @@
+{% extends 'korean/base.html' %}{% from 'korean/macros.html' import csrf, label, dimensions, observation with context %}
+{% block study_body %}
+<h2 lang="ko">{{ item.identity }}</h2><p>{{ item.type }}{% if role %} · {{ role.role }}{% endif %}</p>
+<p>Surface forms: {{ item.evidence.surfaces|join(', ') or 'No recorded surfaces' }}</p>
+<table><thead><tr><th>Dimension</th><th>Manual</th><th>Suggested</th><th>Confidence</th></tr></thead><tbody>
+{% for dimension, state in item.suggested_state.items() %}<tr><td>{{ dimension|title }}</td><td>{{ label(item.manual_state[dimension]) }}</td><td>{{ label(state.status) }}</td><td>{{ state.confidence }}</td></tr>{% endfor %}</tbody></table>
+<details><summary>Save a manual assessment</summary><form method="post" action="{{ url_for('korean_study.assessment',item_id=item.id) }}">{{ csrf() }}<label>Dimension {{ dimensions() }}</label><label>Manual status<select name="status" required><option value="" disabled selected>Choose manual state</option>{% for status in ['unknown','presented','practicing','consolidated','future'] %}<option>{{ status }}</option>{% endfor %}</select></label><button>Save manual assessment</button></form></details>
+{{ observation({item.id:item.identity},timestamp,event_key) }}
+{% for dimension, state in item.suggested_state.items() %}<details><summary>{{ dimension|title }} reasons and warnings</summary><ul>{% for reason in state.reasons %}<li>{{ reason }}</li>{% endfor %}</ul><ul>{% for warning in state.warnings %}<li>{{ warning }}</li>{% endfor %}</ul></details>{% endfor %}
+<h3>Observed evidence summary</h3><p>{{ item.evidence.occurrences }} occurrences, {{ item.evidence.contexts }} contexts, {{ item.evidence.sources }} sources. {{ item.evidence.anki_reviews }} indirect Anki reviews.</p>
+<p>Source types: {{ item.evidence.source_types|join(', ') }}.</p>
+<details><summary>Recent evidence (maximum 20)</summary><ul>{% for e in recent_evidence %}<li>{{ e.occurred_at }} — {{ e.evidence_type }}, {{ e.dimension }}; {{ e.context or e.source_reference }}</li>{% endfor %}</ul></details>
+<details><summary>Recent source occurrences (maximum 30)</summary><ul>{% for o in occurrences %}<li>{{ o.surface }} — {{ o.context }}<small>{{ o.source_type }}: {{ o.reference }}</small></li>{% endfor %}</ul></details>
+<details><summary>Relations / overlap</summary><ul>{% for r in relations %}<li>{{ r.source }} — {{ r.relation_type }} — {{ r.target }}</li>{% else %}<li>No explicit relations.</li>{% endfor %}</ul></details>
+<details><summary>Technical evidence summary</summary><pre>{{ item.evidence|tojson(indent=2) }}</pre></details>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Korean Study · Lute{% endblock %}
+{% block header %}Korean Study{% endblock %}
+{% block preloadassets %}
+<link rel="stylesheet" href="{{ url_for('korean_study.static', filename='study.css') }}">
+<script defer src="{{ url_for('korean_study.static', filename='study.js') }}"></script>
+{% endblock %}
+{% block body %}
+<main class="korean-workspace">
+<nav aria-label="Korean study">
+<a href="{{ url_for('korean_study.home') }}">Overview</a>
+<a href="{{ url_for('korean_study.knowledge') }}">Learner & knowledge</a>
+<a href="{{ url_for('korean_study.anki') }}">Anki</a>
+<a href="{{ url_for('korean_study.analyze') }}">Analyze input</a>
+<a href="{{ url_for('korean_study.history') }}">Study history</a>
+<a href="{{ url_for('korean_study.export_screen') }}">Export</a>
+</nav>
+{% block study_body %}{% endblock %}
+</main>
+{% endblock %}

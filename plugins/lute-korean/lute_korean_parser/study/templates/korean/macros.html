@@ -1,0 +1,32 @@
+{% macro csrf() %}<input type="hidden" name="csrf_token" value="{{ korean_csrf() }}">{% endmacro %}
+{% macro label(status) %}{% if status == 'practicing' %}Familiar / in practice{% elif status == 'presented' %}Presented{% elif status == 'future' %}Intentionally deferred{% elif status == 'consolidated' %}Consolidated{% elif status is none %}Not assessed{% else %}Unknown{% endif %}{% endmacro %}
+{% macro dimensions() %}<select name="dimension" required><option value="reading">Reading</option><option value="listening">Listening</option><option value="production">Production</option></select>{% endmacro %}
+{% macro observation(tracked, timestamp, event_key, sid=none, context='') %}
+<details id="quick-observation"><summary>Record observation about a specific item</summary>
+<p>Record only what you actually observed. This does not save a manual status.</p>
+<form method="post" action="{{ url_for('korean_study.observe') }}" class="observation-form">
+{{ csrf() }}<input type="hidden" name="event_key" value="{{ event_key }}">
+{% if sid %}<input type="hidden" name="study_session_id" value="{{ sid }}">{% endif %}
+<label>Item<select name="item_id" required>{% for id, identity in tracked.items() %}<option value="{{ id }}">{{ identity }}</option>{% endfor %}</select></label>
+<label>Observed dimension {{ dimensions() }}</label>
+<label>Observation<select name="event_type"><option value="recognized">Recognized</option><option value="missed">Missed</option><option value="produced">Produced (production only)</option><option value="manual_confirmation">Manual confirmation</option></select></label>
+<p>Direct, item-specific evidence. Production requires the production dimension.</p>
+<label>Factual context<textarea name="context" required rows="2">{{ context }}</textarea></label>
+<label>Source reference<input name="source_reference" value="{{ 'study:' ~ sid if sid else 'manual-observation' }}" required></label>
+<label>Observed at (ISO timestamp with timezone)<input name="occurred_at" value="{{ timestamp }}" required></label>
+<label>Recorded by<input name="recorded_by" value="learner" required></label>
+<label>Factual note<textarea name="notes" rows="2"></textarea></label>
+<button type="submit">Save observation</button>
+</form></details>
+{% endmacro %}
+{% macro content_export(action) %}
+<details><summary>Export for study / teacher</summary>
+<form method="get" action="{{ action }}">
+<label>Size<select name="size"><option value="compact">Compact</option><option value="default">Default</option><option value="detailed">Detailed diagnostics</option></select></label>
+<label>Format<select name="format"><option value="json">JSON</option><option value="markdown">Markdown</option></select></label>
+<label><input type="checkbox" name="korean" value="yes">Include all Korean segments (larger export)</label>
+<button>Download study context</button>
+</form></details>
+{% endmacro %}
+
+{% macro familiarity(bucket) %}{{ {'strong_familiar':'Strong familiarity','familiar':'Familiar / in practice','seen':'Previously presented','deferred':'Intentionally deferred','unassessed':'Tracked; reading not assessed','untracked':'Not tracked'}.get(bucket,bucket) }}{% endmacro %}

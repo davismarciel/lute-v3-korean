@@ -1,0 +1,6 @@
+{% extends 'korean/base.html' %}
+{% block study_body %}
+<h2>Export learner context</h2><p>Give your teacher or ChatGPT a local file that keeps manual assessment, suggested state and observed evidence separate. This sends nothing to an external service.</p>
+<form method="get" action="{{ url_for('korean_study.export_learner') }}"><label>Size<select name="size"><option value="compact">Compact</option><option value="default">Default</option><option value="detailed">Detailed item inventory</option></select></label><label>Format<select name="format"><option value="json">JSON</option><option value="markdown">Markdown</option></select></label><button>Download learner context</button></form>
+<p>Exports exclude raw Anki review dumps. Candidate and session pages also offer content-specific exports, optionally including the Korean transcript.</p>
+{% endblock %}

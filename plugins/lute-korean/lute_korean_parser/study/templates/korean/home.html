@@ -1,0 +1,21 @@
+{% extends 'korean/base.html' %}
+{% block study_body %}
+<h2>Your Korean study workspace</h2>
+<p>Sync observed Anki history, inspect your learner state, then choose and study input.</p>
+<section class="study-summary">
+{% for kind, dimensions in overview.counts.items() %}
+<div><h3>{{ kind|title }} · reading suggestions</h3>
+{% for status, count in dimensions.reading.items() %}<p>{{ status|title }}: <strong>{{ count }}</strong></p>{% else %}<p>No items yet.</p>{% endfor %}
+</div>{% endfor %}
+</section>
+<p>Listening: {{ 'inspect observed/manual dimensions' if overview.dimension_available.listening else 'insufficient evidence' }}.
+Production: {{ 'inspect observed/manual dimensions' if overview.dimension_available.production else 'insufficient evidence' }}.</p>
+<p>Manual assessments remain authoritative; the counts above are suggestions.</p>
+<p>Anki last successful sync: <strong>{{ anki.last_success or 'Not synced in this database' }}</strong>.
+{{ anki.counts.notes }} notes, {{ anki.counts.cards }} cards, {{ anki.counts.reviews }} reviews.</p>
+<div class="study-actions"><a class="study-button" href="{{ url_for('korean_study.anki') }}">Sync Anki</a><a class="study-button" href="{{ url_for('korean_study.analyze') }}">Analyze input</a></div>
+<h3>Recently analyzed candidates</h3>
+<p>Temporary candidates, not completed study. Open one to recalculate against your current state.</p>
+<ul>{% for token, entry in recent %}<li><a href="{{ url_for('korean_study.candidate',token=token) }}">{{ entry.content.name }}</a> — {{ entry.summary.fit if entry.summary else 'not analyzed' }} (last analysis)</li>{% else %}<li>Paste or upload input to begin. Analysis alone records no exposure.</li>{% endfor %}</ul>
+<details><summary>Snapshot diagnostics</summary><pre>{{ overview.snapshot|tojson(indent=2) }}</pre></details>
+{% endblock %}

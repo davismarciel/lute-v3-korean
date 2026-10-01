@@ -1,0 +1,5 @@
+{% extends 'korean/base.html' %}
+{% block study_body %}
+<h2>Actual study history</h2><p>Only explicitly started sessions appear here. Existing files and past analyses do not imply historical completion.</p>
+<table><thead><tr><th>Started</th><th>Content</th><th>Activity</th><th>Status</th><th>Consumed segments / elapsed time</th></tr></thead><tbody>{% for s in sessions %}<tr><td>{{ s.started_at }}</td><td><a href="{{ url_for('korean_study.study',session_id=s.id) }}">{{ s.name }}</a></td><td>{{ s.activity.replace('_',' ') }}</td><td>{{ s.status }}</td><td>{{ s.consumed_segments }}/{{ s.segment_count }}{% if s.first_segment is not none %}; first/last positions {{ s.first_segment+1 }}–{{ s.last_segment+1 }}{% endif %}{% if s.elapsed_seconds is not none %}<small>{{ "%.1f"|format(s.elapsed_seconds/60) }} minutes elapsed (not active study time)</small>{% endif %}</td></tr>{% else %}<tr><td colspan="5">No study sessions yet. Analyze a candidate and deliberately start study.</td></tr>{% endfor %}</tbody></table>
+{% endblock %}

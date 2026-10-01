@@ -1,0 +1,35 @@
+{% from 'korean/macros.html' import familiarity %}
+<section class="ci-overview">
+<h3>{{ 'Transcript fit' if report.content.kind=='podcast' else 'Overall linguistic fit' }}: {{ report.summary.fit or 'Unavailable' }} <small>Confidence: {{ report.summary.confidence }}</small></h3>
+<p>This estimates transcript/reading linguistic fit, not guaranteed comprehension.</p>
+{% if report.content.kind=='podcast' %}<p><strong>Listening: insufficient evidence.</strong> Transcript familiarity does not establish audio comprehension.</p>{% endif %}
+<p>Supported lexical occurrences: <strong>{{ '%.1f'|format(report.lexical.supported_coverage*100) }}%</strong>. Previously seen: {{ '%.1f'|format(report.lexical.previously_seen_coverage*100) }}%. Untracked: {{ '%.1f'|format(report.lexical.occurrence_distribution.untracked.ratio*100) }}%.</p>
+<p>These describe familiarity coverage, not the percentage you know. Untracked means absent from the Knowledge Model.</p>
+<table><thead><tr><th>Familiarity</th><th>Occurrence count</th><th>Unique items</th></tr></thead><tbody>{% for bucket, value in report.lexical.occurrence_distribution.items() %}<tr><td>{{ familiarity(bucket) }}</td><td>{{ value.count }}</td><td>{{ report.lexical.unique_distribution[bucket].count }}</td></tr>{% endfor %}</tbody></table>
+<h4>Segment distribution</h4><p>{% for level,count in report.summary.segment_load_distribution.items() %}<span class="load load-{{ level }}">Load {{ level }}: {{ count }}</span> {% endfor %}</p>
+<p>Longest difficult cluster: {{ report.summary.longest_difficult_cluster }} segments. Dense segments: {{ '%.1f'|format(report.summary.dense_segment_ratio*100) }}%.</p>
+<p>A single dense cue can make an otherwise supported episode “stretch”. Inspect the segment distribution and hardest passages.</p>
+<details><summary>Why this fit?</summary><ul>{% for reason in report.summary.reasons %}<li>{{ reason }}</li>{% endfor %}</ul></details>
+</section>
+<h3>Tracked grammar</h3><p>Only five constructions are detected. Untracked constructions may exist.</p>
+<ul>{% for g in report.grammar["items"] %}<li>{{ g.identity }} — {{ familiarity(g.bucket) }}, {{ g.confidence }}; {{ g.count }} occurrences</li>{% else %}<li>No supported patterns detected; this does not mean there is no grammar.</li>{% endfor %}</ul>
+<details><summary>Novelty, reinforcement and recycling</summary>
+{% for title,values in [('Untracked / unassessed / deferred',report.novelties),('Presented / reinforcement',report.presented_opportunities),('Recycling familiar items',report.recycling)] %}<h4>{{ title }}</h4><ul>{% for i in values[:20] %}{% if title!='Untracked / unassessed / deferred' or i.bucket in ['untracked','unassessed','deferred'] %}<li>{{ i.identity }} — {{ familiarity(i.bucket) }}; {{ i.count }} occurrences, {{ i.contexts }} contexts; {{ i.surfaces[:4]|join(', ') }}</li>{% endif %}{% endfor %}</ul>{% endfor %}
+</details>
+<details><summary>Proper names (visible, reduced load influence)</summary><ul>{% for i in report.lexical.proper_names["items"] %}<li>{{ i.identity }} — {{ familiarity(i.bucket) }}; {{ i.count }} occurrences</li>{% else %}<li>No POS-supported or stored proper-name matches.</li>{% endfor %}</ul></details>
+<details><summary>Hardest passages</summary><ul>{% for s in report.hardest_segments %}<li><a href="{{ report_url }}?page={{ (s.index//200)+1 }}#segment-{{ s.index }}">{{ s.timestamp or 'Segment ' ~ (s.index+1) }}</a> — load {{ s.load.level }} — {{ s.text }}</li>{% endfor %}</ul></details>
+<h3 id="segments">Korean segments</h3>
+<form method="get" action="{{ report_url }}#segments"><label>Show<select id="segment-filter" name="filter">{% for key,label in [('all','All'),('difficult','Difficult (2–3)'),('dense','Dense'),('novelty','Contains novelty')] %}<option value="{{ key }}" {% if segment_filter==key %}selected{% endif %}>{{ label }}</option>{% endfor %}</select></label><button type="submit">Show segments</button></form>
+<p>{{ matching_segments }} matching segments; page {{ segment_page }} of {{ segment_pages }}. Up to 200 segments per page. Summary metrics cover the entire content.</p>
+{% if segment_page>1 %}<a href="{{ report_url }}?filter={{ segment_filter }}&page={{ segment_page-1 }}#segments">Previous segments</a>{% endif %}
+{% if segment_page<segment_pages %}<a href="{{ report_url }}?filter={{ segment_filter }}&page={{ segment_page+1 }}#segments">Next segments</a>{% endif %}
+{% for s in display_segments %}
+<details class="study-segment" id="segment-{{ s.index }}" data-load="{{ s.load.level }}" data-novelty="{{ s.load.novelty_load }}">
+<summary><span class="load load-{{ s.load.level }}">{{ s.index+1 }} · {{ s.timestamp or '' }} · {{ s.load.label.replace('_',' ') }}</span> <span lang="ko">{{ s.text }}</span></summary>
+<ul>{% for i in s.effective_items %}<li>{{ i.identity }} — {{ i.kind }}, {{ familiarity(i.bucket) }}, {{ i.confidence }}{% if i.role in ['proper_noun','foreign_name'] %} ({{ i.role }}){% endif %}
+{% if study_session and i.tracked %}<button type="button" data-observe="{{ i.item_id }}" data-context="{{ s.text }}" data-event="recognized">Recognized this item</button><button type="button" data-observe="{{ i.item_id }}" data-context="{{ s.text }}" data-event="missed">Missed this item</button>{% endif %}</li>{% endfor %}</ul>
+{% if s.suppressed_overlap %}<h4>Suppressed overlap</h4><ul>{% for i in s.suppressed_overlap %}<li>{{ i.identity }} — {{ i.reason }}</li>{% endfor %}</ul>{% endif %}
+<ul>{% for reason in s.reasons %}<li>{{ reason }}</li>{% endfor %}{% for warning in s.warnings %}<li>{{ warning }}</li>{% endfor %}</ul>
+<p><a href="{{ diagnostic_url }}/{{ s.index }}" target="_blank" rel="noopener">Raw representation / morphology (opens separately)</a></p>
+</details>{% endfor %}
+<details><summary>Limitations & diagnostics</summary><ul>{% for warning in report.warnings %}<li>{{ warning }}</li>{% endfor %}</ul><pre>{{ {'policy':report.policy,'snapshot':report.learner_snapshot,'diagnostics':report.diagnostics}|tojson(indent=2) }}</pre></details>

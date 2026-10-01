@@ -1,0 +1,2 @@
+{% extends 'korean/base.html' %}
+{% block study_body %}<h2>Action needs attention</h2><p role="alert">{{ message }}</p><p><a href="{{ url_for('korean_study.home') }}">Korean overview</a> · <a href="{{ url_for('korean_study.analyze') }}">Analyze another input</a></p><details><summary>Technical details</summary><pre>{{ detail }}</pre></details>{% endblock %}

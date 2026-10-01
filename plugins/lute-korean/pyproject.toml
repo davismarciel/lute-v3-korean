@@ -7,7 +7,7 @@ name = "lute_korean_parser"
 
 [project]
 name = "lute-korean"
-version = "0.1.0"
+version = "0.3.0"
 description = "Lute Korean parser and independent Kiwi morphology analysis"
 requires-python = ">=3.10"
 readme = "README.md"
@@ -16,5 +16,18 @@ dependencies = ["lute3>=3.4.2", "kiwipiepy>=0.23,<0.24"]
 [project.entry-points."lute.plugin.parse"]
 lute_korean = "lute_korean_parser.parser:KoreanParser"
 
+[project.entry-points."lute.plugin.app"]
+korean_study = "lute_korean_parser.study.web:init_app"
+
 [project.scripts]
 lute-korean-install = "lute_korean_parser.install:main"
+lute-korean-analyze-knowledge = "lute_korean_parser.knowledge.cli:main"
+
+lute-korean-anki = "lute_korean_parser.anki.cli:main"
+
+lute-korean-state = "lute_korean_parser.learner_state.cli:main"
+lute-korean-knowledge = "lute_korean_parser.knowledge.hardening_cli:knowledge_main"
+lute-korean-evidence = "lute_korean_parser.knowledge.hardening_cli:evidence_main"
+lute-korean-ci = "lute_korean_parser.ci.cli:main"
+
+lute-korean-study = "lute_korean_parser.study.cli:main"

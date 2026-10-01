@@ -1,0 +1,28 @@
+.korean-workspace { max-width: 1120px; margin: 1rem auto 3rem; color: var(--font-color); }
+.korean-workspace nav { display: flex; flex-wrap: wrap; gap: .65rem 1.25rem; padding: .8rem 0; border-bottom: 1px solid var(--form-border-color,#ddd); }
+.korean-workspace h2 { margin-top: 1.2rem; }
+.korean-workspace p { max-width: 80ch; line-height: 1.5; }
+.korean-workspace label { display: block; margin: .6rem 0; }
+.korean-workspace input:not([type=checkbox]):not([type=hidden]), .korean-workspace textarea { width: min(100%, 720px); box-sizing: border-box; }
+.korean-workspace textarea { display: block; font: inherit; line-height: 1.55; }
+.korean-workspace select { max-width: 100%; }
+.korean-workspace details { margin: .8rem 0; padding: .5rem 0; }
+.korean-workspace summary { cursor: pointer; line-height: 1.8; }
+.korean-workspace button, .korean-workspace .study-button { margin: .3rem .5rem .3rem 0; padding: .4rem .7rem; display: inline-block; }
+.korean-workspace small { display: block; opacity: .8; }
+.korean-workspace .study-summary { display: flex; flex-wrap: wrap; gap: 2rem; }
+.korean-workspace .study-summary p { margin: .3rem 0; }
+.korean-workspace .study-table { overflow-x: auto; }
+.korean-workspace table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+.korean-workspace th, .korean-workspace td { text-align: left; padding: .55rem .65rem; border-bottom: 1px solid var(--form-border-color,#ddd); vertical-align: top; }
+.korean-workspace pre { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 35rem; overflow: auto; }
+.korean-workspace .study-segment { border-bottom: 1px solid var(--form-border-color,#ddd); }
+.korean-workspace .load { display: inline-block; font-size: .85em; padding: .1rem .4rem; border-left: 3px solid #657580; margin-right: .4rem; }
+.korean-workspace .load-1 { border-color: #357db0; }
+.korean-workspace .load-2 { border-color: #b48124; }
+.korean-workspace .load-3 { border-color: #b64d42; }
+.korean-workspace .study-segment [lang=ko] { line-height: 1.8; font-size: 1.1rem; }
+.korean-workspace :focus-visible { outline: 2px solid #357db0; outline-offset: 3px; }
+.korean-workspace .study-filters { display: flex; flex-wrap: wrap; gap: 1rem; align-items: end; }
+.korean-workspace [hidden] { display: none !important; }
+@media (max-width: 650px) { .korean-workspace { padding: 0 .5rem; } .korean-workspace .study-summary { gap: 1rem; } }

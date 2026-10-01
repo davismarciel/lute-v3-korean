@@ -1,0 +1,22 @@
+{% extends 'korean/base.html' %}{% from 'korean/macros.html' import csrf,observation,content_export with context %}
+{% block study_body %}
+<h2>Study: {{ study_session.name }}</h2>
+<p>Status: <strong>{{ study_session.status }}</strong>. Activity: {{ study_session.activity.replace('_',' ') }}.
+Started {{ study_session.started_at }}{% if study_session.completed_at %}; completed {{ study_session.completed_at }}{% endif %}.</p>
+<p>{{ study_session.consumed|length }} of {{ study_session.segments|length }} segments explicitly consumed; {{ study_session.exposure_count }} exposure links; {{ study_session.observation_ids|length }} factual observations.</p>
+<details><summary>Consumed segments / provenance</summary><ul>{% for c in study_session.consumed %}<li>Segment {{ c.segment_index+1 }} — {{ c.consumed_at }}{% if study_session.segments[c.segment_index].timestamp %}; {{ study_session.segments[c.segment_index].timestamp }}{% endif %}</li>{% else %}<li>No consumption recorded yet.</li>{% endfor %}</ul></details>
+{% if study_session.status != 'completed' %}
+<section class="consumption-form"><h3>Record what you actually consumed</h3>
+<p>Select an inclusive segment range. Later segments are not counted. Completing records exposure only, never recognition or consolidation.</p>
+{% if not study_session.transcript_read %}<p>Listening without reading the transcript: this session records consumption provenance only, with no token-based skill evidence.</p>{% endif %}
+<form method="post" action="{{ url_for('korean_study.consume',session_id=study_session.id) }}">{{ csrf() }}
+<label>From<select name="start">{% for s in study_session.segments %}<option value="{{ s.index }}">{{ s.index+1 }} · {{ s.timestamp or '' }} · {{ s.text[:45] }}</option>{% endfor %}</select></label>
+<label>Through<select name="end">{% for s in study_session.segments %}<option value="{{ s.index }}" {{ 'selected' if loop.last }}>{{ s.index+1 }} · {{ s.timestamp or '' }} · {{ s.text[:45] }}</option>{% endfor %}</select></label>
+<button name="finish" value="no">Save partial consumption</button><button name="finish" value="yes">Complete session for this consumed range</button>
+</form></section>{% else %}<p>This completed session is preserved. To study again, <a href="{{ url_for('korean_study.reopen',session_id=study_session.id) }}">open the content as a new candidate</a> and start a separate session.</p>{% endif %}
+<details><summary>Recent factual observations</summary><ul>{% for e in study_session.recent_observations %}<li><a href="{{ url_for('korean_study.item',item_id=e.item_id) }}">{{ e.identity }}</a> — {{ e.evidence_type }}, {{ e.dimension }}; {{ e.occurred_at }}; {{ e.context }}{% if e.metadata.notes %}<small>{{ e.metadata.notes }}</small>{% endif %}</li>{% else %}<li>No recognition, misses or production recorded.</li>{% endfor %}</ul></details>
+{% if tracked %}{{ observation(tracked,timestamp,event_key,study_session.id) }}{% else %}<p>Item-level observations require tracked items. Explicit transcript consumption can create the corresponding items first.</p>{% endif %}
+{{ content_export(url_for('korean_study.export_session',session_id=study_session.id)) }}
+<p>The analysis below is recalculated from the current learner snapshot; viewing it records nothing.</p>
+{% include 'korean/report_body.html' %}
+{% endblock %}

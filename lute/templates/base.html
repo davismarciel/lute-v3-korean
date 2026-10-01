@@ -81,6 +81,9 @@
         <span><a class="home-link" href="/">Home</a></span>
       </div>
       {% endif %}
+      {% for link in plugin_navigation | default([]) %}
+      <div class="menu-item"><span><a href="{{ link.url }}">{{ link.label }}</a></span></div>
+      {% endfor %}
       {% if have_languages %}
       <div class="menu-item">
         <span id="menu_books">Books</span>

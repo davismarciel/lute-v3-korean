@@ -33,6 +33,7 @@ from lute.db.demo import Service as DemoService
 import lute.utils.formutils
 
 from lute.parse.registry import init_parser_plugins, supported_parsers
+from lute.plugins import init_app_plugins
 
 from lute.models.book import Book
 from lute.models.language import Language
@@ -420,6 +421,7 @@ def create_app(
 
     # Plugins are loaded after the app, as they may use settings etc.
     _init_parser_plugins(app_config.plugin_datapath, outfunc)
+    init_app_plugins(app)
 
     return app
 

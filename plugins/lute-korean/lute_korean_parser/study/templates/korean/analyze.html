@@ -1,0 +1,14 @@
+{% extends 'korean/base.html' %}{% from 'korean/macros.html' import csrf with context %}
+{% block study_body %}
+<h2>Analyze supplied input</h2>
+<p>This estimates reading/transcript linguistic fit, not guaranteed comprehension. Analysis records no exposure.</p>
+<form method="post" enctype="multipart/form-data">{{ csrf() }}
+<label>Content name<input name="name" placeholder="Dialogue, TPRS episode…"></label>
+<label>Korean text<textarea name="text" rows="7" lang="ko"></textarea></label>
+<label>Or choose local files<input type="file" name="files" multiple accept=".txt,.srt,.vtt"></label>
+<p>Choose several files to compare. Up to 8 files, 2 MB per file, UTF-8. TPRS uses the original Subtitle column.</p>
+<label>Format<select name="format">{% for format in formats %}<option>{{ format }}</option>{% endfor %}</select></label>
+<label>Content type<select name="kind">{% for kind in ['text','tprs','podcast','dialogue','subtitle'] %}<option>{{ kind }}</option>{% endfor %}</select></label>
+<button>Analyze / compare</button>
+</form>
+{% endblock %}
