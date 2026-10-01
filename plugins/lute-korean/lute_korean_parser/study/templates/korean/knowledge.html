@@ -1,4 +1,15 @@
 {% extends 'korean/base.html' %}{% from 'korean/macros.html' import status_badge, empty_state %}
+{% macro pagination() %}
+{% if pages > 1 %}
+<nav class="ks-knowledge-pagination" aria-label="Páginas de itens acompanhados">
+  {% if page > 1 %}<a class="ks-button ks-button-ghost" href="{{ url_for('korean_study.knowledge', q=query, kind=kind, state=state, page=page-1) }}">Anterior</a>{% endif %}
+  {% if page_numbers.start > 1 %}<a class="ks-button ks-button-ghost" href="{{ url_for('korean_study.knowledge', q=query, kind=kind, state=state, page=1) }}">1</a>{% if page_numbers.start > 2 %}<span aria-hidden="true">…</span>{% endif %}{% endif %}
+  {% for number in page_numbers %}<a class="ks-button ks-button-ghost" href="{{ url_for('korean_study.knowledge', q=query, kind=kind, state=state, page=number) }}" {% if number == page %}aria-current="page"{% endif %} aria-label="Página {{ number }}">{{ number }}</a>{% endfor %}
+  {% if page_numbers.stop <= pages %}{% if page_numbers.stop < pages %}<span aria-hidden="true">…</span>{% endif %}<a class="ks-button ks-button-ghost" href="{{ url_for('korean_study.knowledge', q=query, kind=kind, state=state, page=pages) }}">{{ pages }}</a>{% endif %}
+  {% if page < pages %}<a class="ks-button ks-button-ghost" href="{{ url_for('korean_study.knowledge', q=query, kind=kind, state=state, page=page+1) }}">Próxima</a>{% endif %}
+</nav>
+{% endif %}
+{% endmacro %}
 {% block study_body %}
 <div class="ks-page-heading"><div><h2>Progresso e vocabulário</h2><p>Consulte o estado manual e as sugestões calculadas separadamente.</p></div></div>
 <form method="get" class="ks-filter-panel study-filters">
@@ -6,8 +17,9 @@
 <label>Tipo<select name="kind">{% for value in ['','lexical','grammar','chunk'] %}<option value="{{ value }}" {{ 'selected' if value==kind }}>{{ {'lexical':'Vocabulário','grammar':'Gramática','chunk':'Expressão'}.get(value,'Todos os tipos' if not value else value) }}</option>{% endfor %}</select></label>
 <label>Sugestão de leitura<select name="state">{% for value in ['','presented','practicing','consolidated','future','unknown','no_manual'] %}<option value="{{ value }}" {{ 'selected' if value==state }}>{{ {'presented':'Apresentado','practicing':'Em prática','consolidated':'Consolidado','future':'Deixado para depois','unknown':'Desconhecido','no_manual':'Sem avaliação manual'}.get(value,'Todas as avaliações' if not value else value) }}</option>{% endfor %}</select></label><button class="ks-button ks-button-secondary">Filtrar</button>
 </form>
-<div class="ks-section-heading"><h3>Itens <span class="ks-count">{{ items|length }}</span></h3></div>
+<div class="ks-section-heading"><h3>Itens <span class="ks-count">{{ total }}</span></h3>{% if total %}<p>Exibindo {{ first_item }}–{{ last_item }} de {{ total }}</p>{% endif %}</div>
+{{ pagination() }}
 {% if items %}<div class="study-table"><table><thead><tr><th scope="col">Item</th><th scope="col">Manual · leitura</th><th scope="col">Sugerido · leitura</th><th scope="col">Confiança</th><th scope="col">Evidência</th><th scope="col">Formas e fontes</th></tr></thead><tbody>
 {% for i in items %}<tr><td><a class="ks-item-link" lang="ko" href="{{ url_for('korean_study.item',item_id=i.id) }}">{{ i.identity }}</a><small>{{ {'lexical':'Vocabulário','grammar':'Gramática','chunk':'Expressão'}.get(i.type,i.type) }}</small></td><td>{{ status_badge(i.manual_state.reading) }}</td><td>{{ status_badge(i.suggested_state.reading.status) }}</td><td>{{ {'high':'Alta','medium':'Média','low':'Baixa'}.get(i.suggested_state.reading.confidence,i.suggested_state.reading.confidence) }}</td><td>{{ i.evidence.occurrences }} ocorrências<br>{{ i.evidence.contexts }} contextos</td><td>{{ i.evidence.surfaces[:5]|join(', ') }}<small>{{ i.evidence.source_types|join(', ') }} · {{ i.evidence.events }} observações · {{ i.evidence.anki_reviews }} revisões indiretas do Anki</small></td></tr>{% endfor %}
-</tbody></table></div>{% else %}{{ empty_state('Nenhum item encontrado', 'Ajuste a busca ou os filtros. Você também pode sincronizar o Anki para registrar itens acompanhados.') }}{% endif %}
+</tbody></table></div>{{ pagination() }}{% else %}{{ empty_state('Nenhum item encontrado', 'Ajuste a busca ou os filtros. Você também pode sincronizar o Anki para registrar itens acompanhados.') }}{% endif %}
 {% endblock %}

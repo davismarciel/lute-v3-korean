@@ -19,3 +19,9 @@
 @media(max-width:700px){.korean-workspace{padding:0 14px 24px}.korean-workspace .ks-header,.korean-workspace .ks-action-panel,.korean-workspace .ks-report-title{display:block}.korean-workspace .ks-header .ks-actions,.korean-workspace .ks-action-panel .ks-actions{margin-top:14px}.korean-workspace .ks-form-grid,.korean-workspace .ks-three-columns{grid-template-columns:1fr}.korean-workspace .ks-report-metrics strong{font-size:21px}.korean-workspace .ks-report-metrics>div{padding:3px 9px}.korean-workspace .ks-load-row{grid-template-columns:115px 1fr 30px;gap:7px}.korean-workspace .ks-panel,.korean-workspace .ks-form-card,.korean-workspace .ks-report-hero{padding:16px}.korean-workspace .ks-section-heading{display:block}.korean-workspace .ks-list-row{align-items:start}.korean-workspace .ks-list-row .ks-button{flex:none}}
 /* The core dev banner stays visible, with a quieter treatment on Korean pages only. */
 .container:has(.korean-workspace)>p[style*="background-color: blue"]{background-color:#e9f2fb!important;color:#315e89!important;border:1px solid #cbddeb;border-radius:6px;padding:5px 10px!important;font:600 12px/1.3 Inter,'Segoe UI',Arial,sans-serif}
+
+/* Knowledge result navigation */
+.korean-workspace .ks-knowledge-pagination{display:flex;align-items:center;justify-content:center;gap:5px;flex-wrap:wrap;margin:14px 0 18px}
+.korean-workspace .ks-knowledge-pagination .ks-button{min-width:36px}
+.korean-workspace .ks-knowledge-pagination a[aria-current=page]{background:var(--ks-accent-soft);border-color:#cbd2ea;color:var(--ks-accent);pointer-events:none}
+.korean-workspace .ks-knowledge-pagination>span{color:var(--ks-text-muted);padding:0 3px}

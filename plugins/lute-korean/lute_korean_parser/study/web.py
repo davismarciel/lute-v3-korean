@@ -256,7 +256,29 @@ def knowledge():
             or i["manual_state"].get("reading") == state
         )
     ]
-    return render("knowledge", items=items, kind=kind, state=state, query=query)
+    items.sort(key=lambda i: (i["identity"].casefold(), i["type"], i["id"]))
+    page_size = 50
+    total = len(items)
+    pages = max(1, (total + page_size - 1) // page_size)
+    try:
+        requested_page = int(request.args.get("page", "1"))
+    except ValueError:
+        requested_page = 1
+    page = min(pages, max(1, requested_page))
+    start = (page - 1) * page_size
+    return render(
+        "knowledge",
+        items=items[start : start + page_size],
+        total=total,
+        first_item=start + 1 if total else 0,
+        last_item=min(start + page_size, total),
+        page=page,
+        pages=pages,
+        page_numbers=range(max(1, page - 2), min(pages, page + 2) + 1),
+        kind=kind,
+        state=state,
+        query=query,
+    )
 
 
 @bp.route("/items/<item_id>")
