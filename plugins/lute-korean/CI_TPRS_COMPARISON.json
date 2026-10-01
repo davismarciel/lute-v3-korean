@@ -1,0 +1,4997 @@
+{
+  "validation": "Real EP1–EP7 original Subtitle column only; no consumption evidence",
+  "policy": {
+    "version": "ko.ci-analysis.v1",
+    "parameters": {
+      "version": "ko.ci-analysis.v1",
+      "strong_familiar_weight": 0.0,
+      "familiar_weight": 0.0,
+      "seen_weight": 0.45,
+      "deferred_weight": 1.2,
+      "unassessed_weight": 1.0,
+      "untracked_weight": 1.0,
+      "proper_noun_factor": 0.25,
+      "proper_noun_segment_cap": 0.75,
+      "grammar_factor": 1.5,
+      "low_confidence_support_penalty": 0.15,
+      "support_uncertainty_segment_cap": 0.3,
+      "light_threshold": 0.2,
+      "stretch_threshold": 1.5,
+      "segment_dense_threshold": 3.0,
+      "segment_dense_ratio": 0.45,
+      "segment_absolute_dense": 6.0,
+      "fit_dense_segment_ratio": 0.35,
+      "fit_dense_streak": 3,
+      "fit_stretch_segment_ratio": 0.3,
+      "fit_weak_unique_ratio": 0.4,
+      "fit_low_support_ratio": 0.65,
+      "fit_weak_grammar_ratio": 0.5,
+      "fit_grammar_mean_load": 0.6,
+      "medium_confidence_ratio": 0.5,
+      "high_confidence_ratio": 0.75,
+      "manual_confidence": "medium",
+      "hardest_limit": 10,
+      "novelty_limit": 20,
+      "compact_item_limit": 20,
+      "compact_cluster_limit": 10,
+      "compact_text_limit": 160
+    },
+    "fingerprint": "be113a87005f95b382b183f4addc9f5aae0e797127ee7e96f29053266240b45e"
+  },
+  "learner_snapshot": {
+    "policy_version": "ko.learner-state.v1",
+    "policy_fingerprint": "94819404fd433591b54a9cc1e5b132065c7f35bbe19bc1f88077dcfcef0f24f3",
+    "as_of": "2026-09-30T21:40:56.761638+00:00",
+    "evidence_fingerprint": "e816d8b527f3d4b02ef0c063df71761db95a3d6412b6c3aaebfbe8ecbced5198",
+    "input_fingerprint": "ad9b451c7c60267225ef3b3934c5e9d3ae6df6be70f13a4a54e8da9fa814ebf3",
+    "representation_fingerprint": "a68a44dfda6e6ce5e7bf61925800bde89601fc8e8352e8f8f2588db3c769c352",
+    "items": 357
+  },
+  "staging_sha256": "c590f7050a3bf985943ab1917ed5a3a077a1befe488e1d6ab21f22c1e26830f0",
+  "episodes": [
+    {
+      "content": {
+        "name": "tprs_1.txt",
+        "format": "tprs",
+        "kind": "tprs",
+        "original_hash": "8ebad91d45a1a98a5fac58eec2fc5f0a8362df350a4cc5bc9784e4856ea69cca",
+        "segments": 147
+      },
+      "summary": {
+        "fit": "stretch",
+        "confidence": "medium",
+        "assessment": "reading_linguistic_fit",
+        "listening_fit": "insufficient_evidence",
+        "reasons": [
+          "57.6% of effective lexical links are familiar/strong_familiar; 64.9% previously seen",
+          "17 unique untracked/unassessed/deferred general lexical identities",
+          "133/147 segments have load 0–1; 4 dense segments",
+          "3 dense clusters; longest difficult cluster 3",
+          "0 detected tracked grammar occurrences; proper names reported separately"
+        ],
+        "segment_load_distribution": {
+          "0": 34,
+          "1": 99,
+          "2": 10,
+          "3": 4
+        },
+        "dense_segment_ratio": 0.027210884353741496,
+        "dense_clusters": [
+          {
+            "start_index": 95,
+            "end_index": 95,
+            "length": 1,
+            "start_timestamp": "5:22",
+            "end_timestamp": "5:22"
+          },
+          {
+            "start_index": 138,
+            "end_index": 138,
+            "length": 1,
+            "start_timestamp": "9:45",
+            "end_timestamp": "9:45"
+          },
+          {
+            "start_index": 144,
+            "end_index": 145,
+            "length": 2,
+            "start_timestamp": "10:14",
+            "end_timestamp": "10:16"
+          }
+        ],
+        "difficult_clusters": [
+          {
+            "start_index": 0,
+            "end_index": 0,
+            "length": 1,
+            "start_timestamp": "2s",
+            "end_timestamp": "2s"
+          },
+          {
+            "start_index": 3,
+            "end_index": 3,
+            "length": 1,
+            "start_timestamp": "13s",
+            "end_timestamp": "13s"
+          },
+          {
+            "start_index": 54,
+            "end_index": 54,
+            "length": 1,
+            "start_timestamp": "2:48",
+            "end_timestamp": "2:48"
+          },
+          {
+            "start_index": 76,
+            "end_index": 76,
+            "length": 1,
+            "start_timestamp": "4:07",
+            "end_timestamp": "4:07"
+          },
+          {
+            "start_index": 87,
+            "end_index": 87,
+            "length": 1,
+            "start_timestamp": "4:53",
+            "end_timestamp": "4:53"
+          },
+          {
+            "start_index": 91,
+            "end_index": 91,
+            "length": 1,
+            "start_timestamp": "5:08",
+            "end_timestamp": "5:08"
+          },
+          {
+            "start_index": 95,
+            "end_index": 95,
+            "length": 1,
+            "start_timestamp": "5:22",
+            "end_timestamp": "5:22"
+          },
+          {
+            "start_index": 123,
+            "end_index": 125,
+            "length": 3,
+            "start_timestamp": "7:45",
+            "end_timestamp": "8:15"
+          },
+          {
+            "start_index": 127,
+            "end_index": 127,
+            "length": 1,
+            "start_timestamp": "8:30",
+            "end_timestamp": "8:30"
+          },
+          {
+            "start_index": 138,
+            "end_index": 138,
+            "length": 1,
+            "start_timestamp": "9:45",
+            "end_timestamp": "9:45"
+          },
+          {
+            "start_index": 144,
+            "end_index": 145,
+            "length": 2,
+            "start_timestamp": "10:14",
+            "end_timestamp": "10:16"
+          }
+        ],
+        "longest_difficult_cluster": 3,
+        "total_novelty_load": 78.725
+      },
+      "lexical": {
+        "occurrence_distribution": {
+          "strong_familiar": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "familiar": {
+            "count": 274,
+            "ratio": 0.5756302521008403
+          },
+          "seen": {
+            "count": 35,
+            "ratio": 0.07352941176470588
+          },
+          "deferred": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "unassessed": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "untracked": {
+            "count": 167,
+            "ratio": 0.35084033613445376
+          }
+        },
+        "unique_distribution": {
+          "strong_familiar": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "familiar": {
+            "count": 25,
+            "ratio": 0.43103448275862066
+          },
+          "seen": {
+            "count": 4,
+            "ratio": 0.06896551724137931
+          },
+          "deferred": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "unassessed": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "untracked": {
+            "count": 29,
+            "ratio": 0.5
+          }
+        },
+        "supported_coverage": 0.5756302521008403,
+        "previously_seen_coverage": 0.6491596638655461
+      },
+      "grammar": [],
+      "novelties": [
+        {
+          "identity": "아니요",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "low",
+          "count": 13,
+          "contexts": 11,
+          "surfaces": [
+            "아니요"
+          ],
+          "sample": {
+            "segment_index": 18,
+            "timestamp": "56s",
+            "text": "아니요."
+          }
+        },
+        {
+          "identity": "여러분",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 7,
+          "contexts": 6,
+          "surfaces": [
+            "여러분",
+            "여러분은"
+          ],
+          "sample": {
+            "segment_index": 0,
+            "timestamp": "2s",
+            "text": "자, 여러분 안녕하세요."
+          }
+        },
+        {
+          "identity": "모두",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 6,
+          "contexts": 6,
+          "surfaces": [
+            "모두"
+          ],
+          "sample": {
+            "segment_index": 76,
+            "timestamp": "4:07",
+            "text": "모두(=전부) '사람' 사람이에요."
+          }
+        },
+        {
+          "identity": "자",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 5,
+          "contexts": 3,
+          "surfaces": [
+            "자"
+          ],
+          "sample": {
+            "segment_index": 0,
+            "timestamp": "2s",
+            "text": "자, 여러분 안녕하세요."
+          }
+        },
+        {
+          "identity": "마법사",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 4,
+          "contexts": 3,
+          "surfaces": [
+            "마법사",
+            "마법사는",
+            "마법사예요"
+          ],
+          "sample": {
+            "segment_index": 91,
+            "timestamp": "5:08",
+            "text": "이 톰은 마법사예요. 마법사 wizard, witch"
+          }
+        },
+        {
+          "identity": "그리고",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 2,
+          "contexts": 2,
+          "surfaces": [
+            "그리고"
+          ],
+          "sample": {
+            "segment_index": 1,
+            "timestamp": "3s",
+            "text": "보세요. 들으세요. 그리고 이해하세요."
+          }
+        },
+        {
+          "identity": "댓글",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 2,
+          "contexts": 2,
+          "surfaces": [
+            "댓글에"
+          ],
+          "sample": {
+            "segment_index": 95,
+            "timestamp": "5:22",
+            "text": "여러분 알면은 댓글에 알려 주세요."
+          }
+        },
+        {
+          "identity": "전부",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 2,
+          "contexts": 2,
+          "surfaces": [
+            "전부"
+          ],
+          "sample": {
+            "segment_index": 76,
+            "timestamp": "4:07",
+            "text": "모두(=전부) '사람' 사람이에요."
+          }
+        },
+        {
+          "identity": "육",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "medium",
+          "count": 2,
+          "contexts": 2,
+          "surfaces": [
+            "육"
+          ],
+          "sample": {
+            "segment_index": 98,
+            "timestamp": "5:34",
+            "text": "사, 오, 육"
+          }
+        },
+        {
+          "identity": "나라",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 1,
+          "contexts": 1,
+          "surfaces": [
+            "나라"
+          ],
+          "sample": {
+            "segment_index": 144,
+            "timestamp": "10:14",
+            "text": "여러분은 어느 나라 사람이에요?"
+          }
+        }
+      ],
+      "recycling": [
+        {
+          "identity": "사람",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 109,
+          "contexts": 69,
+          "surfaces": [
+            "사람",
+            "사람도",
+            "사람은",
+            "사람이",
+            "사람이에요",
+            "사람인가",
+            "이사람은"
+          ],
+          "sample": {
+            "segment_index": 4,
+            "timestamp": "14s",
+            "text": "이 사람.. 누구예요?"
+          }
+        },
+        {
+          "identity": "이",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 72,
+          "contexts": 42,
+          "surfaces": [
+            "이",
+            "이사람은",
+            "이에요"
+          ],
+          "sample": {
+            "segment_index": 4,
+            "timestamp": "14s",
+            "text": "이 사람.. 누구예요?"
+          }
+        },
+        {
+          "identity": "네",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 12,
+          "contexts": 8,
+          "surfaces": [
+            "네"
+          ],
+          "sample": {
+            "segment_index": 21,
+            "timestamp": "1:04",
+            "text": "네."
+          }
+        },
+        {
+          "identity": "한국",
+          "kind": "lexical",
+          "role": "proper_noun",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 11,
+          "contexts": 11,
+          "surfaces": [
+            "한국"
+          ],
+          "sample": {
+            "segment_index": 55,
+            "timestamp": "2:50",
+            "text": "태웅이는, 저는 한국 사람이에요."
+          }
+        },
+        {
+          "identity": "고양이",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 10,
+          "contexts": 8,
+          "surfaces": [
+            "고양이가",
+            "고양이는",
+            "고양이에요",
+            "고양이예요"
+          ],
+          "sample": {
+            "segment_index": 79,
+            "timestamp": "4:25",
+            "text": "이 톰은 고양이예요."
+          }
+        },
+        {
+          "identity": "누구",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 10,
+          "contexts": 7,
+          "surfaces": [
+            "누구",
+            "누구예요",
+            "누구지"
+          ],
+          "sample": {
+            "segment_index": 4,
+            "timestamp": "14s",
+            "text": "이 사람.. 누구예요?"
+          }
+        },
+        {
+          "identity": "태웅",
+          "kind": "lexical",
+          "role": "proper_noun",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 8,
+          "contexts": 6,
+          "surfaces": [
+            "태웅이",
+            "태웅이는",
+            "태웅이에요"
+          ],
+          "sample": {
+            "segment_index": 14,
+            "timestamp": "44s",
+            "text": "이 사람은 저, 태웅이에요."
+          }
+        },
+        {
+          "identity": "모르다",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 7,
+          "contexts": 5,
+          "surfaces": [
+            "모르겠네요",
+            "모르겠어요",
+            "몰라"
+          ],
+          "sample": {
+            "segment_index": 90,
+            "timestamp": "5:04",
+            "text": "모르겠어요. 저는 모르겠어요."
+          }
+        },
+        {
+          "identity": "저",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 6,
+          "contexts": 6,
+          "surfaces": [
+            "저",
+            "저는"
+          ],
+          "sample": {
+            "segment_index": 14,
+            "timestamp": "44s",
+            "text": "이 사람은 저, 태웅이에요."
+          }
+        },
+        {
+          "identity": "동물",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 4,
+          "contexts": 3,
+          "surfaces": [
+            "동물",
+            "동물이에요"
+          ],
+          "sample": {
+            "segment_index": 80,
+            "timestamp": "4:30",
+            "text": "고양이는 동물이에요. '동물'"
+          }
+        }
+      ],
+      "hardest_segments": [
+        {
+          "timestamp": "9:45",
+          "text": "여러분 우리 이번 시간에 '톰이에요' '톰이 아니에요'",
+          "load": {
+            "level": 3,
+            "label": "dense",
+            "heuristic_load": 3.5,
+            "novelty_load": 3.5,
+            "weighted_density": 0.7778,
+            "proper_noun_load": 0.5,
+            "support_uncertainty": 0
+          },
+          "reasons": [
+            "3 untracked/unassessed/deferred general lexical links",
+            "0 previously presented links",
+            "0 weak detected tracked-grammar links",
+            "Proper names remain visible with reduced, capped segment influence"
+          ],
+          "warnings": []
+        },
+        {
+          "timestamp": "5:22",
+          "text": "여러분 알면은 댓글에 알려 주세요.",
+          "load": {
+            "level": 3,
+            "label": "dense",
+            "heuristic_load": 3.0,
+            "novelty_load": 3.0,
+            "weighted_density": 0.6,
+            "proper_noun_load": 0.0,
+            "support_uncertainty": 0
+          },
+          "reasons": [
+            "3 untracked/unassessed/deferred general lexical links",
+            "0 previously presented links",
+            "0 weak detected tracked-grammar links"
+          ],
+          "warnings": [
+            "Auxiliary morphology may need untracked construction interpretation"
+          ]
+        },
+        {
+          "timestamp": "10:14",
+          "text": "여러분은 어느 나라 사람이에요?",
+          "load": {
+            "level": 3,
+            "label": "dense",
+            "heuristic_load": 3.0,
+            "novelty_load": 3.0,
+            "weighted_density": 0.75,
+            "proper_noun_load": 0.0,
+            "support_uncertainty": 0
+          },
+          "reasons": [
+            "3 untracked/unassessed/deferred general lexical links",
+            "0 previously presented links",
+            "0 weak detected tracked-grammar links"
+          ],
+          "warnings": []
+        }
+      ],
+      "seconds": 2.1781097979983315,
+      "kiwi_calls": 147,
+      "warnings": [
+        "Auxiliary morphology may need untracked construction interpretation",
+        "Coverage describes candidate occurrences, not demonstrated comprehension or mastery",
+        "Learner state includes indirect Anki/contextual evidence and uncertain historical associations; fit confidence is capped at medium",
+        "Lemma-oriented matching cannot distinguish new senses of a familiar word (polysemy)",
+        "Multiple lexical heads in one span; load uses the maximum component novelty, not an independent sum",
+        "Tracked grammar coverage includes only five detectors; untracked constructions may exist",
+        "Transcript/text analysis does not establish listening comprehension or audio difficulty",
+        "Untracked means absent from the Knowledge Model, not definitely unknown to the learner"
+      ]
+    },
+    {
+      "content": {
+        "name": "tprs_2.txt",
+        "format": "tprs",
+        "kind": "tprs",
+        "original_hash": "17f934a6c15b172e867dde1b22763a793e2022b0c0add01a913b233af7559962",
+        "segments": 177
+      },
+      "summary": {
+        "fit": "stretch",
+        "confidence": "medium",
+        "assessment": "reading_linguistic_fit",
+        "listening_fit": "insufficient_evidence",
+        "reasons": [
+          "53.4% of effective lexical links are familiar/strong_familiar; 60.7% previously seen",
+          "42 unique untracked/unassessed/deferred general lexical identities",
+          "136/177 segments have load 0–1; 5 dense segments",
+          "5 dense clusters; longest difficult cluster 7",
+          "2 detected tracked grammar occurrences; proper names reported separately"
+        ],
+        "segment_load_distribution": {
+          "0": 30,
+          "1": 106,
+          "2": 36,
+          "3": 5
+        },
+        "dense_segment_ratio": 0.02824858757062147,
+        "dense_clusters": [
+          {
+            "start_index": 36,
+            "end_index": 36,
+            "length": 1,
+            "start_timestamp": "1:57",
+            "end_timestamp": "1:57"
+          },
+          {
+            "start_index": 49,
+            "end_index": 49,
+            "length": 1,
+            "start_timestamp": "2:52",
+            "end_timestamp": "2:52"
+          },
+          {
+            "start_index": 53,
+            "end_index": 53,
+            "length": 1,
+            "start_timestamp": "3:12",
+            "end_timestamp": "3:12"
+          },
+          {
+            "start_index": 114,
+            "end_index": 114,
+            "length": 1,
+            "start_timestamp": "8:31",
+            "end_timestamp": "8:31"
+          },
+          {
+            "start_index": 116,
+            "end_index": 116,
+            "length": 1,
+            "start_timestamp": "8:40",
+            "end_timestamp": "8:40"
+          }
+        ],
+        "difficult_clusters": [
+          {
+            "start_index": 3,
+            "end_index": 3,
+            "length": 1,
+            "start_timestamp": "10s",
+            "end_timestamp": "10s"
+          },
+          {
+            "start_index": 16,
+            "end_index": 16,
+            "length": 1,
+            "start_timestamp": "53s",
+            "end_timestamp": "53s"
+          },
+          {
+            "start_index": 28,
+            "end_index": 29,
+            "length": 2,
+            "start_timestamp": "1:31",
+            "end_timestamp": "1:34"
+          },
+          {
+            "start_index": 36,
+            "end_index": 36,
+            "length": 1,
+            "start_timestamp": "1:57",
+            "end_timestamp": "1:57"
+          },
+          {
+            "start_index": 47,
+            "end_index": 53,
+            "length": 7,
+            "start_timestamp": "2:45",
+            "end_timestamp": "3:12"
+          },
+          {
+            "start_index": 55,
+            "end_index": 55,
+            "length": 1,
+            "start_timestamp": "3:26",
+            "end_timestamp": "3:26"
+          },
+          {
+            "start_index": 57,
+            "end_index": 57,
+            "length": 1,
+            "start_timestamp": "3:37",
+            "end_timestamp": "3:37"
+          },
+          {
+            "start_index": 59,
+            "end_index": 60,
+            "length": 2,
+            "start_timestamp": "3:47",
+            "end_timestamp": "3:54"
+          },
+          {
+            "start_index": 64,
+            "end_index": 67,
+            "length": 4,
+            "start_timestamp": "4:06",
+            "end_timestamp": "4:17"
+          },
+          {
+            "start_index": 71,
+            "end_index": 71,
+            "length": 1,
+            "start_timestamp": "4:34",
+            "end_timestamp": "4:34"
+          },
+          {
+            "start_index": 89,
+            "end_index": 89,
+            "length": 1,
+            "start_timestamp": "5:53",
+            "end_timestamp": "5:53"
+          },
+          {
+            "start_index": 96,
+            "end_index": 97,
+            "length": 2,
+            "start_timestamp": "6:29",
+            "end_timestamp": "6:34"
+          },
+          {
+            "start_index": 99,
+            "end_index": 99,
+            "length": 1,
+            "start_timestamp": "6:48",
+            "end_timestamp": "6:48"
+          },
+          {
+            "start_index": 101,
+            "end_index": 102,
+            "length": 2,
+            "start_timestamp": "7:02",
+            "end_timestamp": "7:05"
+          },
+          {
+            "start_index": 109,
+            "end_index": 109,
+            "length": 1,
+            "start_timestamp": "7:58",
+            "end_timestamp": "7:58"
+          },
+          {
+            "start_index": 111,
+            "end_index": 111,
+            "length": 1,
+            "start_timestamp": "8:10",
+            "end_timestamp": "8:10"
+          },
+          {
+            "start_index": 113,
+            "end_index": 114,
+            "length": 2,
+            "start_timestamp": "8:23",
+            "end_timestamp": "8:31"
+          },
+          {
+            "start_index": 116,
+            "end_index": 116,
+            "length": 1,
+            "start_timestamp": "8:40",
+            "end_timestamp": "8:40"
+          },
+          {
+            "start_index": 118,
+            "end_index": 118,
+            "length": 1,
+            "start_timestamp": "8:48",
+            "end_timestamp": "8:48"
+          },
+          {
+            "start_index": 122,
+            "end_index": 124,
+            "length": 3,
+            "start_timestamp": "9:05",
+            "end_timestamp": "9:18"
+          },
+          {
+            "start_index": 135,
+            "end_index": 135,
+            "length": 1,
+            "start_timestamp": "10:04",
+            "end_timestamp": "10:04"
+          },
+          {
+            "start_index": 138,
+            "end_index": 138,
+            "length": 1,
+            "start_timestamp": "10:10",
+            "end_timestamp": "10:10"
+          },
+          {
+            "start_index": 158,
+            "end_index": 158,
+            "length": 1,
+            "start_timestamp": "11:27",
+            "end_timestamp": "11:27"
+          },
+          {
+            "start_index": 162,
+            "end_index": 163,
+            "length": 2,
+            "start_timestamp": "11:47",
+            "end_timestamp": "11:51"
+          }
+        ],
+        "longest_difficult_cluster": 7,
+        "total_novelty_load": 187.725
+      },
+      "lexical": {
+        "occurrence_distribution": {
+          "strong_familiar": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "familiar": {
+            "count": 310,
+            "ratio": 0.5344827586206896
+          },
+          "seen": {
+            "count": 42,
+            "ratio": 0.07241379310344828
+          },
+          "deferred": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "unassessed": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "untracked": {
+            "count": 228,
+            "ratio": 0.3931034482758621
+          }
+        },
+        "unique_distribution": {
+          "strong_familiar": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "familiar": {
+            "count": 47,
+            "ratio": 0.3884297520661157
+          },
+          "seen": {
+            "count": 20,
+            "ratio": 0.1652892561983471
+          },
+          "deferred": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "unassessed": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "untracked": {
+            "count": 54,
+            "ratio": 0.4462809917355372
+          }
+        },
+        "supported_coverage": 0.5344827586206896,
+        "previously_seen_coverage": 0.6068965517241379
+      },
+      "grammar": [
+        {
+          "identity": "-는데",
+          "kind": "grammar",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 1,
+          "contexts": 1,
+          "surfaces": [
+            "살인데"
+          ],
+          "sample": {
+            "segment_index": 148,
+            "timestamp": "10:46",
+            "text": "한국에서는 29(스물 아홉)살인데,"
+          }
+        },
+        {
+          "identity": "-아/어서",
+          "kind": "grammar",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 1,
+          "contexts": 1,
+          "surfaces": [
+            "줄여서"
+          ],
+          "sample": {
+            "segment_index": 49,
+            "timestamp": "2:52",
+            "text": "'머리카락', 줄여서 '머리'라고도 이야기해요."
+          }
+        }
+      ],
+      "novelties": [
+        {
+          "identity": "수염",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 38,
+          "contexts": 31,
+          "surfaces": [
+            "수염",
+            "수염이"
+          ],
+          "sample": {
+            "segment_index": 36,
+            "timestamp": "1:57",
+            "text": "여기.. 턱수염. (턱+수염)"
+          }
+        },
+        {
+          "identity": "머리카락",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 18,
+          "contexts": 16,
+          "surfaces": [
+            "머리카락",
+            "머리카락이"
+          ],
+          "sample": {
+            "segment_index": 16,
+            "timestamp": "53s",
+            "text": "머리카락이.. 머리카락이 없어요."
+          }
+        },
+        {
+          "identity": "머리",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 18,
+          "contexts": 15,
+          "surfaces": [
+            "머리",
+            "머리가"
+          ],
+          "sample": {
+            "segment_index": 47,
+            "timestamp": "2:45",
+            "text": "1번 빈은 머리가.."
+          }
+        },
+        {
+          "identity": "우산",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "low",
+          "count": 9,
+          "contexts": 6,
+          "surfaces": [
+            "우산이",
+            "우산이에요"
+          ],
+          "sample": {
+            "segment_index": 125,
+            "timestamp": "9:20",
+            "text": "이 오바마는 우산이 있어요."
+          }
+        },
+        {
+          "identity": "아니요",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "low",
+          "count": 7,
+          "contexts": 5,
+          "surfaces": [
+            "아니요"
+          ],
+          "sample": {
+            "segment_index": 41,
+            "timestamp": "2:21",
+            "text": "아니요. 없어요."
+          }
+        },
+        {
+          "identity": "그리고",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 6,
+          "contexts": 6,
+          "surfaces": [
+            "그리고"
+          ],
+          "sample": {
+            "segment_index": 1,
+            "timestamp": "1s",
+            "text": "보세요. 들으세요. 그리고 이해하세요."
+          }
+        },
+        {
+          "identity": "자",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 6,
+          "contexts": 5,
+          "surfaces": [
+            "자"
+          ],
+          "sample": {
+            "segment_index": 22,
+            "timestamp": "1:21",
+            "text": "자 다시.."
+          }
+        },
+        {
+          "identity": "그러면",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 5,
+          "contexts": 5,
+          "surfaces": [
+            "그러면"
+          ],
+          "sample": {
+            "segment_index": 89,
+            "timestamp": "5:53",
+            "text": "그러면 누가? 누가 수염이 없어요?"
+          }
+        },
+        {
+          "identity": "코",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 4,
+          "contexts": 3,
+          "surfaces": [
+            "코가",
+            "코도"
+          ],
+          "sample": {
+            "segment_index": 12,
+            "timestamp": "38s",
+            "text": "코가 없어요."
+          }
+        },
+        {
+          "identity": "눈썹",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 3,
+          "contexts": 3,
+          "surfaces": [
+            "눈썹도",
+            "눈썹이"
+          ],
+          "sample": {
+            "segment_index": 19,
+            "timestamp": "1:04",
+            "text": "볼드모트는 눈썹이 없어요. '없어요'"
+          }
+        }
+      ],
+      "recycling": [
+        {
+          "identity": "있다",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 78,
+          "contexts": 63,
+          "surfaces": [
+            "있네요",
+            "있어요",
+            "있죠",
+            "있지"
+          ],
+          "sample": {
+            "segment_index": 14,
+            "timestamp": "43s",
+            "text": "태웅이는 코가 있어요."
+          }
+        },
+        {
+          "identity": "없다",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 43,
+          "contexts": 37,
+          "surfaces": [
+            "없어요"
+          ],
+          "sample": {
+            "segment_index": 12,
+            "timestamp": "38s",
+            "text": "코가 없어요."
+          }
+        },
+        {
+          "identity": "이",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 23,
+          "contexts": 18,
+          "surfaces": [
+            "이",
+            "이건"
+          ],
+          "sample": {
+            "segment_index": 4,
+            "timestamp": "13s",
+            "text": "이 사람은 누구예요?"
+          }
+        },
+        {
+          "identity": "누구",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 16,
+          "contexts": 8,
+          "surfaces": [
+            "누가",
+            "누구예요"
+          ],
+          "sample": {
+            "segment_index": 4,
+            "timestamp": "13s",
+            "text": "이 사람은 누구예요?"
+          }
+        },
+        {
+          "identity": "태웅",
+          "kind": "lexical",
+          "role": "proper_noun",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 14,
+          "contexts": 14,
+          "surfaces": [
+            "태웅이",
+            "태웅이가",
+            "태웅이는",
+            "태웅이랑",
+            "태웅이에요",
+            "태웅이예요",
+            "태웅이와"
+          ],
+          "sample": {
+            "segment_index": 9,
+            "timestamp": "27s",
+            "text": "이 사람은 태웅이예요. 그렇죠?"
+          }
+        },
+        {
+          "identity": "네",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 12,
+          "contexts": 10,
+          "surfaces": [
+            "네"
+          ],
+          "sample": {
+            "segment_index": 5,
+            "timestamp": "15s",
+            "text": "네. 이 사람은 톰 크루즈, 톰이에요."
+          }
+        },
+        {
+          "identity": "사람",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 11,
+          "contexts": 7,
+          "surfaces": [
+            "사람도",
+            "사람은"
+          ],
+          "sample": {
+            "segment_index": 4,
+            "timestamp": "13s",
+            "text": "이 사람은 누구예요?"
+          }
+        },
+        {
+          "identity": "여기",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 10,
+          "contexts": 7,
+          "surfaces": [
+            "여기",
+            "여기서"
+          ],
+          "sample": {
+            "segment_index": 36,
+            "timestamp": "1:57",
+            "text": "여기.. 턱수염. (턱+수염)"
+          }
+        },
+        {
+          "identity": "그런데",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 9,
+          "contexts": 7,
+          "surfaces": [
+            "그런데"
+          ],
+          "sample": {
+            "segment_index": 30,
+            "timestamp": "1:40",
+            "text": "그런데 3번 톰은.."
+          }
+        },
+        {
+          "identity": "친구",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 9,
+          "contexts": 6,
+          "surfaces": [
+            "친구",
+            "친구가",
+            "친구들도",
+            "친구들은",
+            "친구들이에요"
+          ],
+          "sample": {
+            "segment_index": 159,
+            "timestamp": "11:31",
+            "text": "그리고 친구가 있어요."
+          }
+        }
+      ],
+      "hardest_segments": [
+        {
+          "timestamp": "8:31",
+          "text": "'제이슨과 태웅이' = '제이슨이랑 태웅이' 똑같아요.",
+          "load": {
+            "level": 3,
+            "label": "dense",
+            "heuristic_load": 5.0,
+            "novelty_load": 5.0,
+            "weighted_density": 1.0,
+            "proper_noun_load": 0.0,
+            "support_uncertainty": 0
+          },
+          "reasons": [
+            "5 untracked/unassessed/deferred general lexical links",
+            "0 previously presented links",
+            "0 weak detected tracked-grammar links"
+          ],
+          "warnings": []
+        },
+        {
+          "timestamp": "8:40",
+          "text": "'제이슨[과] 태웅이'는 글을 쓸 때",
+          "load": {
+            "level": 3,
+            "label": "dense",
+            "heuristic_load": 4.25,
+            "novelty_load": 4.25,
+            "weighted_density": 0.8095,
+            "proper_noun_load": 0.25,
+            "support_uncertainty": 0
+          },
+          "reasons": [
+            "4 untracked/unassessed/deferred general lexical links",
+            "0 previously presented links",
+            "0 weak detected tracked-grammar links",
+            "Proper names remain visible with reduced, capped segment influence"
+          ],
+          "warnings": []
+        },
+        {
+          "timestamp": "2:52",
+          "text": "'머리카락', 줄여서 '머리'라고도 이야기해요.",
+          "load": {
+            "level": 3,
+            "label": "dense",
+            "heuristic_load": 4.0,
+            "novelty_load": 4.0,
+            "weighted_density": 0.7273,
+            "proper_noun_load": 0.0,
+            "support_uncertainty": 0
+          },
+          "reasons": [
+            "4 untracked/unassessed/deferred general lexical links",
+            "0 previously presented links",
+            "0 weak detected tracked-grammar links"
+          ],
+          "warnings": []
+        }
+      ],
+      "seconds": 0.057599659005063586,
+      "kiwi_calls": 177,
+      "warnings": [
+        "Auxiliary morphology may need untracked construction interpretation",
+        "Coverage describes candidate occurrences, not demonstrated comprehension or mastery",
+        "Learner state includes indirect Anki/contextual evidence and uncertain historical associations; fit confidence is capped at medium",
+        "Lemma-oriented matching cannot distinguish new senses of a familiar word (polysemy)",
+        "Tracked grammar coverage includes only five detectors; untracked constructions may exist",
+        "Transcript/text analysis does not establish listening comprehension or audio difficulty",
+        "Untracked means absent from the Knowledge Model, not definitely unknown to the learner"
+      ]
+    },
+    {
+      "content": {
+        "name": "tprs_3.txt",
+        "format": "tprs",
+        "kind": "tprs",
+        "original_hash": "80d452c777ad4ce00718572423de67a5b55032b858d0b01bb05198ccccb63581",
+        "segments": 151
+      },
+      "summary": {
+        "fit": "stretch",
+        "confidence": "low",
+        "assessment": "reading_linguistic_fit",
+        "listening_fit": "insufficient_evidence",
+        "reasons": [
+          "40.8% of effective lexical links are familiar/strong_familiar; 49.1% previously seen",
+          "47 unique untracked/unassessed/deferred general lexical identities",
+          "78/151 segments have load 0–1; 7 dense segments",
+          "6 dense clusters; longest difficult cluster 8",
+          "6 detected tracked grammar occurrences; proper names reported separately"
+        ],
+        "segment_load_distribution": {
+          "0": 21,
+          "1": 57,
+          "2": 66,
+          "3": 7
+        },
+        "dense_segment_ratio": 0.046357615894039736,
+        "dense_clusters": [
+          {
+            "start_index": 45,
+            "end_index": 45,
+            "length": 1,
+            "start_timestamp": "3:05",
+            "end_timestamp": "3:05"
+          },
+          {
+            "start_index": 47,
+            "end_index": 47,
+            "length": 1,
+            "start_timestamp": "3:17",
+            "end_timestamp": "3:17"
+          },
+          {
+            "start_index": 63,
+            "end_index": 64,
+            "length": 2,
+            "start_timestamp": "4:15",
+            "end_timestamp": "4:22"
+          },
+          {
+            "start_index": 68,
+            "end_index": 68,
+            "length": 1,
+            "start_timestamp": "4:38",
+            "end_timestamp": "4:38"
+          },
+          {
+            "start_index": 75,
+            "end_index": 75,
+            "length": 1,
+            "start_timestamp": "5:09",
+            "end_timestamp": "5:09"
+          },
+          {
+            "start_index": 126,
+            "end_index": 126,
+            "length": 1,
+            "start_timestamp": "8:43",
+            "end_timestamp": "8:43"
+          }
+        ],
+        "difficult_clusters": [
+          {
+            "start_index": 12,
+            "end_index": 12,
+            "length": 1,
+            "start_timestamp": "44s",
+            "end_timestamp": "44s"
+          },
+          {
+            "start_index": 14,
+            "end_index": 15,
+            "length": 2,
+            "start_timestamp": "51s",
+            "end_timestamp": "54s"
+          },
+          {
+            "start_index": 17,
+            "end_index": 17,
+            "length": 1,
+            "start_timestamp": "1:04",
+            "end_timestamp": "1:04"
+          },
+          {
+            "start_index": 19,
+            "end_index": 19,
+            "length": 1,
+            "start_timestamp": "1:09",
+            "end_timestamp": "1:09"
+          },
+          {
+            "start_index": 23,
+            "end_index": 25,
+            "length": 3,
+            "start_timestamp": "1:27",
+            "end_timestamp": "1:38"
+          },
+          {
+            "start_index": 27,
+            "end_index": 28,
+            "length": 2,
+            "start_timestamp": "1:48",
+            "end_timestamp": "1:51"
+          },
+          {
+            "start_index": 31,
+            "end_index": 31,
+            "length": 1,
+            "start_timestamp": "2:05",
+            "end_timestamp": "2:05"
+          },
+          {
+            "start_index": 35,
+            "end_index": 35,
+            "length": 1,
+            "start_timestamp": "2:17",
+            "end_timestamp": "2:17"
+          },
+          {
+            "start_index": 38,
+            "end_index": 38,
+            "length": 1,
+            "start_timestamp": "2:29",
+            "end_timestamp": "2:29"
+          },
+          {
+            "start_index": 40,
+            "end_index": 47,
+            "length": 8,
+            "start_timestamp": "2:38",
+            "end_timestamp": "3:17"
+          },
+          {
+            "start_index": 50,
+            "end_index": 54,
+            "length": 5,
+            "start_timestamp": "3:37",
+            "end_timestamp": "3:51"
+          },
+          {
+            "start_index": 63,
+            "end_index": 65,
+            "length": 3,
+            "start_timestamp": "4:15",
+            "end_timestamp": "4:27"
+          },
+          {
+            "start_index": 68,
+            "end_index": 69,
+            "length": 2,
+            "start_timestamp": "4:38",
+            "end_timestamp": "4:42"
+          },
+          {
+            "start_index": 72,
+            "end_index": 76,
+            "length": 5,
+            "start_timestamp": "4:54",
+            "end_timestamp": "5:14"
+          },
+          {
+            "start_index": 82,
+            "end_index": 82,
+            "length": 1,
+            "start_timestamp": "5:43",
+            "end_timestamp": "5:43"
+          },
+          {
+            "start_index": 84,
+            "end_index": 84,
+            "length": 1,
+            "start_timestamp": "5:55",
+            "end_timestamp": "5:55"
+          },
+          {
+            "start_index": 86,
+            "end_index": 88,
+            "length": 3,
+            "start_timestamp": "6:01",
+            "end_timestamp": "6:09"
+          },
+          {
+            "start_index": 90,
+            "end_index": 92,
+            "length": 3,
+            "start_timestamp": "6:14",
+            "end_timestamp": "6:20"
+          },
+          {
+            "start_index": 94,
+            "end_index": 95,
+            "length": 2,
+            "start_timestamp": "6:28",
+            "end_timestamp": "6:36"
+          },
+          {
+            "start_index": 97,
+            "end_index": 98,
+            "length": 2,
+            "start_timestamp": "6:43",
+            "end_timestamp": "6:47"
+          },
+          {
+            "start_index": 101,
+            "end_index": 101,
+            "length": 1,
+            "start_timestamp": "6:59",
+            "end_timestamp": "6:59"
+          },
+          {
+            "start_index": 103,
+            "end_index": 103,
+            "length": 1,
+            "start_timestamp": "7:09",
+            "end_timestamp": "7:09"
+          },
+          {
+            "start_index": 105,
+            "end_index": 106,
+            "length": 2,
+            "start_timestamp": "7:17",
+            "end_timestamp": "7:20"
+          },
+          {
+            "start_index": 111,
+            "end_index": 111,
+            "length": 1,
+            "start_timestamp": "7:41",
+            "end_timestamp": "7:41"
+          },
+          {
+            "start_index": 114,
+            "end_index": 116,
+            "length": 3,
+            "start_timestamp": "7:57",
+            "end_timestamp": "8:05"
+          },
+          {
+            "start_index": 118,
+            "end_index": 119,
+            "length": 2,
+            "start_timestamp": "8:10",
+            "end_timestamp": "8:16"
+          },
+          {
+            "start_index": 121,
+            "end_index": 121,
+            "length": 1,
+            "start_timestamp": "8:23",
+            "end_timestamp": "8:23"
+          },
+          {
+            "start_index": 123,
+            "end_index": 123,
+            "length": 1,
+            "start_timestamp": "8:30",
+            "end_timestamp": "8:30"
+          },
+          {
+            "start_index": 125,
+            "end_index": 126,
+            "length": 2,
+            "start_timestamp": "8:35",
+            "end_timestamp": "8:43"
+          },
+          {
+            "start_index": 130,
+            "end_index": 130,
+            "length": 1,
+            "start_timestamp": "9:00",
+            "end_timestamp": "9:00"
+          },
+          {
+            "start_index": 135,
+            "end_index": 136,
+            "length": 2,
+            "start_timestamp": "9:17",
+            "end_timestamp": "9:19"
+          },
+          {
+            "start_index": 140,
+            "end_index": 141,
+            "length": 2,
+            "start_timestamp": "9:38",
+            "end_timestamp": "9:45"
+          },
+          {
+            "start_index": 143,
+            "end_index": 144,
+            "length": 2,
+            "start_timestamp": "9:57",
+            "end_timestamp": "10:00"
+          },
+          {
+            "start_index": 146,
+            "end_index": 149,
+            "length": 4,
+            "start_timestamp": "10:14",
+            "end_timestamp": "10:34"
+          }
+        ],
+        "longest_difficult_cluster": 8,
+        "total_novelty_load": 210.2625
+      },
+      "lexical": {
+        "occurrence_distribution": {
+          "strong_familiar": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "familiar": {
+            "count": 211,
+            "ratio": 0.4081237911025145
+          },
+          "seen": {
+            "count": 43,
+            "ratio": 0.08317214700193423
+          },
+          "deferred": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "unassessed": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "untracked": {
+            "count": 263,
+            "ratio": 0.5087040618955513
+          }
+        },
+        "unique_distribution": {
+          "strong_familiar": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "familiar": {
+            "count": 34,
+            "ratio": 0.2982456140350877
+          },
+          "seen": {
+            "count": 10,
+            "ratio": 0.08771929824561403
+          },
+          "deferred": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "unassessed": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "untracked": {
+            "count": 70,
+            "ratio": 0.6140350877192983
+          }
+        },
+        "supported_coverage": 0.4081237911025145,
+        "previously_seen_coverage": 0.4912959381044487
+      },
+      "grammar": [
+        {
+          "identity": "-아/어서",
+          "kind": "grammar",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 5,
+          "contexts": 5,
+          "surfaces": [
+            "봐주셔서",
+            "줄여서"
+          ],
+          "sample": {
+            "segment_index": 64,
+            "timestamp": "4:22",
+            "text": "'남자 동생' 줄여서 '남동생'이라고 해요."
+          }
+        },
+        {
+          "identity": "-는데",
+          "kind": "grammar",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 1,
+          "contexts": 1,
+          "surfaces": [
+            "배웠는데"
+          ],
+          "sample": {
+            "segment_index": 116,
+            "timestamp": "8:05",
+            "text": "오빠, 형, 언니, 누나도 배웠는데,"
+          }
+        }
+      ],
+      "novelties": [
+        {
+          "identity": "언니",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 23,
+          "contexts": 17,
+          "surfaces": [
+            "언니",
+            "언니가",
+            "언니는",
+            "언니예요"
+          ],
+          "sample": {
+            "segment_index": 17,
+            "timestamp": "1:04",
+            "text": "매기는 언니가 있어요,"
+          }
+        },
+        {
+          "identity": "매기",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 20,
+          "contexts": 13,
+          "surfaces": [
+            "매기는",
+            "매기보다",
+            "매기의"
+          ],
+          "sample": {
+            "segment_index": 17,
+            "timestamp": "1:04",
+            "text": "매기는 언니가 있어요,"
+          }
+        },
+        {
+          "identity": "오빠",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 19,
+          "contexts": 14,
+          "surfaces": [
+            "오빠",
+            "오빠가",
+            "오빠는",
+            "오빠예요"
+          ],
+          "sample": {
+            "segment_index": 40,
+            "timestamp": "2:38",
+            "text": "그런데 매기는 오빠가 있어요."
+          }
+        },
+        {
+          "identity": "형",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "low",
+          "count": 18,
+          "contexts": 13,
+          "surfaces": [
+            "형",
+            "형은",
+            "형이",
+            "형이에요"
+          ],
+          "sample": {
+            "segment_index": 8,
+            "timestamp": "29s",
+            "text": "태웅이는 형이 없어요."
+          }
+        },
+        {
+          "identity": "여자",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 12,
+          "contexts": 11,
+          "surfaces": [
+            "여자",
+            "여자가",
+            "여자예요"
+          ],
+          "sample": {
+            "segment_index": 23,
+            "timestamp": "1:27",
+            "text": "그리고 혜원이는 여자예요."
+          }
+        },
+        {
+          "identity": "이름",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "medium",
+          "count": 8,
+          "contexts": 8,
+          "surfaces": [
+            "이름name은",
+            "이름은"
+          ],
+          "sample": {
+            "segment_index": 139,
+            "timestamp": "9:30",
+            "text": "저의 이름name은 정태웅이에요.라고도 할 수 있어요."
+          }
+        },
+        {
+          "identity": "남자",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 8,
+          "contexts": 7,
+          "surfaces": [
+            "남자",
+            "남자예요"
+          ],
+          "sample": {
+            "segment_index": 26,
+            "timestamp": "1:43",
+            "text": "그런데 태웅이는 남자예요."
+          }
+        },
+        {
+          "identity": "남동생",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 6,
+          "contexts": 6,
+          "surfaces": [
+            "남동생",
+            "남동생은",
+            "남동생이",
+            "남동생이에요"
+          ],
+          "sample": {
+            "segment_index": 64,
+            "timestamp": "4:22",
+            "text": "'남자 동생' 줄여서 '남동생'이라고 해요."
+          }
+        },
+        {
+          "identity": "동생",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 6,
+          "contexts": 6,
+          "surfaces": [
+            "동생",
+            "동생이",
+            "동생이에요"
+          ],
+          "sample": {
+            "segment_index": 45,
+            "timestamp": "3:05",
+            "text": "동생이 남자예요. 여자예요."
+          }
+        },
+        {
+          "identity": "그리고",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 5,
+          "contexts": 5,
+          "surfaces": [
+            "그리고"
+          ],
+          "sample": {
+            "segment_index": 6,
+            "timestamp": "19s",
+            "text": "그리고 두 번째 시간에는 '있어요', '없어요' 배웠어요."
+          }
+        }
+      ],
+      "recycling": [
+        {
+          "identity": "있다",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 31,
+          "contexts": 21,
+          "surfaces": [
+            "있나",
+            "있네요",
+            "있어요",
+            "있죠"
+          ],
+          "sample": {
+            "segment_index": 6,
+            "timestamp": "19s",
+            "text": "그리고 두 번째 시간에는 '있어요', '없어요' 배웠어요."
+          }
+        },
+        {
+          "identity": "이",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 25,
+          "contexts": 23,
+          "surfaces": [
+            "이",
+            "이에요"
+          ],
+          "sample": {
+            "segment_index": 2,
+            "timestamp": "6s",
+            "text": "우리 첫 번째 시간에는 '이에요' '아니에요', 배웠어요."
+          }
+        },
+        {
+          "identity": "태웅",
+          "kind": "lexical",
+          "role": "proper_noun",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 22,
+          "contexts": 19,
+          "surfaces": [
+            "태웅이가",
+            "태웅이는",
+            "태웅이보다",
+            "태웅이에요",
+            "태웅이예요",
+            "태웅이의"
+          ],
+          "sample": {
+            "segment_index": 3,
+            "timestamp": "12s",
+            "text": "이 사람은 태웅이에요."
+          }
+        },
+        {
+          "identity": "누나",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 16,
+          "contexts": 13,
+          "surfaces": [
+            "누나",
+            "누나가",
+            "누나는",
+            "누나도",
+            "누나랑",
+            "누나예요"
+          ],
+          "sample": {
+            "segment_index": 7,
+            "timestamp": "26s",
+            "text": "태웅이는 누나가 있어요."
+          }
+        },
+        {
+          "identity": "저",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 13,
+          "contexts": 13,
+          "surfaces": [
+            "저는",
+            "저의",
+            "제"
+          ],
+          "sample": {
+            "segment_index": 121,
+            "timestamp": "8:23",
+            "text": "이 컵은 저의 컵이에요."
+          }
+        },
+        {
+          "identity": "사람",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 10,
+          "contexts": 10,
+          "surfaces": [
+            "사람",
+            "사람들은",
+            "사람은",
+            "사람의"
+          ],
+          "sample": {
+            "segment_index": 3,
+            "timestamp": "12s",
+            "text": "이 사람은 태웅이에요."
+          }
+        },
+        {
+          "identity": "누구",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 10,
+          "contexts": 9,
+          "surfaces": [
+            "누구에요",
+            "누구예요",
+            "누군지"
+          ],
+          "sample": {
+            "segment_index": 12,
+            "timestamp": "44s",
+            "text": "여러분, 이 아기는 누구예요?"
+          }
+        },
+        {
+          "identity": "배우다",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 7,
+          "contexts": 6,
+          "surfaces": [
+            "배웠는데",
+            "배웠어요"
+          ],
+          "sample": {
+            "segment_index": 2,
+            "timestamp": "6s",
+            "text": "우리 첫 번째 시간에는 '이에요' '아니에요', 배웠어요."
+          }
+        },
+        {
+          "identity": "하다",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 6,
+          "contexts": 6,
+          "surfaces": [
+            "할",
+            "해요",
+            "했잖아요"
+          ],
+          "sample": {
+            "segment_index": 64,
+            "timestamp": "4:22",
+            "text": "'남자 동생' 줄여서 '남동생'이라고 해요."
+          }
+        },
+        {
+          "identity": "네",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 6,
+          "contexts": 4,
+          "surfaces": [
+            "네"
+          ],
+          "sample": {
+            "segment_index": 79,
+            "timestamp": "5:30",
+            "text": "네. 로키는 형이 있어요."
+          }
+        }
+      ],
+      "hardest_segments": [
+        {
+          "timestamp": "5:09",
+          "text": "'여자 동생' 줄여서 '여동생', 여동생이에요.",
+          "load": {
+            "level": 3,
+            "label": "dense",
+            "heuristic_load": 5.0,
+            "novelty_load": 5.0,
+            "weighted_density": 0.7692,
+            "proper_noun_load": 0.0,
+            "support_uncertainty": 0
+          },
+          "reasons": [
+            "5 untracked/unassessed/deferred general lexical links",
+            "0 previously presented links",
+            "0 weak detected tracked-grammar links"
+          ],
+          "warnings": []
+        },
+        {
+          "timestamp": "4:22",
+          "text": "'남자 동생' 줄여서 '남동생'이라고 해요.",
+          "load": {
+            "level": 3,
+            "label": "dense",
+            "heuristic_load": 4.0,
+            "novelty_load": 4.0,
+            "weighted_density": 0.6154,
+            "proper_noun_load": 0.0,
+            "support_uncertainty": 0
+          },
+          "reasons": [
+            "4 untracked/unassessed/deferred general lexical links",
+            "0 previously presented links",
+            "0 weak detected tracked-grammar links"
+          ],
+          "warnings": []
+        },
+        {
+          "timestamp": "4:15",
+          "text": "리암은 노엘의 남자 동생,",
+          "load": {
+            "level": 3,
+            "label": "dense",
+            "heuristic_load": 3.5,
+            "novelty_load": 3.5,
+            "weighted_density": 1.0,
+            "proper_noun_load": 0.5,
+            "support_uncertainty": 0
+          },
+          "reasons": [
+            "3 untracked/unassessed/deferred general lexical links",
+            "0 previously presented links",
+            "0 weak detected tracked-grammar links",
+            "Proper names remain visible with reduced, capped segment influence"
+          ],
+          "warnings": [
+            "Multiple lexical heads in one span; load uses the maximum component novelty, not an independent sum"
+          ]
+        }
+      ],
+      "seconds": 0.053655650990549475,
+      "kiwi_calls": 151,
+      "warnings": [
+        "Auxiliary morphology may need untracked construction interpretation",
+        "Coverage describes candidate occurrences, not demonstrated comprehension or mastery",
+        "Learner state includes indirect Anki/contextual evidence and uncertain historical associations; fit confidence is capped at medium",
+        "Lemma-oriented matching cannot distinguish new senses of a familiar word (polysemy)",
+        "Multiple lexical heads in one span; load uses the maximum component novelty, not an independent sum",
+        "Tracked grammar coverage includes only five detectors; untracked constructions may exist",
+        "Transcript/text analysis does not establish listening comprehension or audio difficulty",
+        "Untracked means absent from the Knowledge Model, not definitely unknown to the learner"
+      ]
+    },
+    {
+      "content": {
+        "name": "tprs_4.txt",
+        "format": "tprs",
+        "kind": "tprs",
+        "original_hash": "34e03885d0fefc2593a709822b12c0e3394ba9158e2df9216dcac6bddba45e07",
+        "segments": 177
+      },
+      "summary": {
+        "fit": "stretch",
+        "confidence": "medium",
+        "assessment": "reading_linguistic_fit",
+        "listening_fit": "insufficient_evidence",
+        "reasons": [
+          "70.4% of effective lexical links are familiar/strong_familiar; 87.3% previously seen",
+          "26 unique untracked/unassessed/deferred general lexical identities",
+          "167/177 segments have load 0–1; 2 dense segments",
+          "2 dense clusters; longest difficult cluster 2",
+          "8 detected tracked grammar occurrences; proper names reported separately"
+        ],
+        "segment_load_distribution": {
+          "0": 85,
+          "1": 82,
+          "2": 8,
+          "3": 2
+        },
+        "dense_segment_ratio": 0.011299435028248588,
+        "dense_clusters": [
+          {
+            "start_index": 24,
+            "end_index": 24,
+            "length": 1,
+            "start_timestamp": "1:39",
+            "end_timestamp": "1:39"
+          },
+          {
+            "start_index": 147,
+            "end_index": 147,
+            "length": 1,
+            "start_timestamp": "10:23",
+            "end_timestamp": "10:23"
+          }
+        ],
+        "difficult_clusters": [
+          {
+            "start_index": 0,
+            "end_index": 0,
+            "length": 1,
+            "start_timestamp": "1s",
+            "end_timestamp": "1s"
+          },
+          {
+            "start_index": 3,
+            "end_index": 3,
+            "length": 1,
+            "start_timestamp": "10s",
+            "end_timestamp": "10s"
+          },
+          {
+            "start_index": 18,
+            "end_index": 18,
+            "length": 1,
+            "start_timestamp": "1:08",
+            "end_timestamp": "1:08"
+          },
+          {
+            "start_index": 24,
+            "end_index": 24,
+            "length": 1,
+            "start_timestamp": "1:39",
+            "end_timestamp": "1:39"
+          },
+          {
+            "start_index": 94,
+            "end_index": 94,
+            "length": 1,
+            "start_timestamp": "6:55",
+            "end_timestamp": "6:55"
+          },
+          {
+            "start_index": 129,
+            "end_index": 129,
+            "length": 1,
+            "start_timestamp": "9:11",
+            "end_timestamp": "9:11"
+          },
+          {
+            "start_index": 147,
+            "end_index": 147,
+            "length": 1,
+            "start_timestamp": "10:23",
+            "end_timestamp": "10:23"
+          },
+          {
+            "start_index": 166,
+            "end_index": 166,
+            "length": 1,
+            "start_timestamp": "11:40",
+            "end_timestamp": "11:40"
+          },
+          {
+            "start_index": 174,
+            "end_index": 175,
+            "length": 2,
+            "start_timestamp": "12:07",
+            "end_timestamp": "12:12"
+          }
+        ],
+        "longest_difficult_cluster": 2,
+        "total_novelty_load": 78.3125
+      },
+      "lexical": {
+        "occurrence_distribution": {
+          "strong_familiar": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "familiar": {
+            "count": 409,
+            "ratio": 0.7039586919104991
+          },
+          "seen": {
+            "count": 98,
+            "ratio": 0.1686746987951807
+          },
+          "deferred": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "unassessed": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "untracked": {
+            "count": 74,
+            "ratio": 0.12736660929432014
+          }
+        },
+        "unique_distribution": {
+          "strong_familiar": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "familiar": {
+            "count": 49,
+            "ratio": 0.5
+          },
+          "seen": {
+            "count": 17,
+            "ratio": 0.17346938775510204
+          },
+          "deferred": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "unassessed": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "untracked": {
+            "count": 32,
+            "ratio": 0.32653061224489793
+          }
+        },
+        "supported_coverage": 0.7039586919104991,
+        "previously_seen_coverage": 0.8726333907056798
+      },
+      "grammar": [
+        {
+          "identity": "-(으)면",
+          "kind": "grammar",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 6,
+          "contexts": 6,
+          "surfaces": [
+            "아니면"
+          ],
+          "sample": {
+            "segment_index": 119,
+            "timestamp": "8:33",
+            "text": "뉴욕은 프랑스에 있어요? 아니면 미국에 있어요?"
+          }
+        },
+        {
+          "identity": "-고 싶다",
+          "kind": "grammar",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 1,
+          "contexts": 1,
+          "surfaces": [
+            "오고 싶어"
+          ],
+          "sample": {
+            "segment_index": 102,
+            "timestamp": "7:29",
+            "text": "이 사람들 다 부산에 오고 싶어 해요."
+          }
+        },
+        {
+          "identity": "-아/어서",
+          "kind": "grammar",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 1,
+          "contexts": 1,
+          "surfaces": [
+            "줄여서"
+          ],
+          "sample": {
+            "segment_index": 70,
+            "timestamp": "5:17",
+            "text": "이것은 무엇이에요? 줄여서 \"이건 뭐예요?\" (같아요=)"
+          }
+        }
+      ],
+      "novelties": [
+        {
+          "identity": "하늘",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "medium",
+          "count": 13,
+          "contexts": 10,
+          "surfaces": [
+            "하늘",
+            "하늘에"
+          ],
+          "sample": {
+            "segment_index": 7,
+            "timestamp": "30s",
+            "text": "구름이 하늘,"
+          }
+        },
+        {
+          "identity": "오페라",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "low",
+          "count": 9,
+          "contexts": 7,
+          "surfaces": [
+            "오페라하우스는",
+            "오페라하우스예요"
+          ],
+          "sample": {
+            "segment_index": 91,
+            "timestamp": "6:46",
+            "text": "이건 오페라하우스예요."
+          }
+        },
+        {
+          "identity": "하우스",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "low",
+          "count": 9,
+          "contexts": 7,
+          "surfaces": [
+            "오페라하우스는",
+            "오페라하우스예요"
+          ],
+          "sample": {
+            "segment_index": 91,
+            "timestamp": "6:46",
+            "text": "이건 오페라하우스예요."
+          }
+        },
+        {
+          "identity": "아니요",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "low",
+          "count": 8,
+          "contexts": 7,
+          "surfaces": [
+            "아니요"
+          ],
+          "sample": {
+            "segment_index": 60,
+            "timestamp": "4:23",
+            "text": "아니요. 태웅이는 부산에 있어요."
+          }
+        },
+        {
+          "identity": "여러분",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 6,
+          "contexts": 6,
+          "surfaces": [
+            "여러분"
+          ],
+          "sample": {
+            "segment_index": 0,
+            "timestamp": "1s",
+            "text": "자 여러분"
+          }
+        },
+        {
+          "identity": "-(으)면",
+          "kind": "grammar",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 6,
+          "contexts": 6,
+          "surfaces": [
+            "아니면"
+          ],
+          "sample": {
+            "segment_index": 119,
+            "timestamp": "8:33",
+            "text": "뉴욕은 프랑스에 있어요? 아니면 미국에 있어요?"
+          }
+        },
+        {
+          "identity": "여신상",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "low",
+          "count": 6,
+          "contexts": 5,
+          "surfaces": [
+            "여신상",
+            "여신상은",
+            "여신상이"
+          ],
+          "sample": {
+            "segment_index": 71,
+            "timestamp": "5:25",
+            "text": "이건 '자유의 여신상'이에요."
+          }
+        },
+        {
+          "identity": "자유",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "low",
+          "count": 6,
+          "contexts": 5,
+          "surfaces": [
+            "자유의"
+          ],
+          "sample": {
+            "segment_index": 71,
+            "timestamp": "5:25",
+            "text": "이건 '자유의 여신상'이에요."
+          }
+        },
+        {
+          "identity": "그러면",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 4,
+          "contexts": 4,
+          "surfaces": [
+            "그러면"
+          ],
+          "sample": {
+            "segment_index": 88,
+            "timestamp": "6:35",
+            "text": "프랑스는 어디에 있어요? 그러면?"
+          }
+        },
+        {
+          "identity": "우리",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 3,
+          "contexts": 3,
+          "surfaces": [
+            "우리"
+          ],
+          "sample": {
+            "segment_index": 3,
+            "timestamp": "10s",
+            "text": "우리 지난 시간에 '있어요' '없어요' 배웠었어요."
+          }
+        }
+      ],
+      "recycling": [
+        {
+          "identity": "있다",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 126,
+          "contexts": 99,
+          "surfaces": [
+            "있고",
+            "있나",
+            "있다고",
+            "있다고요",
+            "있어요",
+            "있죠",
+            "있지"
+          ],
+          "sample": {
+            "segment_index": 3,
+            "timestamp": "10s",
+            "text": "우리 지난 시간에 '있어요' '없어요' 배웠었어요."
+          }
+        },
+        {
+          "identity": "어디",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 27,
+          "contexts": 23,
+          "surfaces": [
+            "어디",
+            "어디에"
+          ],
+          "sample": {
+            "segment_index": 6,
+            "timestamp": "25s",
+            "text": "구름이 '어디에' 어디에 있어요?"
+          }
+        },
+        {
+          "identity": "부산",
+          "kind": "lexical",
+          "role": "proper_noun",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 24,
+          "contexts": 19,
+          "surfaces": [
+            "부산",
+            "부산에",
+            "부산으로",
+            "부산은",
+            "부산이에요"
+          ],
+          "sample": {
+            "segment_index": 21,
+            "timestamp": "1:27",
+            "text": "저는 지금 부산에 있어요."
+          }
+        },
+        {
+          "identity": "한국",
+          "kind": "lexical",
+          "role": "proper_noun",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 21,
+          "contexts": 13,
+          "surfaces": [
+            "한국",
+            "한국에",
+            "한국은",
+            "한국이에요"
+          ],
+          "sample": {
+            "segment_index": 28,
+            "timestamp": "2:05",
+            "text": "부산은 한국에 있어요."
+          }
+        },
+        {
+          "identity": "태웅",
+          "kind": "lexical",
+          "role": "proper_noun",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 17,
+          "contexts": 17,
+          "surfaces": [
+            "태웅의의",
+            "태웅이가",
+            "태웅이는",
+            "태웅이랑",
+            "태웅이의"
+          ],
+          "sample": {
+            "segment_index": 17,
+            "timestamp": "1:06",
+            "text": "태웅이는, 저는"
+          }
+        },
+        {
+          "identity": "구름",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 14,
+          "contexts": 12,
+          "surfaces": [
+            "구름",
+            "구름은",
+            "구름이"
+          ],
+          "sample": {
+            "segment_index": 4,
+            "timestamp": "16s",
+            "text": "여기 '구름'"
+          }
+        },
+        {
+          "identity": "지구",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 13,
+          "contexts": 10,
+          "surfaces": [
+            "지구가",
+            "지구는",
+            "지구에"
+          ],
+          "sample": {
+            "segment_index": 38,
+            "timestamp": "2:42",
+            "text": "아시아는 지구에 있어요."
+          }
+        },
+        {
+          "identity": "아시아",
+          "kind": "lexical",
+          "role": "proper_noun",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 13,
+          "contexts": 7,
+          "surfaces": [
+            "아시아",
+            "아시아는",
+            "아시아에",
+            "아시아예요"
+          ],
+          "sample": {
+            "segment_index": 33,
+            "timestamp": "2:22",
+            "text": "한국은 아시아에 있어요."
+          }
+        },
+        {
+          "identity": "없다",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 12,
+          "contexts": 12,
+          "surfaces": [
+            "없네요",
+            "없어요"
+          ],
+          "sample": {
+            "segment_index": 3,
+            "timestamp": "10s",
+            "text": "우리 지난 시간에 '있어요' '없어요' 배웠었어요."
+          }
+        },
+        {
+          "identity": "여기",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 12,
+          "contexts": 8,
+          "surfaces": [
+            "여기",
+            "여기가",
+            "여기에",
+            "여긴"
+          ],
+          "sample": {
+            "segment_index": 4,
+            "timestamp": "16s",
+            "text": "여기 '구름'"
+          }
+        }
+      ],
+      "hardest_segments": [
+        {
+          "timestamp": "1:39",
+          "text": "좀비들이 막, 왁! 나와요.",
+          "load": {
+            "level": 3,
+            "label": "dense",
+            "heuristic_load": 4.0,
+            "novelty_load": 4.0,
+            "weighted_density": 1.0,
+            "proper_noun_load": 0.0,
+            "support_uncertainty": 0
+          },
+          "reasons": [
+            "4 untracked/unassessed/deferred general lexical links",
+            "0 previously presented links",
+            "0 weak detected tracked-grammar links"
+          ],
+          "warnings": []
+        },
+        {
+          "timestamp": "10:23",
+          "text": "BTS는 어느 나라 사람(들)이에요?",
+          "load": {
+            "level": 3,
+            "label": "dense",
+            "heuristic_load": 3.0,
+            "novelty_load": 3.0,
+            "weighted_density": 0.75,
+            "proper_noun_load": 0.0,
+            "support_uncertainty": 0
+          },
+          "reasons": [
+            "3 untracked/unassessed/deferred general lexical links",
+            "0 previously presented links",
+            "0 weak detected tracked-grammar links"
+          ],
+          "warnings": []
+        },
+        {
+          "timestamp": "12:07",
+          "text": "자, 우리 이번 시간에 '(어디)에 있어요' 배웠어요.",
+          "load": {
+            "level": 2,
+            "label": "productive_stretch",
+            "heuristic_load": 3.0,
+            "novelty_load": 3.0,
+            "weighted_density": 0.4286,
+            "proper_noun_load": 0.0,
+            "support_uncertainty": 0
+          },
+          "reasons": [
+            "3 untracked/unassessed/deferred general lexical links",
+            "0 previously presented links",
+            "0 weak detected tracked-grammar links"
+          ],
+          "warnings": []
+        }
+      ],
+      "seconds": 0.05914601299446076,
+      "kiwi_calls": 177,
+      "warnings": [
+        "Auxiliary morphology may need untracked construction interpretation",
+        "Coverage describes candidate occurrences, not demonstrated comprehension or mastery",
+        "Learner state includes indirect Anki/contextual evidence and uncertain historical associations; fit confidence is capped at medium",
+        "Lemma-oriented matching cannot distinguish new senses of a familiar word (polysemy)",
+        "Multiple lexical heads in one span; load uses the maximum component novelty, not an independent sum",
+        "Tracked grammar coverage includes only five detectors; untracked constructions may exist",
+        "Transcript/text analysis does not establish listening comprehension or audio difficulty",
+        "Untracked means absent from the Knowledge Model, not definitely unknown to the learner"
+      ]
+    },
+    {
+      "content": {
+        "name": "tprs_5.txt",
+        "format": "tprs",
+        "kind": "tprs",
+        "original_hash": "eac4be5a7899c8c6989a5f622ea25e1d88346b11b8b1407555c13dc65f042719",
+        "segments": 121
+      },
+      "summary": {
+        "fit": "productive",
+        "confidence": "medium",
+        "assessment": "reading_linguistic_fit",
+        "listening_fit": "insufficient_evidence",
+        "reasons": [
+          "76.4% of effective lexical links are familiar/strong_familiar; 91.9% previously seen",
+          "18 unique untracked/unassessed/deferred general lexical identities",
+          "110/121 segments have load 0–1; 0 dense segments",
+          "0 dense clusters; longest difficult cluster 2",
+          "4 detected tracked grammar occurrences; proper names reported separately"
+        ],
+        "segment_load_distribution": {
+          "0": 64,
+          "1": 46,
+          "2": 11,
+          "3": 0
+        },
+        "dense_segment_ratio": 0.0,
+        "dense_clusters": [],
+        "difficult_clusters": [
+          {
+            "start_index": 0,
+            "end_index": 0,
+            "length": 1,
+            "start_timestamp": "0s",
+            "end_timestamp": "0s"
+          },
+          {
+            "start_index": 3,
+            "end_index": 3,
+            "length": 1,
+            "start_timestamp": "11s",
+            "end_timestamp": "11s"
+          },
+          {
+            "start_index": 31,
+            "end_index": 31,
+            "length": 1,
+            "start_timestamp": "2:10",
+            "end_timestamp": "2:10"
+          },
+          {
+            "start_index": 50,
+            "end_index": 50,
+            "length": 1,
+            "start_timestamp": "3:44",
+            "end_timestamp": "3:44"
+          },
+          {
+            "start_index": 80,
+            "end_index": 80,
+            "length": 1,
+            "start_timestamp": "5:36",
+            "end_timestamp": "5:36"
+          },
+          {
+            "start_index": 82,
+            "end_index": 83,
+            "length": 2,
+            "start_timestamp": "5:46",
+            "end_timestamp": "5:55"
+          },
+          {
+            "start_index": 87,
+            "end_index": 87,
+            "length": 1,
+            "start_timestamp": "6:15",
+            "end_timestamp": "6:15"
+          },
+          {
+            "start_index": 97,
+            "end_index": 97,
+            "length": 1,
+            "start_timestamp": "6:53",
+            "end_timestamp": "6:53"
+          },
+          {
+            "start_index": 107,
+            "end_index": 107,
+            "length": 1,
+            "start_timestamp": "7:46",
+            "end_timestamp": "7:46"
+          },
+          {
+            "start_index": 119,
+            "end_index": 119,
+            "length": 1,
+            "start_timestamp": "8:15",
+            "end_timestamp": "8:15"
+          }
+        ],
+        "longest_difficult_cluster": 2,
+        "total_novelty_load": 56.6375
+      },
+      "lexical": {
+        "occurrence_distribution": {
+          "strong_familiar": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "familiar": {
+            "count": 331,
+            "ratio": 0.7644341801385681
+          },
+          "seen": {
+            "count": 67,
+            "ratio": 0.15473441108545036
+          },
+          "deferred": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "unassessed": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "untracked": {
+            "count": 35,
+            "ratio": 0.08083140877598152
+          }
+        },
+        "unique_distribution": {
+          "strong_familiar": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "familiar": {
+            "count": 58,
+            "ratio": 0.5918367346938775
+          },
+          "seen": {
+            "count": 21,
+            "ratio": 0.21428571428571427
+          },
+          "deferred": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "unassessed": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "untracked": {
+            "count": 19,
+            "ratio": 0.19387755102040816
+          }
+        },
+        "supported_coverage": 0.7644341801385681,
+        "previously_seen_coverage": 0.9191685912240185
+      },
+      "grammar": [
+        {
+          "identity": "-는데",
+          "kind": "grammar",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 2,
+          "contexts": 2,
+          "surfaces": [
+            "스타로드인데",
+            "좋아하는데"
+          ],
+          "sample": {
+            "segment_index": 84,
+            "timestamp": "6:05",
+            "text": "아빠가 스타로드인데,"
+          }
+        },
+        {
+          "identity": "-(으)면",
+          "kind": "grammar",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 1,
+          "contexts": 1,
+          "surfaces": [
+            "마시면"
+          ],
+          "sample": {
+            "segment_index": 101,
+            "timestamp": "7:11",
+            "text": "초밥이랑 맥주랑 같이 먹고 마시면 진짜 맛있어요."
+          }
+        },
+        {
+          "identity": "-아/어서",
+          "kind": "grammar",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 1,
+          "contexts": 1,
+          "surfaces": [
+            "좋아해서"
+          ],
+          "sample": {
+            "segment_index": 97,
+            "timestamp": "6:53",
+            "text": "맥주를 너무 좋아해서 잔을 한 개, 두 개 들고 있어요"
+          }
+        }
+      ],
+      "novelties": [
+        {
+          "identity": "북극곰",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "medium",
+          "count": 7,
+          "contexts": 4,
+          "surfaces": [
+            "북극곰",
+            "북극곰은"
+          ],
+          "sample": {
+            "segment_index": 15,
+            "timestamp": "59s",
+            "text": "강아지, 고양이, 호랑이, 북극곰, 판다"
+          }
+        },
+        {
+          "identity": "그러면",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 6,
+          "contexts": 6,
+          "surfaces": [
+            "그러면"
+          ],
+          "sample": {
+            "segment_index": 26,
+            "timestamp": "1:43",
+            "text": "그러면 강아지는 상자를 안 좋아해요?"
+          }
+        },
+        {
+          "identity": "버거",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "medium",
+          "count": 6,
+          "contexts": 3,
+          "surfaces": [
+            "치즈버거를"
+          ],
+          "sample": {
+            "segment_index": 71,
+            "timestamp": "4:58",
+            "text": "아이언맨은 치즈버거를 좋아해요."
+          }
+        },
+        {
+          "identity": "치즈",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "medium",
+          "count": 6,
+          "contexts": 3,
+          "surfaces": [
+            "치즈버거를"
+          ],
+          "sample": {
+            "segment_index": 71,
+            "timestamp": "4:58",
+            "text": "아이언맨은 치즈버거를 좋아해요."
+          }
+        },
+        {
+          "identity": "팔다",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "low",
+          "count": 6,
+          "contexts": 3,
+          "surfaces": [
+            "판다는"
+          ],
+          "sample": {
+            "segment_index": 52,
+            "timestamp": "3:56",
+            "text": "그러면 판다는 뭘 좋아해요?"
+          }
+        },
+        {
+          "identity": "자",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 5,
+          "contexts": 5,
+          "surfaces": [
+            "자"
+          ],
+          "sample": {
+            "segment_index": 0,
+            "timestamp": "0s",
+            "text": "자 여러분 안녕하세요."
+          }
+        },
+        {
+          "identity": "여러분",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 4,
+          "contexts": 4,
+          "surfaces": [
+            "여러분"
+          ],
+          "sample": {
+            "segment_index": 0,
+            "timestamp": "0s",
+            "text": "자 여러분 안녕하세요."
+          }
+        },
+        {
+          "identity": "두",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "low",
+          "count": 4,
+          "contexts": 4,
+          "surfaces": [
+            "두"
+          ],
+          "sample": {
+            "segment_index": 3,
+            "timestamp": "11s",
+            "text": "여러분 우리 episode 2, 두 번째 시간에 '있어요' '없어요' 했어요."
+          }
+        },
+        {
+          "identity": "무엇",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "low",
+          "count": 4,
+          "contexts": 4,
+          "surfaces": [
+            "무엇을"
+          ],
+          "sample": {
+            "segment_index": 22,
+            "timestamp": "1:27",
+            "text": "고양이는 무엇을 좋아해요?(뭘 좋아해요?)"
+          }
+        },
+        {
+          "identity": "불리다",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "low",
+          "count": 3,
+          "contexts": 3,
+          "surfaces": [
+            "불리"
+          ],
+          "sample": {
+            "segment_index": 80,
+            "timestamp": "5:36",
+            "text": "조커랑 불리 맥과이어가 춤을 좋아해요."
+          }
+        }
+      ],
+      "recycling": [
+        {
+          "identity": "좋아하다",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 89,
+          "contexts": 65,
+          "surfaces": [
+            "좋아하고",
+            "좋아하는데",
+            "좋아해서",
+            "좋아해요"
+          ],
+          "sample": {
+            "segment_index": 9,
+            "timestamp": "37s",
+            "text": "저는 초밥을 좋아해요.😘"
+          }
+        },
+        {
+          "identity": "고양이",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 15,
+          "contexts": 12,
+          "surfaces": [
+            "고양이",
+            "고양이는",
+            "고양이도",
+            "고양이를"
+          ],
+          "sample": {
+            "segment_index": 15,
+            "timestamp": "59s",
+            "text": "강아지, 고양이, 호랑이, 북극곰, 판다"
+          }
+        },
+        {
+          "identity": "안",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 14,
+          "contexts": 14,
+          "surfaces": [
+            "안"
+          ],
+          "sample": {
+            "segment_index": 26,
+            "timestamp": "1:43",
+            "text": "그러면 강아지는 상자를 안 좋아해요?"
+          }
+        },
+        {
+          "identity": "상자",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 14,
+          "contexts": 10,
+          "surfaces": [
+            "상자도",
+            "상자를"
+          ],
+          "sample": {
+            "segment_index": 23,
+            "timestamp": "1:33",
+            "text": "고양이는 상자를 좋아해요."
+          }
+        },
+        {
+          "identity": "저",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 13,
+          "contexts": 11,
+          "surfaces": [
+            "저",
+            "저는",
+            "저도",
+            "제가"
+          ],
+          "sample": {
+            "segment_index": 7,
+            "timestamp": "29s",
+            "text": "왜냐면 제가 다 먹었어요."
+          }
+        },
+        {
+          "identity": "강아지",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 12,
+          "contexts": 9,
+          "surfaces": [
+            "강아지",
+            "강아지는",
+            "강아지도",
+            "강아지들이"
+          ],
+          "sample": {
+            "segment_index": 15,
+            "timestamp": "59s",
+            "text": "강아지, 고양이, 호랑이, 북극곰, 판다"
+          }
+        },
+        {
+          "identity": "스타로드",
+          "kind": "lexical",
+          "role": "proper_noun",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 11,
+          "contexts": 11,
+          "surfaces": [
+            "스타로드",
+            "스타로드는",
+            "스타로드랑",
+            "스타로드를",
+            "스타로드예요",
+            "스타로드의",
+            "스타로드인데"
+          ],
+          "sample": {
+            "segment_index": 68,
+            "timestamp": "4:49",
+            "text": "이 사람은 스타로드예요."
+          }
+        },
+        {
+          "identity": "춤",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 8,
+          "contexts": 8,
+          "surfaces": [
+            "dancing춤을",
+            "춤",
+            "춤을"
+          ],
+          "sample": {
+            "segment_index": 74,
+            "timestamp": "5:10",
+            "text": "스타로드는 dancing춤을 좋아해요."
+          }
+        },
+        {
+          "identity": "동물",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 8,
+          "contexts": 7,
+          "surfaces": [
+            "동물들",
+            "동물들이",
+            "동물들이에요",
+            "동물이",
+            "동물이에요"
+          ],
+          "sample": {
+            "segment_index": 12,
+            "timestamp": "49s",
+            "text": "여기 동물들이 있어요."
+          }
+        },
+        {
+          "identity": "뭐",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 8,
+          "contexts": 7,
+          "surfaces": [
+            "뭘"
+          ],
+          "sample": {
+            "segment_index": 22,
+            "timestamp": "1:27",
+            "text": "고양이는 무엇을 좋아해요?(뭘 좋아해요?)"
+          }
+        }
+      ],
+      "hardest_segments": [
+        {
+          "timestamp": "0s",
+          "text": "자 여러분 안녕하세요.",
+          "load": {
+            "level": 2,
+            "label": "productive_stretch",
+            "heuristic_load": 2.45,
+            "novelty_load": 2.45,
+            "weighted_density": 0.8167,
+            "proper_noun_load": 0.0,
+            "support_uncertainty": 0
+          },
+          "reasons": [
+            "2 untracked/unassessed/deferred general lexical links",
+            "1 previously presented links",
+            "0 weak detected tracked-grammar links"
+          ],
+          "warnings": []
+        },
+        {
+          "timestamp": "11s",
+          "text": "여러분 우리 episode 2, 두 번째 시간에 '있어요' '없어요' 했어요.",
+          "load": {
+            "level": 2,
+            "label": "productive_stretch",
+            "heuristic_load": 2.45,
+            "novelty_load": 2.45,
+            "weighted_density": 0.35,
+            "proper_noun_load": 0.0,
+            "support_uncertainty": 0
+          },
+          "reasons": [
+            "2 untracked/unassessed/deferred general lexical links",
+            "1 previously presented links",
+            "0 weak detected tracked-grammar links"
+          ],
+          "warnings": []
+        },
+        {
+          "timestamp": "5:55",
+          "text": "여러분, 이.. 스타로드의 아들은 캡틴 아메리카를 좋아해요.",
+          "load": {
+            "level": 2,
+            "label": "productive_stretch",
+            "heuristic_load": 2.1125,
+            "novelty_load": 2.1125,
+            "weighted_density": 0.4694,
+            "proper_noun_load": 0.1125,
+            "support_uncertainty": 0
+          },
+          "reasons": [
+            "2 untracked/unassessed/deferred general lexical links",
+            "1 previously presented links",
+            "0 weak detected tracked-grammar links",
+            "Proper names remain visible with reduced, capped segment influence"
+          ],
+          "warnings": []
+        }
+      ],
+      "seconds": 0.06051070200919639,
+      "kiwi_calls": 121,
+      "warnings": [
+        "Auxiliary morphology may need untracked construction interpretation",
+        "Coverage describes candidate occurrences, not demonstrated comprehension or mastery",
+        "Learner state includes indirect Anki/contextual evidence and uncertain historical associations; fit confidence is capped at medium",
+        "Lemma-oriented matching cannot distinguish new senses of a familiar word (polysemy)",
+        "Multiple lexical heads in one span; load uses the maximum component novelty, not an independent sum",
+        "Tracked grammar coverage includes only five detectors; untracked constructions may exist",
+        "Transcript/text analysis does not establish listening comprehension or audio difficulty",
+        "Untracked means absent from the Knowledge Model, not definitely unknown to the learner"
+      ]
+    },
+    {
+      "content": {
+        "name": "tprs_6.txt",
+        "format": "tprs",
+        "kind": "tprs",
+        "original_hash": "d43eb546ac97e32592c4fd9ce1ac116fd41f2fb62be49e2c3f57bcca8fcff81e",
+        "segments": 120
+      },
+      "summary": {
+        "fit": "stretch",
+        "confidence": "medium",
+        "assessment": "reading_linguistic_fit",
+        "listening_fit": "insufficient_evidence",
+        "reasons": [
+          "69.9% of effective lexical links are familiar/strong_familiar; 87.6% previously seen",
+          "24 unique untracked/unassessed/deferred general lexical identities",
+          "107/120 segments have load 0–1; 3 dense segments",
+          "3 dense clusters; longest difficult cluster 4",
+          "1 detected tracked grammar occurrences; proper names reported separately"
+        ],
+        "segment_load_distribution": {
+          "0": 51,
+          "1": 56,
+          "2": 10,
+          "3": 3
+        },
+        "dense_segment_ratio": 0.025,
+        "dense_clusters": [
+          {
+            "start_index": 3,
+            "end_index": 3,
+            "length": 1,
+            "start_timestamp": "12s",
+            "end_timestamp": "12s"
+          },
+          {
+            "start_index": 94,
+            "end_index": 94,
+            "length": 1,
+            "start_timestamp": "6:40",
+            "end_timestamp": "6:40"
+          },
+          {
+            "start_index": 117,
+            "end_index": 117,
+            "length": 1,
+            "start_timestamp": "8:25",
+            "end_timestamp": "8:25"
+          }
+        ],
+        "difficult_clusters": [
+          {
+            "start_index": 3,
+            "end_index": 3,
+            "length": 1,
+            "start_timestamp": "12s",
+            "end_timestamp": "12s"
+          },
+          {
+            "start_index": 24,
+            "end_index": 24,
+            "length": 1,
+            "start_timestamp": "1:33",
+            "end_timestamp": "1:33"
+          },
+          {
+            "start_index": 33,
+            "end_index": 33,
+            "length": 1,
+            "start_timestamp": "1:59",
+            "end_timestamp": "1:59"
+          },
+          {
+            "start_index": 59,
+            "end_index": 59,
+            "length": 1,
+            "start_timestamp": "3:57",
+            "end_timestamp": "3:57"
+          },
+          {
+            "start_index": 74,
+            "end_index": 74,
+            "length": 1,
+            "start_timestamp": "5:08",
+            "end_timestamp": "5:08"
+          },
+          {
+            "start_index": 90,
+            "end_index": 90,
+            "length": 1,
+            "start_timestamp": "6:17",
+            "end_timestamp": "6:17"
+          },
+          {
+            "start_index": 93,
+            "end_index": 94,
+            "length": 2,
+            "start_timestamp": "6:34",
+            "end_timestamp": "6:40"
+          },
+          {
+            "start_index": 103,
+            "end_index": 103,
+            "length": 1,
+            "start_timestamp": "7:17",
+            "end_timestamp": "7:17"
+          },
+          {
+            "start_index": 115,
+            "end_index": 118,
+            "length": 4,
+            "start_timestamp": "8:08",
+            "end_timestamp": "8:28"
+          }
+        ],
+        "longest_difficult_cluster": 4,
+        "total_novelty_load": 78.575
+      },
+      "lexical": {
+        "occurrence_distribution": {
+          "strong_familiar": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "familiar": {
+            "count": 292,
+            "ratio": 0.6985645933014354
+          },
+          "seen": {
+            "count": 74,
+            "ratio": 0.17703349282296652
+          },
+          "deferred": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "unassessed": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "untracked": {
+            "count": 52,
+            "ratio": 0.12440191387559808
+          }
+        },
+        "unique_distribution": {
+          "strong_familiar": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "familiar": {
+            "count": 47,
+            "ratio": 0.5222222222222223
+          },
+          "seen": {
+            "count": 19,
+            "ratio": 0.2111111111111111
+          },
+          "deferred": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "unassessed": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "untracked": {
+            "count": 24,
+            "ratio": 0.26666666666666666
+          }
+        },
+        "supported_coverage": 0.6985645933014354,
+        "previously_seen_coverage": 0.8755980861244019
+      },
+      "grammar": [
+        {
+          "identity": "-고 싶다",
+          "kind": "grammar",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 1,
+          "contexts": 1,
+          "surfaces": [
+            "먹고 싶네요"
+          ],
+          "sample": {
+            "segment_index": 102,
+            "timestamp": "7:15",
+            "text": "또 먹고 싶네요."
+          }
+        }
+      ],
+      "novelties": [
+        {
+          "identity": "그러면",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 9,
+          "contexts": 9,
+          "surfaces": [
+            "그러면"
+          ],
+          "sample": {
+            "segment_index": 14,
+            "timestamp": "54s",
+            "text": "그러면 코알라는 뭘 먹어요?"
+          }
+        },
+        {
+          "identity": "여러분",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 8,
+          "contexts": 8,
+          "surfaces": [
+            "여러분",
+            "여러분은",
+            "여러분의"
+          ],
+          "sample": {
+            "segment_index": 0,
+            "timestamp": "0s",
+            "text": "여러분 안녕하세요."
+          }
+        },
+        {
+          "identity": "언제",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "low",
+          "count": 7,
+          "contexts": 5,
+          "surfaces": [
+            "언제"
+          ],
+          "sample": {
+            "segment_index": 59,
+            "timestamp": "3:57",
+            "text": "그러면 언제? 언제 먹어요?"
+          }
+        },
+        {
+          "identity": "떡볶이",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "medium",
+          "count": 6,
+          "contexts": 6,
+          "surfaces": [
+            "떡볶이",
+            "떡볶이는",
+            "떡볶이도",
+            "떡볶이를",
+            "떡볶이에요"
+          ],
+          "sample": {
+            "segment_index": 93,
+            "timestamp": "6:34",
+            "text": "여기 떡볶이에요. 그리고 튀김이에요"
+          }
+        },
+        {
+          "identity": "고기",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "low",
+          "count": 6,
+          "contexts": 5,
+          "surfaces": [
+            "고기를",
+            "고기지"
+          ],
+          "sample": {
+            "segment_index": 28,
+            "timestamp": "1:46",
+            "text": "사자는 고기를 먹어요."
+          }
+        },
+        {
+          "identity": "돈가스",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "low",
+          "count": 5,
+          "contexts": 5,
+          "surfaces": [
+            "돈가스",
+            "돈가스를",
+            "돈가스예요"
+          ],
+          "sample": {
+            "segment_index": 86,
+            "timestamp": "6:04",
+            "text": "이 음식은 돈가스예요."
+          }
+        },
+        {
+          "identity": "고래",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "low",
+          "count": 5,
+          "contexts": 4,
+          "surfaces": [
+            "고래는"
+          ],
+          "sample": {
+            "segment_index": 31,
+            "timestamp": "1:53",
+            "text": "고래는 고기를 먹어요?"
+          }
+        },
+        {
+          "identity": "사자",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "low",
+          "count": 5,
+          "contexts": 4,
+          "surfaces": [
+            "사자는"
+          ],
+          "sample": {
+            "segment_index": 20,
+            "timestamp": "1:22",
+            "text": "사자는 초밥을 먹어요?"
+          }
+        },
+        {
+          "identity": "튀김",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 5,
+          "contexts": 3,
+          "surfaces": [
+            "새우튀김",
+            "오징어튀김",
+            "튀김",
+            "튀김이에요"
+          ],
+          "sample": {
+            "segment_index": 93,
+            "timestamp": "6:34",
+            "text": "여기 떡볶이에요. 그리고 튀김이에요"
+          }
+        },
+        {
+          "identity": "무슨",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "low",
+          "count": 4,
+          "contexts": 3,
+          "surfaces": [
+            "무슨"
+          ],
+          "sample": {
+            "segment_index": 29,
+            "timestamp": "1:49",
+            "text": "무슨 고기지..?"
+          }
+        }
+      ],
+      "recycling": [
+        {
+          "identity": "먹다",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 88,
+          "contexts": 66,
+          "surfaces": [
+            "먹고",
+            "먹어요",
+            "먹었어요",
+            "먹을",
+            "먹을까요"
+          ],
+          "sample": {
+            "segment_index": 6,
+            "timestamp": "20s",
+            "text": "태웅이가 초밥을 먹어요."
+          }
+        },
+        {
+          "identity": "초밥",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 23,
+          "contexts": 21,
+          "surfaces": [
+            "초밥",
+            "초밥도",
+            "초밥은",
+            "초밥을"
+          ],
+          "sample": {
+            "segment_index": 4,
+            "timestamp": "15s",
+            "text": "'초밥을 좋아해요' 했었어요."
+          }
+        },
+        {
+          "identity": "안",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 15,
+          "contexts": 10,
+          "surfaces": [
+            "안"
+          ],
+          "sample": {
+            "segment_index": 11,
+            "timestamp": "42s",
+            "text": "어...아니요. 안 먹어요."
+          }
+        },
+        {
+          "identity": "이",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 14,
+          "contexts": 13,
+          "surfaces": [
+            "이"
+          ],
+          "sample": {
+            "segment_index": 46,
+            "timestamp": "2:48",
+            "text": "그런데 이 케이크는 연어 케이크래요."
+          }
+        },
+        {
+          "identity": "음식",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 14,
+          "contexts": 10,
+          "surfaces": [
+            "음식",
+            "음식들이",
+            "음식은",
+            "음식을",
+            "음식이에요",
+            "음식인지"
+          ],
+          "sample": {
+            "segment_index": 77,
+            "timestamp": "5:25",
+            "text": "초밥은 '음식'이에요."
+          }
+        },
+        {
+          "identity": "저",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 12,
+          "contexts": 12,
+          "surfaces": [
+            "저",
+            "저는",
+            "제가"
+          ],
+          "sample": {
+            "segment_index": 53,
+            "timestamp": "3:26",
+            "text": "잘 모르겠어요, 저는.."
+          }
+        },
+        {
+          "identity": "케이크",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 10,
+          "contexts": 9,
+          "surfaces": [
+            "케이크",
+            "케이크는",
+            "케이크도",
+            "케이크래요",
+            "케이크를",
+            "케이크예요"
+          ],
+          "sample": {
+            "segment_index": 41,
+            "timestamp": "2:27",
+            "text": "고양이는 케이크를 먹어요?"
+          }
+        },
+        {
+          "identity": "고양이",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 8,
+          "contexts": 8,
+          "surfaces": [
+            "고양이가",
+            "고양이는",
+            "고양이용"
+          ],
+          "sample": {
+            "segment_index": 41,
+            "timestamp": "2:27",
+            "text": "고양이는 케이크를 먹어요?"
+          }
+        },
+        {
+          "identity": "뭐",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 7,
+          "contexts": 7,
+          "surfaces": [
+            "뭐",
+            "뭐예요",
+            "뭘"
+          ],
+          "sample": {
+            "segment_index": 14,
+            "timestamp": "54s",
+            "text": "그러면 코알라는 뭘 먹어요?"
+          }
+        },
+        {
+          "identity": "지금",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 6,
+          "contexts": 5,
+          "surfaces": [
+            "지금"
+          ],
+          "sample": {
+            "segment_index": 64,
+            "timestamp": "4:29",
+            "text": "지금, 지금 태웅이가 초밥을 먹어요?"
+          }
+        }
+      ],
+      "hardest_segments": [
+        {
+          "timestamp": "12s",
+          "text": "여러분 우리, 지난 시간에",
+          "load": {
+            "level": 3,
+            "label": "dense",
+            "heuristic_load": 3.0,
+            "novelty_load": 3.0,
+            "weighted_density": 0.75,
+            "proper_noun_load": 0.0,
+            "support_uncertainty": 0
+          },
+          "reasons": [
+            "3 untracked/unassessed/deferred general lexical links",
+            "0 previously presented links",
+            "0 weak detected tracked-grammar links"
+          ],
+          "warnings": []
+        },
+        {
+          "timestamp": "6:40",
+          "text": "오징어튀김, 새우튀김.. 튀김이에요.",
+          "load": {
+            "level": 3,
+            "label": "dense",
+            "heuristic_load": 3.0,
+            "novelty_load": 3.0,
+            "weighted_density": 1.0,
+            "proper_noun_load": 0.0,
+            "support_uncertainty": 0
+          },
+          "reasons": [
+            "5 untracked/unassessed/deferred general lexical links",
+            "0 previously presented links",
+            "0 weak detected tracked-grammar links"
+          ],
+          "warnings": [
+            "Multiple lexical heads in one span; load uses the maximum component novelty, not an independent sum"
+          ]
+        },
+        {
+          "timestamp": "8:25",
+          "text": "밑에 댓글 남겨주세요.",
+          "load": {
+            "level": 3,
+            "label": "dense",
+            "heuristic_load": 3.0,
+            "novelty_load": 3.0,
+            "weighted_density": 1.0,
+            "proper_noun_load": 0.0,
+            "support_uncertainty": 0
+          },
+          "reasons": [
+            "3 untracked/unassessed/deferred general lexical links",
+            "0 previously presented links",
+            "0 weak detected tracked-grammar links"
+          ],
+          "warnings": [
+            "Auxiliary morphology may need untracked construction interpretation",
+            "Multiple lexical heads in one span; load uses the maximum component novelty, not an independent sum"
+          ]
+        }
+      ],
+      "seconds": 0.04649336599686649,
+      "kiwi_calls": 120,
+      "warnings": [
+        "Auxiliary morphology may need untracked construction interpretation",
+        "Coverage describes candidate occurrences, not demonstrated comprehension or mastery",
+        "Learner state includes indirect Anki/contextual evidence and uncertain historical associations; fit confidence is capped at medium",
+        "Lemma-oriented matching cannot distinguish new senses of a familiar word (polysemy)",
+        "Multiple lexical heads in one span; load uses the maximum component novelty, not an independent sum",
+        "Tracked grammar coverage includes only five detectors; untracked constructions may exist",
+        "Transcript/text analysis does not establish listening comprehension or audio difficulty",
+        "Untracked means absent from the Knowledge Model, not definitely unknown to the learner"
+      ]
+    },
+    {
+      "content": {
+        "name": "tprs_7.txt",
+        "format": "tprs",
+        "kind": "tprs",
+        "original_hash": "ed72c5f2c1db63633c3b46fe15107fcf5a57b50ca8ee0f3eac77c328521e2c5b",
+        "segments": 115
+      },
+      "summary": {
+        "fit": "stretch",
+        "confidence": "medium",
+        "assessment": "reading_linguistic_fit",
+        "listening_fit": "insufficient_evidence",
+        "reasons": [
+          "69.3% of effective lexical links are familiar/strong_familiar; 84.7% previously seen",
+          "28 unique untracked/unassessed/deferred general lexical identities",
+          "101/115 segments have load 0–1; 3 dense segments",
+          "3 dense clusters; longest difficult cluster 2",
+          "8 detected tracked grammar occurrences; proper names reported separately"
+        ],
+        "segment_load_distribution": {
+          "0": 43,
+          "1": 58,
+          "2": 11,
+          "3": 3
+        },
+        "dense_segment_ratio": 0.02608695652173913,
+        "dense_clusters": [
+          {
+            "start_index": 0,
+            "end_index": 0,
+            "length": 1,
+            "start_timestamp": "0s",
+            "end_timestamp": "0s"
+          },
+          {
+            "start_index": 71,
+            "end_index": 71,
+            "length": 1,
+            "start_timestamp": "5:08",
+            "end_timestamp": "5:08"
+          },
+          {
+            "start_index": 73,
+            "end_index": 73,
+            "length": 1,
+            "start_timestamp": "5:18",
+            "end_timestamp": "5:18"
+          }
+        ],
+        "difficult_clusters": [
+          {
+            "start_index": 0,
+            "end_index": 0,
+            "length": 1,
+            "start_timestamp": "0s",
+            "end_timestamp": "0s"
+          },
+          {
+            "start_index": 3,
+            "end_index": 3,
+            "length": 1,
+            "start_timestamp": "10s",
+            "end_timestamp": "10s"
+          },
+          {
+            "start_index": 40,
+            "end_index": 40,
+            "length": 1,
+            "start_timestamp": "2:24",
+            "end_timestamp": "2:24"
+          },
+          {
+            "start_index": 49,
+            "end_index": 49,
+            "length": 1,
+            "start_timestamp": "3:15",
+            "end_timestamp": "3:15"
+          },
+          {
+            "start_index": 51,
+            "end_index": 51,
+            "length": 1,
+            "start_timestamp": "3:27",
+            "end_timestamp": "3:27"
+          },
+          {
+            "start_index": 68,
+            "end_index": 68,
+            "length": 1,
+            "start_timestamp": "4:52",
+            "end_timestamp": "4:52"
+          },
+          {
+            "start_index": 71,
+            "end_index": 71,
+            "length": 1,
+            "start_timestamp": "5:08",
+            "end_timestamp": "5:08"
+          },
+          {
+            "start_index": 73,
+            "end_index": 73,
+            "length": 1,
+            "start_timestamp": "5:18",
+            "end_timestamp": "5:18"
+          },
+          {
+            "start_index": 87,
+            "end_index": 87,
+            "length": 1,
+            "start_timestamp": "6:27",
+            "end_timestamp": "6:27"
+          },
+          {
+            "start_index": 97,
+            "end_index": 97,
+            "length": 1,
+            "start_timestamp": "7:10",
+            "end_timestamp": "7:10"
+          },
+          {
+            "start_index": 107,
+            "end_index": 108,
+            "length": 2,
+            "start_timestamp": "7:51",
+            "end_timestamp": "7:58"
+          },
+          {
+            "start_index": 112,
+            "end_index": 113,
+            "length": 2,
+            "start_timestamp": "8:14",
+            "end_timestamp": "8:18"
+          }
+        ],
+        "longest_difficult_cluster": 2,
+        "total_novelty_load": 76.2
+      },
+      "lexical": {
+        "occurrence_distribution": {
+          "strong_familiar": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "familiar": {
+            "count": 271,
+            "ratio": 0.6930946291560103
+          },
+          "seen": {
+            "count": 60,
+            "ratio": 0.1534526854219949
+          },
+          "deferred": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "unassessed": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "untracked": {
+            "count": 60,
+            "ratio": 0.1534526854219949
+          }
+        },
+        "unique_distribution": {
+          "strong_familiar": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "familiar": {
+            "count": 51,
+            "ratio": 0.504950495049505
+          },
+          "seen": {
+            "count": 19,
+            "ratio": 0.18811881188118812
+          },
+          "deferred": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "unassessed": {
+            "count": 0,
+            "ratio": 0.0
+          },
+          "untracked": {
+            "count": 31,
+            "ratio": 0.3069306930693069
+          }
+        },
+        "supported_coverage": 0.6930946291560103,
+        "previously_seen_coverage": 0.8465473145780051
+      },
+      "grammar": [
+        {
+          "identity": "-아/어서",
+          "kind": "grammar",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 6,
+          "contexts": 5,
+          "surfaces": [
+            "가서",
+            "썰어서"
+          ],
+          "sample": {
+            "segment_index": 66,
+            "timestamp": "4:39",
+            "text": "양고기 집에 가서 양고기를 먹었어요."
+          }
+        },
+        {
+          "identity": "-(으)면",
+          "kind": "grammar",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 1,
+          "contexts": 1,
+          "surfaces": [
+            "갔으면"
+          ],
+          "sample": {
+            "segment_index": 112,
+            "timestamp": "8:14",
+            "text": "어디 갔으면 밑에 댓글 남겨 주세요."
+          }
+        },
+        {
+          "identity": "-고 싶다",
+          "kind": "grammar",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 1,
+          "contexts": 1,
+          "surfaces": [
+            "먹고 싶어요"
+          ],
+          "sample": {
+            "segment_index": 72,
+            "timestamp": "5:16",
+            "text": "또 먹고 싶어요."
+          }
+        }
+      ],
+      "novelties": [
+        {
+          "identity": "샌드위치",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 8,
+          "contexts": 7,
+          "surfaces": [
+            "샌드위치",
+            "샌드위치를"
+          ],
+          "sample": {
+            "segment_index": 73,
+            "timestamp": "5:18",
+            "text": "우리 지난 시간에 '샌드위치/돈가스/떡볶이를 먹었어요' 얘기했어요."
+          }
+        },
+        {
+          "identity": "떡볶이",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "medium",
+          "count": 8,
+          "contexts": 6,
+          "surfaces": [
+            "떡볶이",
+            "떡볶이를",
+            "떡볶이집은"
+          ],
+          "sample": {
+            "segment_index": 73,
+            "timestamp": "5:18",
+            "text": "우리 지난 시간에 '샌드위치/돈가스/떡볶이를 먹었어요' 얘기했어요."
+          }
+        },
+        {
+          "identity": "친척",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "low",
+          "count": 6,
+          "contexts": 6,
+          "surfaces": [
+            "친척"
+          ],
+          "sample": {
+            "segment_index": 41,
+            "timestamp": "2:29",
+            "text": "이 사람들은 태웅이의 '친척'들이에요."
+          }
+        },
+        {
+          "identity": "-아/어서",
+          "kind": "grammar",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 6,
+          "contexts": 5,
+          "surfaces": [
+            "가서",
+            "썰어서"
+          ],
+          "sample": {
+            "segment_index": 66,
+            "timestamp": "4:39",
+            "text": "양고기 집에 가서 양고기를 먹었어요."
+          }
+        },
+        {
+          "identity": "돈가스",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "low",
+          "count": 6,
+          "contexts": 5,
+          "surfaces": [
+            "돈가스",
+            "돈가스를"
+          ],
+          "sample": {
+            "segment_index": 73,
+            "timestamp": "5:18",
+            "text": "우리 지난 시간에 '샌드위치/돈가스/떡볶이를 먹었어요' 얘기했어요."
+          }
+        },
+        {
+          "identity": "형",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "low",
+          "count": 5,
+          "contexts": 5,
+          "surfaces": [
+            "형",
+            "형의",
+            "형이"
+          ],
+          "sample": {
+            "segment_index": 42,
+            "timestamp": "2:35",
+            "text": "이 사람은 태웅이의 '친척 형'이에요."
+          }
+        },
+        {
+          "identity": "여러분",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 4,
+          "contexts": 4,
+          "surfaces": [
+            "여러분",
+            "여러분은"
+          ],
+          "sample": {
+            "segment_index": 0,
+            "timestamp": "0s",
+            "text": "자 여러분 오랜만이에요."
+          }
+        },
+        {
+          "identity": "토요일",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "seen",
+          "confidence": "medium",
+          "count": 4,
+          "contexts": 4,
+          "surfaces": [
+            "토요일",
+            "토요일에",
+            "토요일이었어요"
+          ],
+          "sample": {
+            "segment_index": 50,
+            "timestamp": "3:20",
+            "text": "12월 18일 토요일이었어요."
+          }
+        },
+        {
+          "identity": "그러면",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 3,
+          "contexts": 3,
+          "surfaces": [
+            "그러면"
+          ],
+          "sample": {
+            "segment_index": 49,
+            "timestamp": "3:15",
+            "text": "그러면 언제? 언제 결혼식이에요?"
+          }
+        },
+        {
+          "identity": "그리고",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "untracked",
+          "confidence": "low",
+          "count": 3,
+          "contexts": 3,
+          "surfaces": [
+            "그리고"
+          ],
+          "sample": {
+            "segment_index": 1,
+            "timestamp": "2s",
+            "text": "보세요. 들으세요. 그리고 이해하세요."
+          }
+        }
+      ],
+      "recycling": [
+        {
+          "identity": "가다",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 47,
+          "contexts": 42,
+          "surfaces": [
+            "가서",
+            "가요",
+            "갔냐면ㅋㅋ",
+            "갔어요",
+            "갔으면",
+            "갔을까요"
+          ],
+          "sample": {
+            "segment_index": 5,
+            "timestamp": "20s",
+            "text": "이 사람들이 지금 어디에 가요?"
+          }
+        },
+        {
+          "identity": "집",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 22,
+          "contexts": 18,
+          "surfaces": [
+            "떡볶이집은",
+            "집",
+            "집도",
+            "집에",
+            "집은",
+            "집의",
+            "집이라고",
+            "집이에요"
+          ],
+          "sample": {
+            "segment_index": 48,
+            "timestamp": "3:08",
+            "text": "아니요. 저는 지금 부산 집이에요."
+          }
+        },
+        {
+          "identity": "이",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 17,
+          "contexts": 17,
+          "surfaces": [
+            "이"
+          ],
+          "sample": {
+            "segment_index": 5,
+            "timestamp": "20s",
+            "text": "이 사람들이 지금 어디에 가요?"
+          }
+        },
+        {
+          "identity": "있다",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 17,
+          "contexts": 14,
+          "surfaces": [
+            "있냐면",
+            "있는",
+            "있어요",
+            "있었어요"
+          ],
+          "sample": {
+            "segment_index": 21,
+            "timestamp": "1:19",
+            "text": "제가 이 사진에서 어디에 있어요?"
+          }
+        },
+        {
+          "identity": "먹다",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 16,
+          "contexts": 13,
+          "surfaces": [
+            "먹고",
+            "먹어요",
+            "먹었어요"
+          ],
+          "sample": {
+            "segment_index": 51,
+            "timestamp": "3:27",
+            "text": "우리 지난 시간에 '먹어요' '먹었어요' 배웠어요."
+          }
+        },
+        {
+          "identity": "양고기",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "low",
+          "count": 15,
+          "contexts": 9,
+          "surfaces": [
+            "양고기",
+            "양고기를"
+          ],
+          "sample": {
+            "segment_index": 61,
+            "timestamp": "4:18",
+            "text": "양고기 식당에 갔어요."
+          }
+        },
+        {
+          "identity": "저",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 11,
+          "contexts": 11,
+          "surfaces": [
+            "저는",
+            "저예요",
+            "제가"
+          ],
+          "sample": {
+            "segment_index": 20,
+            "timestamp": "1:17",
+            "text": "이 사람은 저예요."
+          }
+        },
+        {
+          "identity": "어디",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 10,
+          "contexts": 10,
+          "surfaces": [
+            "어디",
+            "어디에"
+          ],
+          "sample": {
+            "segment_index": 5,
+            "timestamp": "20s",
+            "text": "이 사람들이 지금 어디에 가요?"
+          }
+        },
+        {
+          "identity": "결혼식",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 10,
+          "contexts": 9,
+          "surfaces": [
+            "결혼식",
+            "결혼식에",
+            "결혼식에는",
+            "결혼식이에요"
+          ],
+          "sample": {
+            "segment_index": 27,
+            "timestamp": "1:47",
+            "text": "결혼식에 가요."
+          }
+        },
+        {
+          "identity": "사람",
+          "kind": "lexical",
+          "role": "general",
+          "bucket": "familiar",
+          "confidence": "medium",
+          "count": 9,
+          "contexts": 9,
+          "surfaces": [
+            "사람들은",
+            "사람들이",
+            "사람은"
+          ],
+          "sample": {
+            "segment_index": 5,
+            "timestamp": "20s",
+            "text": "이 사람들이 지금 어디에 가요?"
+          }
+        }
+      ],
+      "hardest_segments": [
+        {
+          "timestamp": "5:18",
+          "text": "우리 지난 시간에 '샌드위치/돈가스/떡볶이를 먹었어요' 얘기했어요.",
+          "load": {
+            "level": 3,
+            "label": "dense",
+            "heuristic_load": 4.35,
+            "novelty_load": 4.35,
+            "weighted_density": 0.5437,
+            "proper_noun_load": 0.0,
+            "support_uncertainty": 0
+          },
+          "reasons": [
+            "3 untracked/unassessed/deferred general lexical links",
+            "3 previously presented links",
+            "0 weak detected tracked-grammar links"
+          ],
+          "warnings": []
+        },
+        {
+          "timestamp": "5:08",
+          "text": "양고기 집의 이름은 '줘마양다리구이 본점'이에요. 최고",
+          "load": {
+            "level": 3,
+            "label": "dense",
+            "heuristic_load": 3.6,
+            "novelty_load": 3.45,
+            "weighted_density": 0.6,
+            "proper_noun_load": 0.0,
+            "support_uncertainty": 0.15
+          },
+          "reasons": [
+            "3 untracked/unassessed/deferred general lexical links",
+            "1 previously presented links",
+            "0 weak detected tracked-grammar links"
+          ],
+          "warnings": []
+        },
+        {
+          "timestamp": "0s",
+          "text": "자 여러분 오랜만이에요.",
+          "load": {
+            "level": 3,
+            "label": "dense",
+            "heuristic_load": 3.0,
+            "novelty_load": 3.0,
+            "weighted_density": 1.0,
+            "proper_noun_load": 0.0,
+            "support_uncertainty": 0
+          },
+          "reasons": [
+            "3 untracked/unassessed/deferred general lexical links",
+            "0 previously presented links",
+            "0 weak detected tracked-grammar links"
+          ],
+          "warnings": []
+        }
+      ],
+      "seconds": 0.04988687500008382,
+      "kiwi_calls": 115,
+      "warnings": [
+        "Auxiliary morphology may need untracked construction interpretation",
+        "Coverage describes candidate occurrences, not demonstrated comprehension or mastery",
+        "Learner state includes indirect Anki/contextual evidence and uncertain historical associations; fit confidence is capped at medium",
+        "Lemma-oriented matching cannot distinguish new senses of a familiar word (polysemy)",
+        "Multiple lexical heads in one span; load uses the maximum component novelty, not an independent sum",
+        "Tracked grammar coverage includes only five detectors; untracked constructions may exist",
+        "Transcript/text analysis does not establish listening comprehension or audio difficulty",
+        "Untracked means absent from the Knowledge Model, not definitely unknown to the learner"
+      ]
+    }
+  ]
+}
