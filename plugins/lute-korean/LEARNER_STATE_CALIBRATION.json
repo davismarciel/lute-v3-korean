@@ -1,0 +1,4940 @@
+{
+  "schema_version": 1,
+  "language": "ko",
+  "policy_version": "ko.learner-state.v1",
+  "policy_fingerprint": "94819404fd433591b54a9cc1e5b132065c7f35bbe19bc1f88077dcfcef0f24f3",
+  "policy": {
+    "version": "ko.learner-state.v1",
+    "exposure_weight": 0.35,
+    "recognized_weight": 2.5,
+    "produced_weight": 3.0,
+    "confirmation_weight": 3.0,
+    "missed_weight": 2.5,
+    "indirect_factor": 0.4,
+    "historical_factor": 0.35,
+    "inferred_association_factor": 0.65,
+    "unspecified_modality_factor": 0.4,
+    "recency_floor": 0.6,
+    "recency_half_life_days": 365.0,
+    "review_saturation": 5.0,
+    "review_positive_cap": 0.9,
+    "review_negative_cap": 0.55,
+    "review_lapse_boost": 1.5,
+    "review_recovery_discount": 0.75,
+    "review_recovery_limit": 3,
+    "surface_bonus": 0.1,
+    "surface_bonus_cap": 0.3,
+    "high_confidence_events": 6,
+    "hard_signal": 0.15,
+    "good_signal": 0.6,
+    "easy_signal": 0.8,
+    "context_positive_cap": 3.0,
+    "context_negative_cap": 2.5,
+    "source_positive_cap": 6.0,
+    "source_negative_cap": 5.0,
+    "practice_threshold": 1.5,
+    "consolidation_threshold": 6.0,
+    "consolidation_sources": 2,
+    "stale_relevance_threshold": 0.8,
+    "consolidation_contexts": 3,
+    "consolidation_recognition_contexts": 3,
+    "indirect_recognition_contexts": 6,
+    "recent_miss_days": 45.0,
+    "consolidation_negative_ratio": 0.2,
+    "high_confidence_contexts": 6,
+    "medium_confidence_contexts": 3
+  },
+  "as_of": "2026-09-30T19:07:10.816967+00:00",
+  "evidence_fingerprint": "9af3386542815bec649b4541ddfcc7aa5884dacc79a321b41b46242b6396b7a5",
+  "input_fingerprint": "3f28c31c0269f0605f817a3ca4af5307b0e0953e7f9c369186863b63fbdc5fcc",
+  "items": [
+    {
+      "suggested_overall": {
+        "status": "practicing",
+        "confidence": "medium",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "516ae59b-ae8c-43cf-bc1d-4e118082d325",
+      "type": "lexical",
+      "identity": "있다",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "practicing",
+          "confidence": "medium",
+          "reasons": [
+            "143 dimension-specific events; 133 distinct contexts; 143 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "14 observed surface forms; conservative temporal weighting retains older exposure",
+            "955 sentence-level Anki events provide capped contextual support",
+            "Negative evidence retained; indirect failures do not imply this item is unknown"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 143,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 133,
+            "sources": 143,
+            "surface_count": 14,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 955,
+            "temporal_relevance_range": [
+              0.935389226881872,
+              0.9999459934832521
+            ],
+            "modality_observed_events": 143,
+            "polarity": {
+              "positive": 982,
+              "mixed": 28,
+              "negative": 88
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 143,
+        "occurrences": 143,
+        "sources": 143,
+        "logical_sources": 143,
+        "contexts": 133,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "있는",
+          "있는데",
+          "있다가",
+          "있다고",
+          "있다고요",
+          "있어서",
+          "있어요",
+          "있었는데",
+          "있었어요",
+          "있으면",
+          "있잖아",
+          "있잖아요",
+          "있지",
+          "재미있는데"
+        ],
+        "anki_notes": 143,
+        "anki_cards": 143,
+        "anki_reviews": 955,
+        "anki_ratings": {
+          "again": 88,
+          "hard": 28,
+          "good": 813,
+          "easy": 26
+        },
+        "last_review": "2026-09-30T03:14:46.591000+00:00",
+        "historically_uncertain_reviews": 955,
+        "unspecified_modality_events": 955
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    },
+    {
+      "suggested_overall": {
+        "status": "presented",
+        "confidence": "low",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "616de8b7-b68f-418a-8f67-fa022891c72d",
+      "type": "lexical",
+      "identity": "화장실",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "presented",
+          "confidence": "low",
+          "reasons": [
+            "1 dimension-specific events; 1 distinct contexts; 1 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "1 observed surface forms; conservative temporal weighting retains older exposure",
+            "8 sentence-level Anki events provide capped contextual support",
+            "Negative evidence retained; indirect failures do not imply this item is unknown"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 1,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 1,
+            "sources": 1,
+            "surface_count": 1,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 8,
+            "temporal_relevance_range": [
+              0.9846006019559846,
+              0.9999459701920193
+            ],
+            "modality_observed_events": 1,
+            "polarity": {
+              "positive": 7,
+              "mixed": 1,
+              "negative": 1
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 1,
+        "occurrences": 1,
+        "sources": 1,
+        "logical_sources": 1,
+        "contexts": 1,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "화장실을"
+        ],
+        "anki_notes": 1,
+        "anki_cards": 1,
+        "anki_reviews": 8,
+        "anki_ratings": {
+          "again": 1,
+          "hard": 1,
+          "good": 6,
+          "easy": 0
+        },
+        "last_review": "2026-09-22T01:25:47.760000+00:00",
+        "historically_uncertain_reviews": 8,
+        "unspecified_modality_events": 8
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    },
+    {
+      "suggested_overall": {
+        "status": "practicing",
+        "confidence": "medium",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "71f31b88-09c4-417d-be94-3ccbfebbd13f",
+      "type": "lexical",
+      "identity": "기차",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "practicing",
+          "confidence": "medium",
+          "reasons": [
+            "5 dimension-specific events; 5 distinct contexts; 5 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "2 observed surface forms; conservative temporal weighting retains older exposure",
+            "17 sentence-level Anki events provide capped contextual support"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 5,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 5,
+            "sources": 5,
+            "surface_count": 2,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 17,
+            "temporal_relevance_range": [
+              0.9846023396557483,
+              0.9999459884323822
+            ],
+            "modality_observed_events": 5,
+            "polarity": {
+              "positive": 22
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 5,
+        "occurrences": 5,
+        "sources": 5,
+        "logical_sources": 5,
+        "contexts": 5,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "기차는",
+          "기차를"
+        ],
+        "anki_notes": 5,
+        "anki_cards": 5,
+        "anki_reviews": 17,
+        "anki_ratings": {
+          "again": 0,
+          "hard": 0,
+          "good": 17,
+          "easy": 0
+        },
+        "last_review": "2026-09-30T03:10:47.958000+00:00",
+        "historically_uncertain_reviews": 17,
+        "unspecified_modality_events": 17
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    },
+    {
+      "suggested_overall": {
+        "status": "practicing",
+        "confidence": "medium",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "9c158df5-2e16-4c33-909f-707e53f6f740",
+      "type": "lexical",
+      "identity": "먹다",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "practicing",
+          "confidence": "medium",
+          "reasons": [
+            "129 dimension-specific events; 118 distinct contexts; 125 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "14 observed surface forms; conservative temporal weighting retains older exposure",
+            "732 sentence-level Anki events provide capped contextual support",
+            "Negative evidence retained; indirect failures do not imply this item is unknown"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 129,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 118,
+            "sources": 125,
+            "surface_count": 14,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 732,
+            "temporal_relevance_range": [
+              0.9464324782403283,
+              0.9999459929777905
+            ],
+            "modality_observed_events": 129,
+            "polarity": {
+              "positive": 771,
+              "negative": 64,
+              "mixed": 26
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 129,
+        "occurrences": 129,
+        "sources": 125,
+        "logical_sources": 125,
+        "contexts": 118,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "먹고",
+          "먹기",
+          "먹는",
+          "먹어",
+          "먹어서",
+          "먹어야",
+          "먹어요",
+          "먹었는데",
+          "먹었어요",
+          "먹으면",
+          "먹을",
+          "먹을까",
+          "먹을까요",
+          "먹지"
+        ],
+        "anki_notes": 125,
+        "anki_cards": 125,
+        "anki_reviews": 732,
+        "anki_ratings": {
+          "again": 64,
+          "hard": 26,
+          "good": 634,
+          "easy": 8
+        },
+        "last_review": "2026-09-30T03:24:09.055000+00:00",
+        "historically_uncertain_reviews": 732,
+        "unspecified_modality_events": 732
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    },
+    {
+      "suggested_overall": {
+        "status": "practicing",
+        "confidence": "medium",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "a186c12c-bbb1-4efb-aa50-33cde9fab259",
+      "type": "lexical",
+      "identity": "타다",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "practicing",
+          "confidence": "medium",
+          "reasons": [
+            "10 dimension-specific events; 9 distinct contexts; 10 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "3 observed surface forms; conservative temporal weighting retains older exposure",
+            "40 sentence-level Anki events provide capped contextual support",
+            "Negative evidence retained; indirect failures do not imply this item is unknown"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 10,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 9,
+            "sources": 10,
+            "surface_count": 3,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 40,
+            "temporal_relevance_range": [
+              0.9846019478921587,
+              0.999945988668824
+            ],
+            "modality_observed_events": 10,
+            "polarity": {
+              "positive": 46,
+              "mixed": 4
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 10,
+        "occurrences": 10,
+        "sources": 10,
+        "logical_sources": 10,
+        "contexts": 9,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "타고",
+          "타요",
+          "탔어요"
+        ],
+        "anki_notes": 10,
+        "anki_cards": 10,
+        "anki_reviews": 40,
+        "anki_ratings": {
+          "again": 0,
+          "hard": 4,
+          "good": 36,
+          "easy": 0
+        },
+        "last_review": "2026-09-30T03:10:47.958000+00:00",
+        "historically_uncertain_reviews": 40,
+        "unspecified_modality_events": 40
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    },
+    {
+      "suggested_overall": {
+        "status": "practicing",
+        "confidence": "medium",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "2fd20c75-0a5f-4c42-b7db-65d5884b4811",
+      "type": "lexical",
+      "identity": "좋아하다",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "practicing",
+          "confidence": "medium",
+          "reasons": [
+            "109 dimension-specific events; 95 distinct contexts; 96 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "7 observed surface forms; conservative temporal weighting retains older exposure",
+            "589 sentence-level Anki events provide capped contextual support",
+            "Negative evidence retained; indirect failures do not imply this item is unknown"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 109,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 95,
+            "sources": 96,
+            "surface_count": 7,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 589,
+            "temporal_relevance_range": [
+              0.945677853775953,
+              0.9999459780705192
+            ],
+            "modality_observed_events": 109,
+            "polarity": {
+              "positive": 669,
+              "negative": 17,
+              "mixed": 12
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 109,
+        "occurrences": 109,
+        "sources": 96,
+        "logical_sources": 96,
+        "contexts": 95,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "좋아하고",
+          "좋아하는데",
+          "좋아하면",
+          "좋아한다고",
+          "좋아할",
+          "좋아해서",
+          "좋아해요"
+        ],
+        "anki_notes": 96,
+        "anki_cards": 96,
+        "anki_reviews": 589,
+        "anki_ratings": {
+          "again": 17,
+          "hard": 12,
+          "good": 540,
+          "easy": 20
+        },
+        "last_review": "2026-09-30T03:21:22.168000+00:00",
+        "historically_uncertain_reviews": 589,
+        "unspecified_modality_events": 589
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    },
+    {
+      "suggested_overall": {
+        "status": "practicing",
+        "confidence": "medium",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "5975707d-f9f7-453c-a8a7-dfd3752e9a01",
+      "type": "lexical",
+      "identity": "안",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "practicing",
+          "confidence": "medium",
+          "reasons": [
+            "53 dimension-specific events; 50 distinct contexts; 52 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "1 observed surface forms; conservative temporal weighting retains older exposure",
+            "303 sentence-level Anki events provide capped contextual support",
+            "Negative evidence retained; indirect failures do not imply this item is unknown"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 53,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 50,
+            "sources": 52,
+            "surface_count": 1,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 303,
+            "temporal_relevance_range": [
+              0.9456797008321243,
+              0.9999459926784958
+            ],
+            "modality_observed_events": 53,
+            "polarity": {
+              "positive": 318,
+              "negative": 23,
+              "mixed": 15
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 53,
+        "occurrences": 53,
+        "sources": 52,
+        "logical_sources": 52,
+        "contexts": 50,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "안"
+        ],
+        "anki_notes": 52,
+        "anki_cards": 52,
+        "anki_reviews": 303,
+        "anki_ratings": {
+          "again": 23,
+          "hard": 15,
+          "good": 261,
+          "easy": 4
+        },
+        "last_review": "2026-09-30T03:21:41.916000+00:00",
+        "historically_uncertain_reviews": 303,
+        "unspecified_modality_events": 303
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    },
+    {
+      "suggested_overall": {
+        "status": "practicing",
+        "confidence": "medium",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "fffa48e8-e91e-427a-82d8-434668d1b4f4",
+      "type": "lexical",
+      "identity": "하다",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "practicing",
+          "confidence": "medium",
+          "reasons": [
+            "87 dimension-specific events; 84 distinct contexts; 85 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "16 observed surface forms; conservative temporal weighting retains older exposure",
+            "585 sentence-level Anki events provide capped contextual support",
+            "Negative evidence retained; indirect failures do not imply this item is unknown"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 87,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 84,
+            "sources": 85,
+            "surface_count": 16,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 585,
+            "temporal_relevance_range": [
+              0.9403852666268634,
+              0.9999459919111087
+            ],
+            "modality_observed_events": 87,
+            "polarity": {
+              "positive": 573,
+              "mixed": 21,
+              "negative": 78
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 87,
+        "occurrences": 87,
+        "sources": 85,
+        "logical_sources": 85,
+        "contexts": 84,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "게임하고",
+          "설거지할",
+          "잘하고",
+          "하고",
+          "하기",
+          "하는데",
+          "하려고",
+          "하면",
+          "하지",
+          "할",
+          "할게요",
+          "해",
+          "해서",
+          "해요",
+          "했어요",
+          "했지"
+        ],
+        "anki_notes": 85,
+        "anki_cards": 85,
+        "anki_reviews": 585,
+        "anki_ratings": {
+          "again": 78,
+          "hard": 21,
+          "good": 485,
+          "easy": 1
+        },
+        "last_review": "2026-09-30T03:21:55.801000+00:00",
+        "historically_uncertain_reviews": 585,
+        "unspecified_modality_events": 585
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    },
+    {
+      "suggested_overall": {
+        "status": "presented",
+        "confidence": "low",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "663fd43b-9292-4f41-93c5-3899768e9196",
+      "type": "lexical",
+      "identity": "화요일",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "presented",
+          "confidence": "low",
+          "reasons": [
+            "1 dimension-specific events; 1 distinct contexts; 1 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "1 observed surface forms; conservative temporal weighting retains older exposure",
+            "16 sentence-level Anki events provide capped contextual support",
+            "Negative evidence retained; indirect failures do not imply this item is unknown"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 1,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 1,
+            "sources": 1,
+            "surface_count": 1,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 16,
+            "temporal_relevance_range": [
+              0.962302487905637,
+              0.9999459307048291
+            ],
+            "modality_observed_events": 1,
+            "polarity": {
+              "positive": 11,
+              "negative": 6
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 1,
+        "occurrences": 1,
+        "sources": 1,
+        "logical_sources": 1,
+        "contexts": 1,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "화요일"
+        ],
+        "anki_notes": 1,
+        "anki_cards": 1,
+        "anki_reviews": 16,
+        "anki_ratings": {
+          "again": 6,
+          "hard": 0,
+          "good": 10,
+          "easy": 0
+        },
+        "last_review": "2026-09-22T01:26:13.803000+00:00",
+        "historically_uncertain_reviews": 16,
+        "unspecified_modality_events": 16
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    },
+    {
+      "suggested_overall": {
+        "status": "practicing",
+        "confidence": "medium",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "9ae5afb8-6b3b-40cc-9944-208284c81d95",
+      "type": "lexical",
+      "identity": "네",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "practicing",
+          "confidence": "medium",
+          "reasons": [
+            "5 dimension-specific events; 5 distinct contexts; 5 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "1 observed surface forms; conservative temporal weighting retains older exposure",
+            "28 sentence-level Anki events provide capped contextual support",
+            "Negative evidence retained; indirect failures do not imply this item is unknown"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 5,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 5,
+            "sources": 5,
+            "surface_count": 1,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 28,
+            "temporal_relevance_range": [
+              0.9456863062155683,
+              0.9999459916162092
+            ],
+            "modality_observed_events": 5,
+            "polarity": {
+              "positive": 28,
+              "mixed": 3,
+              "negative": 2
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 5,
+        "occurrences": 5,
+        "sources": 5,
+        "logical_sources": 5,
+        "contexts": 5,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "네"
+        ],
+        "anki_notes": 5,
+        "anki_cards": 5,
+        "anki_reviews": 28,
+        "anki_ratings": {
+          "again": 2,
+          "hard": 3,
+          "good": 22,
+          "easy": 1
+        },
+        "last_review": "2026-09-29T23:06:59.058000+00:00",
+        "historically_uncertain_reviews": 28,
+        "unspecified_modality_events": 28
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    },
+    {
+      "suggested_overall": {
+        "status": "practicing",
+        "confidence": "medium",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "3b1520b3-fe92-4f13-8fa5-511047d9ccd4",
+      "type": "lexical",
+      "identity": "오늘",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "practicing",
+          "confidence": "medium",
+          "reasons": [
+            "72 dimension-specific events; 70 distinct contexts; 72 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "3 observed surface forms; conservative temporal weighting retains older exposure",
+            "417 sentence-level Anki events provide capped contextual support",
+            "Negative evidence retained; indirect failures do not imply this item is unknown"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 72,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 70,
+            "sources": 72,
+            "surface_count": 3,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 417,
+            "temporal_relevance_range": [
+              0.9456870391603533,
+              0.999945994282013
+            ],
+            "modality_observed_events": 72,
+            "polarity": {
+              "positive": 434,
+              "negative": 38,
+              "mixed": 17
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 72,
+        "occurrences": 72,
+        "sources": 72,
+        "logical_sources": 72,
+        "contexts": 70,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "오늘",
+          "오늘도",
+          "오늘은"
+        ],
+        "anki_notes": 72,
+        "anki_cards": 72,
+        "anki_reviews": 417,
+        "anki_ratings": {
+          "again": 38,
+          "hard": 17,
+          "good": 358,
+          "easy": 4
+        },
+        "last_review": "2026-09-30T03:24:09.055000+00:00",
+        "historically_uncertain_reviews": 417,
+        "unspecified_modality_events": 417
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    },
+    {
+      "suggested_overall": {
+        "status": "practicing",
+        "confidence": "medium",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "82032ca2-9a52-4fab-910f-746d8ebbe0a6",
+      "type": "lexical",
+      "identity": "스타로드",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "practicing",
+          "confidence": "medium",
+          "reasons": [
+            "7 dimension-specific events; 6 distinct contexts; 6 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "3 observed surface forms; conservative temporal weighting retains older exposure",
+            "36 sentence-level Anki events provide capped contextual support"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 7,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 6,
+            "sources": 6,
+            "surface_count": 3,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 36,
+            "temporal_relevance_range": [
+              0.9456801952876558,
+              0.9999459288936863
+            ],
+            "modality_observed_events": 7,
+            "polarity": {
+              "positive": 43
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 7,
+        "occurrences": 7,
+        "sources": 6,
+        "logical_sources": 6,
+        "contexts": 6,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "스타로드는",
+          "스타로드를",
+          "스타로드인데"
+        ],
+        "anki_notes": 6,
+        "anki_cards": 6,
+        "anki_reviews": 36,
+        "anki_ratings": {
+          "again": 0,
+          "hard": 0,
+          "good": 35,
+          "easy": 1
+        },
+        "last_review": "2026-09-18T01:54:55.294000+00:00",
+        "historically_uncertain_reviews": 36,
+        "unspecified_modality_events": 36
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    },
+    {
+      "suggested_overall": {
+        "status": "practicing",
+        "confidence": "medium",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "036b6a31-bda2-4bae-902a-5e150d598ed3",
+      "type": "lexical",
+      "identity": "가다",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "practicing",
+          "confidence": "medium",
+          "reasons": [
+            "71 dimension-specific events; 66 distinct contexts; 63 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "12 observed surface forms; conservative temporal weighting retains older exposure",
+            "297 sentence-level Anki events provide capped contextual support",
+            "Negative evidence retained; indirect failures do not imply this item is unknown"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 71,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 66,
+            "sources": 63,
+            "surface_count": 12,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 297,
+            "temporal_relevance_range": [
+              0.9456879076789515,
+              0.9999459947739369
+            ],
+            "modality_observed_events": 71,
+            "polarity": {
+              "positive": 319,
+              "negative": 27,
+              "mixed": 22
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 71,
+        "occurrences": 71,
+        "sources": 63,
+        "logical_sources": 63,
+        "contexts": 66,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "가고",
+          "가는",
+          "가면",
+          "가서",
+          "가야",
+          "가요",
+          "간다고요",
+          "갈",
+          "갈게요",
+          "갈까요",
+          "갔는데",
+          "갔어요"
+        ],
+        "anki_notes": 63,
+        "anki_cards": 63,
+        "anki_reviews": 297,
+        "anki_ratings": {
+          "again": 27,
+          "hard": 22,
+          "good": 245,
+          "easy": 3
+        },
+        "last_review": "2026-09-30T03:19:44.526000+00:00",
+        "historically_uncertain_reviews": 297,
+        "unspecified_modality_events": 297
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    },
+    {
+      "suggested_overall": {
+        "status": "practicing",
+        "confidence": "medium",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "6be3b6a3-c195-4e94-99b1-b2cb575acb42",
+      "type": "lexical",
+      "identity": "좀",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "practicing",
+          "confidence": "medium",
+          "reasons": [
+            "45 dimension-specific events; 44 distinct contexts; 45 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "1 observed surface forms; conservative temporal weighting retains older exposure",
+            "291 sentence-level Anki events provide capped contextual support",
+            "Negative evidence retained; indirect failures do not imply this item is unknown"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 45,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 44,
+            "sources": 45,
+            "surface_count": 1,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 291,
+            "temporal_relevance_range": [
+              0.9469771274591929,
+              0.9999459934299633
+            ],
+            "modality_observed_events": 45,
+            "polarity": {
+              "positive": 286,
+              "mixed": 15,
+              "negative": 35
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 45,
+        "occurrences": 45,
+        "sources": 45,
+        "logical_sources": 45,
+        "contexts": 44,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "좀"
+        ],
+        "anki_notes": 45,
+        "anki_cards": 45,
+        "anki_reviews": 291,
+        "anki_ratings": {
+          "again": 35,
+          "hard": 15,
+          "good": 240,
+          "easy": 1
+        },
+        "last_review": "2026-09-30T03:22:42.256000+00:00",
+        "historically_uncertain_reviews": 291,
+        "unspecified_modality_events": 291
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    },
+    {
+      "suggested_overall": {
+        "status": "practicing",
+        "confidence": "medium",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "d3314372-b553-4932-9e0e-d23d8969c92a",
+      "type": "lexical",
+      "identity": "싶다",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "practicing",
+          "confidence": "medium",
+          "reasons": [
+            "55 dimension-specific events; 53 distinct contexts; 54 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "6 observed surface forms; conservative temporal weighting retains older exposure",
+            "295 sentence-level Anki events provide capped contextual support",
+            "Negative evidence retained; indirect failures do not imply this item is unknown"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 55,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 53,
+            "sources": 54,
+            "surface_count": 6,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 295,
+            "temporal_relevance_range": [
+              0.9487767112969699,
+              0.9999459921987383
+            ],
+            "modality_observed_events": 55,
+            "polarity": {
+              "positive": 311,
+              "negative": 26,
+              "mixed": 13
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 55,
+        "occurrences": 55,
+        "sources": 54,
+        "logical_sources": 54,
+        "contexts": 53,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "싶네요",
+          "싶다고",
+          "싶어는데",
+          "싶어요",
+          "싶었는데",
+          "싶은데"
+        ],
+        "anki_notes": 54,
+        "anki_cards": 54,
+        "anki_reviews": 295,
+        "anki_ratings": {
+          "again": 26,
+          "hard": 13,
+          "good": 253,
+          "easy": 3
+        },
+        "last_review": "2026-09-30T03:19:27.544000+00:00",
+        "historically_uncertain_reviews": 295,
+        "unspecified_modality_events": 295
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    },
+    {
+      "suggested_overall": {
+        "status": "presented",
+        "confidence": "low",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "3f292dcc-f060-45c2-8eb3-19283e234cb8",
+      "type": "lexical",
+      "identity": "형",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "presented",
+          "confidence": "low",
+          "reasons": [
+            "1 dimension-specific events; 1 distinct contexts; 1 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "1 observed surface forms; conservative temporal weighting retains older exposure",
+            "5 sentence-level Anki events provide capped contextual support",
+            "Negative evidence retained; indirect failures do not imply this item is unknown"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 1,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 1,
+            "sources": 1,
+            "surface_count": 1,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 5,
+            "temporal_relevance_range": [
+              0.9934303884136527,
+              0.9999459792272876
+            ],
+            "modality_observed_events": 1,
+            "polarity": {
+              "positive": 5,
+              "mixed": 1
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 1,
+        "occurrences": 1,
+        "sources": 1,
+        "logical_sources": 1,
+        "contexts": 1,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "형이"
+        ],
+        "anki_notes": 1,
+        "anki_cards": 1,
+        "anki_reviews": 5,
+        "anki_ratings": {
+          "again": 0,
+          "hard": 1,
+          "good": 4,
+          "easy": 0
+        },
+        "last_review": "2026-09-28T02:48:53.513000+00:00",
+        "historically_uncertain_reviews": 5,
+        "unspecified_modality_events": 5
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    },
+    {
+      "suggested_overall": {
+        "status": "practicing",
+        "confidence": "medium",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "b8be7748-124f-4742-97ef-1ea88e6cff7d",
+      "type": "lexical",
+      "identity": "동물",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "practicing",
+          "confidence": "medium",
+          "reasons": [
+            "5 dimension-specific events; 3 distinct contexts; 3 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "3 observed surface forms; conservative temporal weighting retains older exposure",
+            "19 sentence-level Anki events provide capped contextual support",
+            "Negative evidence retained; indirect failures do not imply this item is unknown"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 5,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 3,
+            "sources": 3,
+            "surface_count": 3,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 19,
+            "temporal_relevance_range": [
+              0.9469909228119349,
+              0.9999459256157912
+            ],
+            "modality_observed_events": 5,
+            "polarity": {
+              "positive": 23,
+              "mixed": 1
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 5,
+        "occurrences": 5,
+        "sources": 3,
+        "logical_sources": 3,
+        "contexts": 3,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "동물들",
+          "동물을",
+          "동물이"
+        ],
+        "anki_notes": 3,
+        "anki_cards": 3,
+        "anki_reviews": 19,
+        "anki_ratings": {
+          "again": 0,
+          "hard": 1,
+          "good": 18,
+          "easy": 0
+        },
+        "last_review": "2026-09-18T22:19:00.278000+00:00",
+        "historically_uncertain_reviews": 19,
+        "unspecified_modality_events": 19
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    },
+    {
+      "suggested_overall": {
+        "status": "practicing",
+        "confidence": "medium",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "6652b8ad-9a5b-49e4-be41-880060ae2fd6",
+      "type": "lexical",
+      "identity": "공부하다",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "practicing",
+          "confidence": "medium",
+          "reasons": [
+            "50 dimension-specific events; 49 distinct contexts; 50 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "8 observed surface forms; conservative temporal weighting retains older exposure",
+            "299 sentence-level Anki events provide capped contextual support",
+            "Negative evidence retained; indirect failures do not imply this item is unknown"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 50,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 49,
+            "sources": 50,
+            "surface_count": 8,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 299,
+            "temporal_relevance_range": [
+              0.937253031095031,
+              0.9999459862403146
+            ],
+            "modality_observed_events": 50,
+            "polarity": {
+              "positive": 327,
+              "mixed": 9,
+              "negative": 13
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 50,
+        "occurrences": 50,
+        "sources": 50,
+        "logical_sources": 50,
+        "contexts": 49,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "공부하고",
+          "공부하면",
+          "공부한",
+          "공부할",
+          "공부할까요",
+          "공부해야",
+          "공부해요",
+          "공부했어요"
+        ],
+        "anki_notes": 50,
+        "anki_cards": 50,
+        "anki_reviews": 299,
+        "anki_ratings": {
+          "again": 13,
+          "hard": 9,
+          "good": 272,
+          "easy": 5
+        },
+        "last_review": "2026-09-30T02:22:17.552000+00:00",
+        "historically_uncertain_reviews": 299,
+        "unspecified_modality_events": 299
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    },
+    {
+      "suggested_overall": {
+        "status": "practicing",
+        "confidence": "medium",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "cb1084da-b0bc-46f6-8eb6-cdc71d77a1d5",
+      "type": "lexical",
+      "identity": "결혼식",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "practicing",
+          "confidence": "medium",
+          "reasons": [
+            "6 dimension-specific events; 6 distinct contexts; 6 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "1 observed surface forms; conservative temporal weighting retains older exposure",
+            "16 sentence-level Anki events provide capped contextual support",
+            "Negative evidence retained; indirect failures do not imply this item is unknown"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 6,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 6,
+            "sources": 6,
+            "surface_count": 1,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 16,
+            "temporal_relevance_range": [
+              0.9934267679181676,
+              0.9999459911412689
+            ],
+            "modality_observed_events": 6,
+            "polarity": {
+              "positive": 21,
+              "mixed": 1
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 6,
+        "occurrences": 6,
+        "sources": 6,
+        "logical_sources": 6,
+        "contexts": 6,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "결혼식에"
+        ],
+        "anki_notes": 6,
+        "anki_cards": 6,
+        "anki_reviews": 16,
+        "anki_ratings": {
+          "again": 0,
+          "hard": 1,
+          "good": 15,
+          "easy": 0
+        },
+        "last_review": "2026-09-30T03:10:47.958000+00:00",
+        "historically_uncertain_reviews": 16,
+        "unspecified_modality_events": 16
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    },
+    {
+      "suggested_overall": {
+        "status": "practicing",
+        "confidence": "medium",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "cb1c59c5-652a-4e48-8bdb-4e323a76be57",
+      "type": "lexical",
+      "identity": "저",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "practicing",
+          "confidence": "medium",
+          "reasons": [
+            "49 dimension-specific events; 48 distinct contexts; 48 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "8 observed surface forms; conservative temporal weighting retains older exposure",
+            "321 sentence-level Anki events provide capped contextual support",
+            "Negative evidence retained; indirect failures do not imply this item is unknown"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 49,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 48,
+            "sources": 48,
+            "surface_count": 8,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 321,
+            "temporal_relevance_range": [
+              0.9353910714497773,
+              0.9999459946588147
+            ],
+            "modality_observed_events": 49,
+            "polarity": {
+              "positive": 339,
+              "negative": 21,
+              "mixed": 10
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 49,
+        "occurrences": 49,
+        "sources": 48,
+        "logical_sources": 48,
+        "contexts": 48,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "어제",
+          "저",
+          "저는",
+          "저도",
+          "저보다",
+          "전",
+          "제",
+          "제가"
+        ],
+        "anki_notes": 48,
+        "anki_cards": 48,
+        "anki_reviews": 321,
+        "anki_ratings": {
+          "again": 21,
+          "hard": 10,
+          "good": 284,
+          "easy": 6
+        },
+        "last_review": "2026-09-30T02:32:08.695000+00:00",
+        "historically_uncertain_reviews": 321,
+        "unspecified_modality_events": 321
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    },
+    {
+      "suggested_overall": {
+        "status": "practicing",
+        "confidence": "medium",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "5ed1eace-4394-45f1-bbc4-ddc1e5a3a2e4",
+      "type": "lexical",
+      "identity": "같이",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "practicing",
+          "confidence": "medium",
+          "reasons": [
+            "33 dimension-specific events; 30 distinct contexts; 33 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "1 observed surface forms; conservative temporal weighting retains older exposure",
+            "199 sentence-level Anki events provide capped contextual support",
+            "Negative evidence retained; indirect failures do not imply this item is unknown"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 33,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 30,
+            "sources": 33,
+            "surface_count": 1,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 199,
+            "temporal_relevance_range": [
+              0.9464468786012293,
+              0.9999459947506681
+            ],
+            "modality_observed_events": 33,
+            "polarity": {
+              "positive": 202,
+              "negative": 20,
+              "mixed": 10
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 33,
+        "occurrences": 33,
+        "sources": 33,
+        "logical_sources": 33,
+        "contexts": 30,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "같이"
+        ],
+        "anki_notes": 33,
+        "anki_cards": 33,
+        "anki_reviews": 199,
+        "anki_ratings": {
+          "again": 20,
+          "hard": 10,
+          "good": 167,
+          "easy": 2
+        },
+        "last_review": "2026-09-30T03:09:34.306000+00:00",
+        "historically_uncertain_reviews": 199,
+        "unspecified_modality_events": 199
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    },
+    {
+      "suggested_overall": {
+        "status": "practicing",
+        "confidence": "medium",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "bcbd6742-3021-49ce-b828-7a515dd12205",
+      "type": "lexical",
+      "identity": "뭐",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "practicing",
+          "confidence": "medium",
+          "reasons": [
+            "41 dimension-specific events; 38 distinct contexts; 41 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "10 observed surface forms; conservative temporal weighting retains older exposure",
+            "354 sentence-level Anki events provide capped contextual support",
+            "Negative evidence retained; indirect failures do not imply this item is unknown"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 41,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 38,
+            "sources": 41,
+            "surface_count": 10,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 354,
+            "temporal_relevance_range": [
+              0.9372599985216414,
+              0.9999459853246558
+            ],
+            "modality_observed_events": 41,
+            "polarity": {
+              "positive": 319,
+              "negative": 61,
+              "mixed": 15
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 41,
+        "occurrences": 41,
+        "sources": 41,
+        "logical_sources": 41,
+        "contexts": 38,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "뭐",
+          "뭐라고",
+          "뭐였어요",
+          "뭐였죠",
+          "뭐였지",
+          "뭐예요",
+          "뭐지",
+          "뭔가",
+          "뭔지",
+          "뭘"
+        ],
+        "anki_notes": 41,
+        "anki_cards": 41,
+        "anki_reviews": 354,
+        "anki_ratings": {
+          "again": 61,
+          "hard": 15,
+          "good": 277,
+          "easy": 1
+        },
+        "last_review": "2026-09-29T23:48:43.867000+00:00",
+        "historically_uncertain_reviews": 354,
+        "unspecified_modality_events": 354
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    },
+    {
+      "suggested_overall": {
+        "status": "presented",
+        "confidence": "low",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "e7395ff8-caaa-4ab3-8872-4bb7b6fa0d9f",
+      "type": "lexical",
+      "identity": "행복하다",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "presented",
+          "confidence": "low",
+          "reasons": [
+            "1 dimension-specific events; 1 distinct contexts; 1 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "1 observed surface forms; conservative temporal weighting retains older exposure",
+            "7 sentence-level Anki events provide capped contextual support",
+            "Negative evidence retained; indirect failures do not imply this item is unknown"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 1,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 1,
+            "sources": 1,
+            "surface_count": 1,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 7,
+            "temporal_relevance_range": [
+              0.9469808902091316,
+              0.9999459251264342
+            ],
+            "modality_observed_events": 1,
+            "polarity": {
+              "positive": 7,
+              "negative": 1
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 1,
+        "occurrences": 1,
+        "sources": 1,
+        "logical_sources": 1,
+        "contexts": 1,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "행복해요"
+        ],
+        "anki_notes": 1,
+        "anki_cards": 1,
+        "anki_reviews": 7,
+        "anki_ratings": {
+          "again": 1,
+          "hard": 0,
+          "good": 6,
+          "easy": 0
+        },
+        "last_review": "2026-09-18T02:06:47.327000+00:00",
+        "historically_uncertain_reviews": 7,
+        "unspecified_modality_events": 7
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    },
+    {
+      "suggested_overall": {
+        "status": "practicing",
+        "confidence": "medium",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "f7b0c925-3d09-48fe-b4ac-65316c4f6515",
+      "type": "lexical",
+      "identity": "또",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "practicing",
+          "confidence": "medium",
+          "reasons": [
+            "5 dimension-specific events; 4 distinct contexts; 5 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "1 observed surface forms; conservative temporal weighting retains older exposure",
+            "17 sentence-level Anki events provide capped contextual support",
+            "Negative evidence retained; indirect failures do not imply this item is unknown"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 5,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 4,
+            "sources": 5,
+            "surface_count": 1,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 17,
+            "temporal_relevance_range": [
+              0.9673887825817495,
+              0.9999459893047824
+            ],
+            "modality_observed_events": 5,
+            "polarity": {
+              "positive": 21,
+              "mixed": 1
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 5,
+        "occurrences": 5,
+        "sources": 5,
+        "logical_sources": 5,
+        "contexts": 4,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "또"
+        ],
+        "anki_notes": 5,
+        "anki_cards": 5,
+        "anki_reviews": 17,
+        "anki_ratings": {
+          "again": 0,
+          "hard": 1,
+          "good": 16,
+          "easy": 0
+        },
+        "last_review": "2026-09-30T03:19:27.544000+00:00",
+        "historically_uncertain_reviews": 17,
+        "unspecified_modality_events": 17
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    },
+    {
+      "suggested_overall": {
+        "status": "practicing",
+        "confidence": "medium",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "a303cd7a-84b4-4b5c-9c4a-6342ca67c9e3",
+      "type": "lexical",
+      "identity": "사람",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "practicing",
+          "confidence": "medium",
+          "reasons": [
+            "37 dimension-specific events; 35 distinct contexts; 36 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "8 observed surface forms; conservative temporal weighting retains older exposure",
+            "251 sentence-level Anki events provide capped contextual support",
+            "Negative evidence retained; indirect failures do not imply this item is unknown"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 37,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 35,
+            "sources": 36,
+            "surface_count": 8,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 251,
+            "temporal_relevance_range": [
+              0.9353901491203263,
+              0.9999459915542881
+            ],
+            "modality_observed_events": 37,
+            "polarity": {
+              "positive": 264,
+              "mixed": 4,
+              "negative": 20
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 37,
+        "occurrences": 37,
+        "sources": 36,
+        "logical_sources": 36,
+        "contexts": 35,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "사람",
+          "사람들은",
+          "사람들이",
+          "사람은",
+          "사람이",
+          "사람이라고",
+          "사람이라고요",
+          "사람이에요"
+        ],
+        "anki_notes": 36,
+        "anki_cards": 36,
+        "anki_reviews": 251,
+        "anki_ratings": {
+          "again": 20,
+          "hard": 4,
+          "good": 220,
+          "easy": 7
+        },
+        "last_review": "2026-09-30T02:21:59.916000+00:00",
+        "historically_uncertain_reviews": 251,
+        "unspecified_modality_events": 251
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    },
+    {
+      "suggested_overall": {
+        "status": "practicing",
+        "confidence": "medium",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "df491611-445d-4a14-96d9-44a841df28c7",
+      "type": "grammar",
+      "identity": "-(으)ㄹ 거예요",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "practicing",
+          "confidence": "medium",
+          "reasons": [
+            "51 dimension-specific events; 51 distinct contexts; 50 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "13 observed surface forms; conservative temporal weighting retains older exposure",
+            "305 sentence-level Anki events provide capped contextual support",
+            "Negative evidence retained; indirect failures do not imply this item is unknown"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 51,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 51,
+            "sources": 50,
+            "surface_count": 13,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 305,
+            "temporal_relevance_range": [
+              0.9464640613928503,
+              0.9999459938401166
+            ],
+            "modality_observed_events": 51,
+            "polarity": {
+              "positive": 307,
+              "negative": 35,
+              "mixed": 14
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 51,
+        "occurrences": 51,
+        "sources": 50,
+        "logical_sources": 50,
+        "contexts": 51,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "갈 거예요",
+          "게임할 거예요",
+          "공부할 거예요",
+          "만날 거예요",
+          "먹을 거예요",
+          "볼 거예요",
+          "살 거예요",
+          "설거지할 거예요",
+          "쉴 거예요",
+          "일할 거예요",
+          "읽을 거예요",
+          "잘 거예요",
+          "할 거예요"
+        ],
+        "anki_notes": 50,
+        "anki_cards": 50,
+        "anki_reviews": 305,
+        "anki_ratings": {
+          "again": 35,
+          "hard": 14,
+          "good": 256,
+          "easy": 0
+        },
+        "last_review": "2026-09-30T03:21:41.916000+00:00",
+        "historically_uncertain_reviews": 305,
+        "unspecified_modality_events": 305
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    },
+    {
+      "suggested_overall": {
+        "status": "practicing",
+        "confidence": "medium",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "3ba3d847-5f0e-442f-b051-c06293762ae3",
+      "type": "grammar",
+      "identity": "-(으)면",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "practicing",
+          "confidence": "medium",
+          "reasons": [
+            "63 dimension-specific events; 56 distinct contexts; 62 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "18 observed surface forms; conservative temporal weighting retains older exposure",
+            "364 sentence-level Anki events provide capped contextual support",
+            "Negative evidence retained; indirect failures do not imply this item is unknown"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 63,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 56,
+            "sources": 62,
+            "surface_count": 18,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 364,
+            "temporal_relevance_range": [
+              0.9456869667205849,
+              0.999945994845607
+            ],
+            "modality_observed_events": 63,
+            "polarity": {
+              "positive": 353,
+              "negative": 55,
+              "mixed": 19
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 63,
+        "occurrences": 63,
+        "sources": 62,
+        "logical_sources": 62,
+        "contexts": 56,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "가면",
+          "공부하면",
+          "기다리면",
+          "끝나면",
+          "마시면",
+          "말하면",
+          "먹으면",
+          "배고프면",
+          "쉬면",
+          "아니면",
+          "없으면",
+          "오면",
+          "운동하면",
+          "있으면",
+          "좋아하면",
+          "좋으면",
+          "피곤하면",
+          "하면"
+        ],
+        "anki_notes": 62,
+        "anki_cards": 62,
+        "anki_reviews": 364,
+        "anki_ratings": {
+          "again": 55,
+          "hard": 19,
+          "good": 279,
+          "easy": 11
+        },
+        "last_review": "2026-09-30T03:24:09.055000+00:00",
+        "historically_uncertain_reviews": 364,
+        "unspecified_modality_events": 364
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    },
+    {
+      "suggested_overall": {
+        "status": "practicing",
+        "confidence": "medium",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "656957f7-4b95-4d5d-85b4-2e1e8e29bc03",
+      "type": "grammar",
+      "identity": "-고 싶다",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "practicing",
+          "confidence": "medium",
+          "reasons": [
+            "55 dimension-specific events; 53 distinct contexts; 54 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "24 observed surface forms; conservative temporal weighting retains older exposure",
+            "295 sentence-level Anki events provide capped contextual support",
+            "Negative evidence retained; indirect failures do not imply this item is unknown"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 55,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 53,
+            "sources": 54,
+            "surface_count": 24,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 295,
+            "temporal_relevance_range": [
+              0.9487767112969699,
+              0.9999459923136758
+            ],
+            "modality_observed_events": 55,
+            "polarity": {
+              "positive": 311,
+              "negative": 26,
+              "mixed": 13
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 55,
+        "occurrences": 55,
+        "sources": 54,
+        "logical_sources": 54,
+        "contexts": 53,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "가고 싶어요",
+          "게임하고 싶다고",
+          "게임하고 싶어요",
+          "게임하고 싶은데",
+          "공부하고 싶어요",
+          "공부하고 싶은데",
+          "듣고 싶었는데",
+          "듣고 싶은데",
+          "마시고 싶어요",
+          "마시고 싶은데",
+          "만나고 싶은데",
+          "말하고 싶어요",
+          "말하고 싶은데",
+          "먹고 싶네요",
+          "먹고 싶어요",
+          "먹고 싶었는데",
+          "먹고 싶은데",
+          "보고 싶어요",
+          "쉬고 싶어요",
+          "쓰고 싶어요",
+          "읽고 싶어는데",
+          "잘하고 싶어요",
+          "하고 싶어요",
+          "하고 싶은데"
+        ],
+        "anki_notes": 54,
+        "anki_cards": 54,
+        "anki_reviews": 295,
+        "anki_ratings": {
+          "again": 26,
+          "hard": 13,
+          "good": 253,
+          "easy": 3
+        },
+        "last_review": "2026-09-30T03:19:27.544000+00:00",
+        "historically_uncertain_reviews": 295,
+        "unspecified_modality_events": 295
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    },
+    {
+      "suggested_overall": {
+        "status": "practicing",
+        "confidence": "medium",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "e327c2e3-a610-4a3e-99c5-b2119b375680",
+      "type": "grammar",
+      "identity": "-는데",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "practicing",
+          "confidence": "medium",
+          "reasons": [
+            "51 dimension-specific events; 50 distinct contexts; 51 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "21 observed surface forms; conservative temporal weighting retains older exposure",
+            "281 sentence-level Anki events provide capped contextual support",
+            "Negative evidence retained; indirect failures do not imply this item is unknown"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 51,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 50,
+            "sources": 51,
+            "surface_count": 21,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 281,
+            "temporal_relevance_range": [
+              0.9464314358567524,
+              0.9999459923337359
+            ],
+            "modality_observed_events": 51,
+            "polarity": {
+              "positive": 312,
+              "negative": 15,
+              "mixed": 5
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 51,
+        "occurrences": 51,
+        "sources": 51,
+        "logical_sources": 51,
+        "contexts": 50,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "갔는데",
+          "같은데",
+          "귀여운데",
+          "듣는데",
+          "매운데",
+          "먹었는데",
+          "바쁜데",
+          "배고픈데",
+          "스타로드인데",
+          "싶어는데",
+          "싶었는데",
+          "싶은데",
+          "쓴데",
+          "어려운데",
+          "있는데",
+          "있었는데",
+          "재미있는데",
+          "졸린데",
+          "좋아하는데",
+          "피곤한데",
+          "하는데"
+        ],
+        "anki_notes": 51,
+        "anki_cards": 51,
+        "anki_reviews": 281,
+        "anki_ratings": {
+          "again": 15,
+          "hard": 5,
+          "good": 258,
+          "easy": 3
+        },
+        "last_review": "2026-09-30T03:19:18.356000+00:00",
+        "historically_uncertain_reviews": 281,
+        "unspecified_modality_events": 281
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    },
+    {
+      "suggested_overall": {
+        "status": "practicing",
+        "confidence": "medium",
+        "reasons": [
+          "Strongest non-deferred observed dimension; no skill transfer is implied"
+        ],
+        "warnings": [
+          "Overall unknown may be a default, not an explicit manual assessment"
+        ]
+      },
+      "id": "1a5c133f-a9a0-4d75-a35f-2c9846172f24",
+      "type": "grammar",
+      "identity": "-아/어서",
+      "manual_state": {
+        "overall": "unknown",
+        "reading": null,
+        "listening": null,
+        "production": null
+      },
+      "suggested_state": {
+        "reading": {
+          "status": "practicing",
+          "confidence": "medium",
+          "reasons": [
+            "56 dimension-specific events; 56 distinct contexts; 56 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "17 observed surface forms; conservative temporal weighting retains older exposure",
+            "278 sentence-level Anki events provide capped contextual support",
+            "Negative evidence retained; indirect failures do not imply this item is unknown"
+          ],
+          "warnings": [
+            "Exposure is not proof of comprehension; consolidation is gated on recognition/use",
+            "Anki reviews are indirect, note scoped and modality unspecified; not individual word successes",
+            "Historical/inferred associations reduce evidence strength and confidence"
+          ],
+          "evidence_quality": {
+            "events": 56,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 56,
+            "sources": 56,
+            "surface_count": 17,
+            "association_confidence_floor": 0.35,
+            "source_types": [
+              "anki"
+            ],
+            "indirect_contextual_support_events": 278,
+            "temporal_relevance_range": [
+              0.946462154913434,
+              0.9999459938182279
+            ],
+            "modality_observed_events": 56,
+            "polarity": {
+              "positive": 295,
+              "negative": 28,
+              "mixed": 11
+            },
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "listening": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed listening evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        },
+        "production": {
+          "status": "unknown",
+          "confidence": "low",
+          "reasons": [
+            "0 dimension-specific events; 0 distinct contexts; 0 logical sources",
+            "0 directly recognized/used contexts; 0 total recognition/use contexts",
+            "0 observed surface forms; conservative temporal weighting retains older exposure"
+          ],
+          "warnings": [
+            "No observed production evidence"
+          ],
+          "evidence_quality": {
+            "events": 0,
+            "direct_contexts": 0,
+            "recognition_contexts": 0,
+            "contexts": 0,
+            "sources": 0,
+            "surface_count": 0,
+            "association_confidence_floor": 1,
+            "source_types": [],
+            "indirect_contextual_support_events": 0,
+            "temporal_relevance_range": [
+              0,
+              0
+            ],
+            "modality_observed_events": 0,
+            "polarity": {},
+            "score_semantics": "heuristic evidence strength, not probability"
+          },
+          "origin": "evidence_suggestion"
+        }
+      },
+      "evidence": {
+        "events": 56,
+        "occurrences": 56,
+        "sources": 56,
+        "logical_sources": 56,
+        "contexts": 56,
+        "source_types": [
+          "anki"
+        ],
+        "surfaces": [
+          "가서",
+          "걸어서",
+          "귀찮아서",
+          "나서",
+          "많아서",
+          "맛있어서",
+          "먹어서",
+          "목말라서",
+          "배고파서",
+          "사서",
+          "써서",
+          "어려워서",
+          "없어서",
+          "있어서",
+          "좋아해서",
+          "피곤해서",
+          "해서"
+        ],
+        "anki_notes": 56,
+        "anki_cards": 56,
+        "anki_reviews": 278,
+        "anki_ratings": {
+          "again": 28,
+          "hard": 11,
+          "good": 238,
+          "easy": 1
+        },
+        "last_review": "2026-09-30T03:22:42.256000+00:00",
+        "historically_uncertain_reviews": 278,
+        "unspecified_modality_events": 278
+      },
+      "comparison": {
+        "reading": "no manual",
+        "listening": "no manual",
+        "production": "no manual",
+        "overall": "manual < suggested"
+      }
+    }
+  ],
+  "sampling": "deterministic frequency/Again/surface strata; labels not used"
+}
