@@ -1,20 +1,54 @@
-{% extends 'base.html' %}
-{% block title %}Estudos de coreano · Lute{% endblock %}
-{% block header %}Estudos de coreano{% endblock %}
-{% block preloadassets %}
-<link rel="stylesheet" href="{{ url_for('korean_study.static', filename='study.css') }}">
-<script defer src="{{ url_for('korean_study.static', filename='study.js') }}"></script>
-{% endblock %}
-{% block body %}
+{% extends 'base.html' %} {% block title %}Estudo de Coreano · Lute{% endblock
+%} {% block header %}Estudo de Coreano{% endblock %} {% block preloadassets %}
+<link
+  rel="stylesheet"
+  href="{{ url_for('korean_study.static', filename='study.css') }}"
+/>
+<script
+  defer
+  src="{{ url_for('korean_study.static', filename='study.js') }}"
+></script>
+{% endblock %} {% block body %}
 <main class="korean-workspace">
-<nav aria-label="Estudos de coreano">
-<a href="{{ url_for('korean_study.home') }}">Visão geral</a>
-<a href="{{ url_for('korean_study.knowledge') }}">Progresso e vocabulário</a>
-<a href="{{ url_for('korean_study.anki') }}">Anki</a>
-<a href="{{ url_for('korean_study.analyze') }}">Analisar conteúdo</a>
-<a href="{{ url_for('korean_study.history') }}">Histórico de estudos</a>
-<a href="{{ url_for('korean_study.export_screen') }}">Exportar</a>
-</nav>
-{% block study_body %}{% endblock %}
+  <header class="ks-header">
+    <div>
+      <p class="ks-kicker">Espaço de estudo</p>
+      <h1>Estudo de Coreano</h1>
+      <p>Seu espaço de aquisição de coreano</p>
+    </div>
+    <div class="ks-actions">
+      <a
+        class="ks-button ks-button-secondary"
+        href="{{ url_for('korean_study.anki') }}"
+        >Sync Anki</a
+      ><a
+        class="ks-button ks-button-primary"
+        href="{{ url_for('korean_study.analyze') }}"
+        >Analisar conteúdo</a
+      >
+    </div>
+  </header>
+  {% set endpoint = request.endpoint or '' %}
+  <nav class="ks-nav" aria-label="Navegação do Estudo de Coreano">
+    {% for route, text, active in [ ('home','Visão geral',endpoint ==
+    'korean_study.home'), ('knowledge','Progresso e vocabulário',endpoint in
+    ['korean_study.knowledge','korean_study.item']), ('anki','Anki',endpoint ==
+    'korean_study.anki'), ('analyze','Analisar conteúdo',endpoint in
+    ['korean_study.analyze','korean_study.candidate','korean_study.compare','korean_study.candidate_segment']),
+    ('history','Histórico',endpoint in
+    ['korean_study.history','korean_study.study','korean_study.session_segment']),
+    ('export_screen','Exportar',endpoint == 'korean_study.export_screen') ] %}<a
+      href="{{ url_for('korean_study.' ~ route) }}"
+      {%
+      if
+      active
+      %}aria-current="page"
+      {%
+      endif
+      %}
+      >{{ text }}</a
+    >{% endfor %}
+  </nav>
+  <div class="ks-content">{% block study_body %}{% endblock %}</div>
 </main>
 {% endblock %}

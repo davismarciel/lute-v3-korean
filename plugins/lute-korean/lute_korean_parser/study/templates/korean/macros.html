@@ -16,7 +16,7 @@
 <label>Data e hora (formato ISO com fuso horário)<input name="occurred_at" value="{{ timestamp }}" required></label>
 <label>Registrado por<input name="recorded_by" value="learner" required></label>
 <label>Observação factual<textarea name="notes" rows="2"></textarea></label>
-<button type="submit">Salvar observação</button>
+<button class="ks-button ks-button-primary" type="submit">Salvar observação</button>
 </form></details>
 {% endmacro %}
 {% macro content_export(action) %}
@@ -25,8 +25,11 @@
 <label>Tamanho<select name="size"><option value="compact">Enxuto</option><option value="default">Padrão</option><option value="detailed">Detalhado</option></select></label>
 <label>Formato<select name="format"><option value="json">JSON</option><option value="markdown">Markdown</option></select></label>
 <label><input type="checkbox" name="korean" value="yes">Incluir todos os trechos em coreano (arquivo maior)</label>
-<button>Baixar contexto de estudo</button>
+<button class="ks-button ks-button-secondary">Baixar contexto de estudo</button>
 </form></details>
 {% endmacro %}
 
 {% macro familiarity(bucket) %}{{ {'strong_familiar':'Bem familiar','familiar':'Em prática','seen':'Já apresentado','deferred':'Deixado para depois','unassessed':'Acompanhado; leitura ainda não avaliada','untracked':'Não acompanhado'}.get(bucket,bucket) }}{% endmacro %}
+{% macro status_badge(status) %}<span class="ks-badge ks-status-{{ status or 'unknown' }}">{{ label(status) }}</span>{% endmacro %}
+{% macro fit_badge(fit) %}<span class="ks-badge ks-fit-{{ fit or 'unknown' }}">{{ {'comfortable':'Confortável','productive':'Produtivo','stretch':'Desafiador','dense':'Denso','difficult':'Difícil'}.get(fit,fit or 'Indisponível') }}</span>{% endmacro %}
+{% macro empty_state(title, description, href=none, action=none) %}<div class="ks-empty"><strong>{{ title }}</strong><p>{{ description }}</p>{% if href %}<a class="ks-button ks-button-primary" href="{{ href }}">{{ action }}</a>{% endif %}</div>{% endmacro %}

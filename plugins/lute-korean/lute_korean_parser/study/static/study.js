@@ -1,6 +1,8 @@
 /* Presentation only: observations still require an explicit, protected save. */
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('[data-observe]').forEach(button => {
+  const workspace = document.querySelector('.korean-workspace');
+  if (!workspace) return;
+  workspace.querySelectorAll('[data-observe]').forEach(button => {
     button.addEventListener('click', () => {
       const details = document.getElementById('quick-observation');
       if (!details) return;
@@ -11,6 +13,15 @@ document.addEventListener('DOMContentLoaded', () => {
       details.open = true;
       details.scrollIntoView({block: 'start', behavior: 'auto'});
       form.elements.context.focus();
+    });
+  });
+  workspace.querySelectorAll('form').forEach(form => {
+    form.addEventListener('submit', event => {
+      const button = event.submitter;
+      if (!button || !button.dataset.busyLabel) return;
+      const label = button.dataset.busyLabel;
+      button.setAttribute('aria-busy', 'true');
+      window.setTimeout(() => { button.textContent = label; }, 0);
     });
   });
 });
