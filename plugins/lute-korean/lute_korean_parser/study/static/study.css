@@ -21,7 +21,8 @@
 .container:has(.korean-workspace)>p[style*="background-color: blue"]{background-color:#e9f2fb!important;color:#315e89!important;border:1px solid #cbddeb;border-radius:6px;padding:5px 10px!important;font:600 12px/1.3 Inter,'Segoe UI',Arial,sans-serif}
 
 /* Knowledge result navigation */
-.korean-workspace .ks-knowledge-pagination{display:flex;align-items:center;justify-content:center;gap:5px;flex-wrap:wrap;margin:14px 0 18px}
+.korean-workspace .ks-knowledge-heading{align-items:center}
+.korean-workspace .ks-knowledge-pagination{display:flex;align-items:center;justify-content:flex-end;gap:5px;flex-wrap:wrap;margin:0}
 .korean-workspace .ks-knowledge-pagination .ks-button{min-width:36px}
 .korean-workspace .ks-knowledge-pagination a[aria-current=page]{background:var(--ks-accent-soft);border-color:#cbd2ea;color:var(--ks-accent);pointer-events:none}
 .korean-workspace .ks-knowledge-pagination>span{color:var(--ks-text-muted);padding:0 3px}

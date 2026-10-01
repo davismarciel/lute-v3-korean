@@ -257,7 +257,7 @@ def knowledge():
         )
     ]
     items.sort(key=lambda i: (i["identity"].casefold(), i["type"], i["id"]))
-    page_size = 50
+    page_size = 2
     total = len(items)
     pages = max(1, (total + page_size - 1) // page_size)
     try:
