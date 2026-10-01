@@ -108,7 +108,7 @@ def protect():
         return
     database = current_app.config.get("DATABASE")
     if database and not Path(database).is_file():
-        return unavailable_database("The configured database file is unavailable."), 503
+        return unavailable_database("O arquivo configurado para o banco de dados não está disponível."), 503
     if request.method == "POST":
         if request.content_length and request.content_length > 16 * 1024 * 1024:
             raise RequestEntityTooLarge()
@@ -135,8 +135,8 @@ def protect():
         return (
             render(
                 "error",
-                message="The Korean database needs its additive migrations. Restart the updated Lute installation after backing up your database.",
-                detail="Required Knowledge, Anki, representation or study tables are unavailable.",
+                message="O banco de dados precisa das novas tabelas de Estudos de coreano. Faça uma cópia de segurança e reinicie o Lute atualizado.",
+                detail="As tabelas de vocabulário, Anki, análise ou estudos necessárias não estão disponíveis.",
             ),
             503,
         )
@@ -168,7 +168,7 @@ def mutation(function):
 def unavailable_database(detail):
     """No template context queries when the core database itself cannot be opened."""
     return Response(
-        "<h1>Korean database unavailable</h1><p>Check its location, permissions and migrations.</p><details><summary>Technical details</summary><pre>"
+        "<h1>Banco de dados indisponível</h1><p>Verifique o local do arquivo, as permissões e as atualizações do banco.</p><details><summary>Detalhes técnicos</summary><pre>"
         + str(escape(detail))
         + "</pre></details>",
         mimetype="text/html",
@@ -188,21 +188,21 @@ def friendly_error(error):
     if isinstance(error, SQLAlchemyError):
         return unavailable_database(str(error)), 503
     current_app.logger.warning("Korean study action failed: %s", error)
-    message = "The action could not be completed. Check the input and try again."
+    message = "Não foi possível concluir a ação. Confira os dados e tente novamente."
     if isinstance(error, RequestEntityTooLarge):
         message = (
-            "The upload is too large. Choose up to 8 UTF-8 files of at most 2 MB each."
+            "Os arquivos são grandes demais. Selecione até 8 arquivos em UTF-8, com no máximo 2 MB cada."
         )
     if isinstance(error, AnkiError):
-        message = "Anki is unavailable or rejected the request. Keep Anki and AnkiConnect open on the configured local endpoint."
+        message = "O Anki está indisponível ou recusou a solicitação. Abra o Anki e o AnkiConnect no endereço local configurado."
     elif isinstance(error, UnicodeError):
         message = (
-            "The file must contain UTF-8 text. Save it as UTF-8 and upload it again."
+            "O arquivo precisa estar em UTF-8. Salve-o nesse formato e envie novamente."
         )
     elif isinstance(error, SQLAlchemyError):
-        message = "The Korean database is unavailable or incompatible. Check its location and migrations."
+        message = "O banco de dados está indisponível ou é incompatível. Verifique o local e as atualizações."
     elif isinstance(error, KeyError):
-        message = "The requested item, session or temporary candidate is unavailable."
+        message = "O item, a sessão ou o conteúdo temporário solicitado não está disponível."
     return (
         render("error", message=message, detail=str(error)),
         400 if not isinstance(error, SQLAlchemyError) else 503,
@@ -214,7 +214,7 @@ def csrf_error(error):
     return (
         render(
             "error",
-            message="This form expired or failed its safety check. Reload the page before saving.",
+            message="Este formulário expirou ou não passou na verificação de segurança. Recarregue a página antes de salvar.",
             detail=error.description,
         ),
         400,
@@ -312,22 +312,22 @@ def inputs():
     entries = []
     text = request.form.get("text", "")
     if text.strip():
-        entries.append((request.form.get("name") or "Pasted Korean text", text))
+        entries.append((request.form.get("name") or "Texto em coreano colado", text))
     for file in files:
         if not file.filename:
             continue
         if Path(file.filename).suffix.casefold() not in {".txt", ".srt", ".vtt"}:
-            raise ValueError("Choose TXT, SRT or VTT files")
+            raise ValueError("Selecione arquivos TXT, SRT ou VTT")
         raw = file.read(2_000_001)
         if len(raw) > 2_000_000:
-            raise ValueError("Each file must be at most 2 MB")
+            raise ValueError("Cada arquivo deve ter no máximo 2 MB")
         entries.append(
             (Path(file.filename.replace("\\", "/")).name, raw.decode("utf-8-sig"))
         )
     if not entries:
-        raise ValueError("Paste Korean text or choose a local file")
+        raise ValueError("Cole um texto em coreano ou selecione um arquivo do computador")
     if len(entries) > 8 or any(len(text.encode()) > 2_000_000 for _, text in entries):
-        raise ValueError("Choose at most 8 candidates, each up to 2 MB")
+        raise ValueError("Selecione até 8 conteúdos, com no máximo 2 MB cada")
     return [
         adapt_content(
             text,
@@ -388,7 +388,7 @@ def candidate(token):
 
 def segment_diagnostic(content, index):
     if index < 0 or index >= len(content.segments):
-        raise ValueError("Segment is unavailable")
+        raise ValueError("Este trecho não está disponível")
     report = KoreanStudyWorkspace(db_session()).analyze(
         replace(content, segments=(content.segments[index],))
     )
@@ -500,7 +500,7 @@ def anki():
 
             payload = request.form.get("configuration", "")
             if len(payload) > 32000:
-                raise ValueError("Configuration is too large")
+                raise ValueError("A configuração é grande demais")
             # Validate through the existing loader before replacing local settings.
             path = config_path()
             fd, temp_path = mkstemp(suffix=".yml", dir=path.parent)
@@ -520,7 +520,7 @@ def anki():
             result = getattr(service, action)()
         elif action in {"dry_run", "sync", "full"}:
             if not config().mappings:
-                raise ValueError("Save explicit field mappings before syncing")
+                raise ValueError("Salve o mapeamento dos campos antes de sincronizar")
             try:
                 result = service.sync(
                     dry_run=action == "dry_run", full_reviews=action == "full"
@@ -531,7 +531,7 @@ def anki():
                 db_session().rollback()
                 raise
         else:
-            raise ValueError("Unknown Anki action")
+            raise ValueError("Ação do Anki desconhecida")
     configuration = (
         config_path().read_text(encoding="utf8")
         if config_path().is_file()
@@ -608,4 +608,4 @@ def init_app(app):
     app.config.setdefault("KOREAN_CSRF_SECRET", token_urlsafe(48))
     app.extensions["korean_candidates"] = CandidateCache()
     app.register_blueprint(bp)
-    return [{"label": "Korean Study", "url": "/korean/"}]
+    return [{"label": "Estudos de coreano", "url": "/korean/"}]

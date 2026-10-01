@@ -1,35 +1,35 @@
 {% from 'korean/macros.html' import familiarity %}
 <section class="ci-overview">
-<h3>{{ 'Transcript fit' if report.content.kind=='podcast' else 'Overall linguistic fit' }}: {{ report.summary.fit or 'Unavailable' }} <small>Confidence: {{ report.summary.confidence }}</small></h3>
-<p>This estimates transcript/reading linguistic fit, not guaranteed comprehension.</p>
-{% if report.content.kind=='podcast' %}<p><strong>Listening: insufficient evidence.</strong> Transcript familiarity does not establish audio comprehension.</p>{% endif %}
-<p>Supported lexical occurrences: <strong>{{ '%.1f'|format(report.lexical.supported_coverage*100) }}%</strong>. Previously seen: {{ '%.1f'|format(report.lexical.previously_seen_coverage*100) }}%. Untracked: {{ '%.1f'|format(report.lexical.occurrence_distribution.untracked.ratio*100) }}%.</p>
-<p>These describe familiarity coverage, not the percentage you know. Untracked means absent from the Knowledge Model.</p>
-<table><thead><tr><th>Familiarity</th><th>Occurrence count</th><th>Unique items</th></tr></thead><tbody>{% for bucket, value in report.lexical.occurrence_distribution.items() %}<tr><td>{{ familiarity(bucket) }}</td><td>{{ value.count }}</td><td>{{ report.lexical.unique_distribution[bucket].count }}</td></tr>{% endfor %}</tbody></table>
-<h4>Segment distribution</h4><p>{% for level,count in report.summary.segment_load_distribution.items() %}<span class="load load-{{ level }}">Load {{ level }}: {{ count }}</span> {% endfor %}</p>
-<p>Longest difficult cluster: {{ report.summary.longest_difficult_cluster }} segments. Dense segments: {{ '%.1f'|format(report.summary.dense_segment_ratio*100) }}%.</p>
-<p>A single dense cue can make an otherwise supported episode “stretch”. Inspect the segment distribution and hardest passages.</p>
-<details><summary>Why this fit?</summary><ul>{% for reason in report.summary.reasons %}<li>{{ reason }}</li>{% endfor %}</ul></details>
+<h3>{{ 'Dificuldade da transcrição' if report.content.kind=='podcast' else 'Dificuldade linguística geral' }}: {{ {'comfortable':'Confortável','stretch':'Desafiador','difficult':'Difícil'}.get(report.summary.fit,report.summary.fit or 'Indisponível') }} <small>Confiabilidade: {{ {'high':'alta','medium':'média','low':'baixa'}.get(report.summary.confidence,report.summary.confidence) }}</small></h3>
+<p>Esta estimativa considera o vocabulário e a gramática da leitura ou transcrição. Ela não garante que o conteúdo será compreendido.</p>
+{% if report.content.kind=='podcast' %}<p><strong>Compreensão do áudio: dados insuficientes.</strong> Conhecer a transcrição não comprova que você compreenderá o áudio.</p>{% endif %}
+<p>Ocorrências de vocabulário acompanhado: <strong>{{ '%.1f'|format(report.lexical.supported_coverage*100) }}%</strong>. Já vistas: {{ '%.1f'|format(report.lexical.previously_seen_coverage*100) }}%. Sem acompanhamento: {{ '%.1f'|format(report.lexical.occurrence_distribution.untracked.ratio*100) }}%.</p>
+<p>Esses números mostram quanto do conteúdo já é familiar; não representam uma porcentagem do que você sabe. “Sem acompanhamento” significa que o item ainda não está registrado no vocabulário.</p>
+<table><thead><tr><th>Familiaridade</th><th>Ocorrências</th><th>Itens diferentes</th></tr></thead><tbody>{% for bucket, value in report.lexical.occurrence_distribution.items() %}<tr><td>{{ familiarity(bucket) }}</td><td>{{ value.count }}</td><td>{{ report.lexical.unique_distribution[bucket].count }}</td></tr>{% endfor %}</tbody></table>
+<h4>Dificuldade por trecho</h4><p>{% for level,count in report.summary.segment_load_distribution.items() %}<span class="load load-{{ level }}">Nível {{ level }}: {{ count }}</span> {% endfor %}</p>
+<p>Maior sequência de trechos difíceis: {{ report.summary.longest_difficult_cluster }} trechos. Trechos densos: {{ '%.1f'|format(report.summary.dense_segment_ratio*100) }}%.</p>
+<p>Um único trecho denso pode tornar desafiador um episódio que, no restante, parece adequado. Confira a distribuição e os trechos mais difíceis.</p>
+<details><summary>Como chegamos a esta estimativa?</summary><ul>{% for reason in report.summary.reasons %}<li>{{ reason }}</li>{% endfor %}</ul></details>
 </section>
-<h3>Tracked grammar</h3><p>Only five constructions are detected. Untracked constructions may exist.</p>
-<ul>{% for g in report.grammar["items"] %}<li>{{ g.identity }} — {{ familiarity(g.bucket) }}, {{ g.confidence }}; {{ g.count }} occurrences</li>{% else %}<li>No supported patterns detected; this does not mean there is no grammar.</li>{% endfor %}</ul>
-<details><summary>Novelty, reinforcement and recycling</summary>
-{% for title,values in [('Untracked / unassessed / deferred',report.novelties),('Presented / reinforcement',report.presented_opportunities),('Recycling familiar items',report.recycling)] %}<h4>{{ title }}</h4><ul>{% for i in values[:20] %}{% if title!='Untracked / unassessed / deferred' or i.bucket in ['untracked','unassessed','deferred'] %}<li>{{ i.identity }} — {{ familiarity(i.bucket) }}; {{ i.count }} occurrences, {{ i.contexts }} contexts; {{ i.surfaces[:4]|join(', ') }}</li>{% endif %}{% endfor %}</ul>{% endfor %}
+<h3>Gramática acompanhada</h3><p>O sistema detecta cinco construções. Pode haver outras construções no texto.</p>
+<ul>{% for g in report.grammar["items"] %}<li>{{ g.identity }} — {{ familiarity(g.bucket) }}, confiabilidade {{ g.confidence }}; {{ g.count }} ocorrências</li>{% else %}<li>Nenhuma construção reconhecida com segurança. Isso não significa que o texto não tenha gramática.</li>{% endfor %}</ul>
+<details><summary>Itens novos, reforço e revisão</summary>
+{% for title,values in [('Sem acompanhamento / sem avaliação / deixados para depois',report.novelties),('Já apresentados / oportunidades de reforço',report.presented_opportunities),('Revisão de itens familiares',report.recycling)] %}<h4>{{ title }}</h4><ul>{% for i in values[:20] %}{% if title!='Sem acompanhamento / sem avaliação / deixados para depois' or i.bucket in ['untracked','unassessed','deferred'] %}<li>{{ i.identity }} — {{ familiarity(i.bucket) }}; {{ i.count }} ocorrências, {{ i.contexts }} contextos; {{ i.surfaces[:4]|join(', ') }}</li>{% endif %}{% endfor %}</ul>{% endfor %}
 </details>
-<details><summary>Proper names (visible, reduced load influence)</summary><ul>{% for i in report.lexical.proper_names["items"] %}<li>{{ i.identity }} — {{ familiarity(i.bucket) }}; {{ i.count }} occurrences</li>{% else %}<li>No POS-supported or stored proper-name matches.</li>{% endfor %}</ul></details>
-<details><summary>Hardest passages</summary><ul>{% for s in report.hardest_segments %}<li><a href="{{ report_url }}?page={{ (s.index//200)+1 }}#segment-{{ s.index }}">{{ s.timestamp or 'Segment ' ~ (s.index+1) }}</a> — load {{ s.load.level }} — {{ s.text }}</li>{% endfor %}</ul></details>
-<h3 id="segments">Korean segments</h3>
-<form method="get" action="{{ report_url }}#segments"><label>Show<select id="segment-filter" name="filter">{% for key,label in [('all','All'),('difficult','Difficult (2–3)'),('dense','Dense'),('novelty','Contains novelty')] %}<option value="{{ key }}" {% if segment_filter==key %}selected{% endif %}>{{ label }}</option>{% endfor %}</select></label><button type="submit">Show segments</button></form>
-<p>{{ matching_segments }} matching segments; page {{ segment_page }} of {{ segment_pages }}. Up to 200 segments per page. Summary metrics cover the entire content.</p>
-{% if segment_page>1 %}<a href="{{ report_url }}?filter={{ segment_filter }}&page={{ segment_page-1 }}#segments">Previous segments</a>{% endif %}
-{% if segment_page<segment_pages %}<a href="{{ report_url }}?filter={{ segment_filter }}&page={{ segment_page+1 }}#segments">Next segments</a>{% endif %}
+<details><summary>Nomes próprios (visíveis, com menor peso na dificuldade)</summary><ul>{% for i in report.lexical.proper_names["items"] %}<li>{{ i.identity }} — {{ familiarity(i.bucket) }}; {{ i.count }} ocorrências</li>{% else %}<li>Nenhum nome próprio identificado ou registrado.</li>{% endfor %}</ul></details>
+<details><summary>Trechos mais difíceis</summary><ul>{% for s in report.hardest_segments %}<li><a href="{{ report_url }}?page={{ (s.index//200)+1 }}#segment-{{ s.index }}">{{ s.timestamp or 'Trecho ' ~ (s.index+1) }}</a> — nível {{ s.load.level }} — {{ s.text }}</li>{% endfor %}</ul></details>
+<h3 id="segments">Trechos em coreano</h3>
+<form method="get" action="{{ report_url }}#segments"><label>Mostrar<select id="segment-filter" name="filter">{% for key,label in [('all','Todos'),('difficult','Difíceis (2–3)'),('dense','Densos'),('novelty','Com itens novos')] %}<option value="{{ key }}" {% if segment_filter==key %}selected{% endif %}>{{ label }}</option>{% endfor %}</select></label><button type="submit">Filtrar trechos</button></form>
+<p>{{ matching_segments }} trechos encontrados; página {{ segment_page }} de {{ segment_pages }}. São exibidos até 200 trechos por página. O resumo considera o conteúdo inteiro.</p>
+{% if segment_page>1 %}<a href="{{ report_url }}?filter={{ segment_filter }}&page={{ segment_page-1 }}#segments">Trechos anteriores</a>{% endif %}
+{% if segment_page<segment_pages %}<a href="{{ report_url }}?filter={{ segment_filter }}&page={{ segment_page+1 }}#segments">Próximos trechos</a>{% endif %}
 {% for s in display_segments %}
 <details class="study-segment" id="segment-{{ s.index }}" data-load="{{ s.load.level }}" data-novelty="{{ s.load.novelty_load }}">
-<summary><span class="load load-{{ s.load.level }}">{{ s.index+1 }} · {{ s.timestamp or '' }} · {{ s.load.label.replace('_',' ') }}</span> <span lang="ko">{{ s.text }}</span></summary>
+<summary><span class="load load-{{ s.load.level }}">{{ s.index+1 }} · {{ s.timestamp or '' }} · {{ {'familiar':'Familiar','light_novelty':'Poucos itens novos','productive_stretch':'Desafio produtivo','dense':'Denso'}.get(s.load.label,s.load.label) }}</span> <span lang="ko">{{ s.text }}</span></summary>
 <ul>{% for i in s.effective_items %}<li>{{ i.identity }} — {{ i.kind }}, {{ familiarity(i.bucket) }}, {{ i.confidence }}{% if i.role in ['proper_noun','foreign_name'] %} ({{ i.role }}){% endif %}
-{% if study_session and i.tracked %}<button type="button" data-observe="{{ i.item_id }}" data-context="{{ s.text }}" data-event="recognized">Recognized this item</button><button type="button" data-observe="{{ i.item_id }}" data-context="{{ s.text }}" data-event="missed">Missed this item</button>{% endif %}</li>{% endfor %}</ul>
-{% if s.suppressed_overlap %}<h4>Suppressed overlap</h4><ul>{% for i in s.suppressed_overlap %}<li>{{ i.identity }} — {{ i.reason }}</li>{% endfor %}</ul>{% endif %}
+{% if study_session and i.tracked %}<button type="button" data-observe="{{ i.item_id }}" data-context="{{ s.text }}" data-event="recognized">Reconheci este item</button><button type="button" data-observe="{{ i.item_id }}" data-context="{{ s.text }}" data-event="missed">Não reconheci este item</button>{% endif %}</li>{% endfor %}</ul>
+{% if s.suppressed_overlap %}<h4>Itens sobrepostos ocultados</h4><ul>{% for i in s.suppressed_overlap %}<li>{{ i.identity }} — {{ i.reason }}</li>{% endfor %}</ul>{% endif %}
 <ul>{% for reason in s.reasons %}<li>{{ reason }}</li>{% endfor %}{% for warning in s.warnings %}<li>{{ warning }}</li>{% endfor %}</ul>
-<p><a href="{{ diagnostic_url }}/{{ s.index }}" target="_blank" rel="noopener">Raw representation / morphology (opens separately)</a></p>
+<p><a href="{{ diagnostic_url }}/{{ s.index }}" target="_blank" rel="noopener">Ver análise técnica da forma e da morfologia (abre em outra página)</a></p>
 </details>{% endfor %}
-<details><summary>Limitations & diagnostics</summary><ul>{% for warning in report.warnings %}<li>{{ warning }}</li>{% endfor %}</ul><pre>{{ {'policy':report.policy,'snapshot':report.learner_snapshot,'diagnostics':report.diagnostics}|tojson(indent=2) }}</pre></details>
+<details><summary>Limitações e informações técnicas</summary><ul>{% for warning in report.warnings %}<li>{{ warning }}</li>{% endfor %}</ul><pre>{{ {'policy':report.policy,'snapshot':report.learner_snapshot,'diagnostics':report.diagnostics}|tojson(indent=2) }}</pre></details>

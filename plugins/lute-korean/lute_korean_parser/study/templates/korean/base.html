@@ -1,19 +1,19 @@
 {% extends 'base.html' %}
-{% block title %}Korean Study · Lute{% endblock %}
-{% block header %}Korean Study{% endblock %}
+{% block title %}Estudos de coreano · Lute{% endblock %}
+{% block header %}Estudos de coreano{% endblock %}
 {% block preloadassets %}
 <link rel="stylesheet" href="{{ url_for('korean_study.static', filename='study.css') }}">
 <script defer src="{{ url_for('korean_study.static', filename='study.js') }}"></script>
 {% endblock %}
 {% block body %}
 <main class="korean-workspace">
-<nav aria-label="Korean study">
-<a href="{{ url_for('korean_study.home') }}">Overview</a>
-<a href="{{ url_for('korean_study.knowledge') }}">Learner & knowledge</a>
+<nav aria-label="Estudos de coreano">
+<a href="{{ url_for('korean_study.home') }}">Visão geral</a>
+<a href="{{ url_for('korean_study.knowledge') }}">Progresso e vocabulário</a>
 <a href="{{ url_for('korean_study.anki') }}">Anki</a>
-<a href="{{ url_for('korean_study.analyze') }}">Analyze input</a>
-<a href="{{ url_for('korean_study.history') }}">Study history</a>
-<a href="{{ url_for('korean_study.export_screen') }}">Export</a>
+<a href="{{ url_for('korean_study.analyze') }}">Analisar conteúdo</a>
+<a href="{{ url_for('korean_study.history') }}">Histórico de estudos</a>
+<a href="{{ url_for('korean_study.export_screen') }}">Exportar</a>
 </nav>
 {% block study_body %}{% endblock %}
 </main>

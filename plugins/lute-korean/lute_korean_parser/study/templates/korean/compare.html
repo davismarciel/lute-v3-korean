@@ -1,7 +1,7 @@
 {% extends 'korean/base.html' %}
 {% block study_body %}
-<h2>Compare supplied inputs</h2><p>Reading/transcript linguistic fit only. No candidate was recorded as studied.</p>
-<div class="study-table"><table><thead><tr><th>Input</th><th>Fit / confidence</th><th>Supported</th><th>Previously seen</th><th>Untracked</th><th>Dense segments</th></tr></thead><tbody>
-{% for row in comparison.candidates %}<tr><td><a href="{{ url_for('korean_study.candidate',token=row.token) }}">{{ row.content }}</a></td><td>{{ row.fit }} / {{ row.confidence }}</td><td>{{ '%.1f'|format(row.supported_lexical_occurrence_coverage*100) }}%</td><td>{{ '%.1f'|format(row.report.lexical.previously_seen_coverage*100) }}%</td><td>{{ '%.1f'|format(row.untracked_lexical_occurrence_coverage*100) }}%</td><td>{{ '%.1f'|format(row.dense_segment_ratio*100) }}%</td></tr>{% endfor %}</tbody></table></div>
-<p>Open a candidate for segment distribution, novelty, recycling and an explicit Start study action.</p>
+<h2>Comparar conteúdos</h2><p>A comparação considera somente a dificuldade linguística da leitura ou transcrição. Nenhum conteúdo foi registrado como estudado.</p>
+<div class="study-table"><table><thead><tr><th>Conteúdo</th><th>Dificuldade / confiança</th><th>Itens acompanhados</th><th>Já vistos</th><th>Não acompanhados</th><th>Trechos densos</th></tr></thead><tbody>
+{% for row in comparison.candidates %}<tr><td><a href="{{ url_for('korean_study.candidate',token=row.token) }}">{{ row.content }}</a></td><td>{{ {'comfortable':'Confortável','stretch':'Desafiador','difficult':'Difícil'}.get(row.fit,row.fit) }} / {{ {'high':'Alta','medium':'Média','low':'Baixa'}.get(row.confidence,row.confidence) }}</td><td>{{ '%.1f'|format(row.supported_lexical_occurrence_coverage*100) }}%</td><td>{{ '%.1f'|format(row.report.lexical.previously_seen_coverage*100) }}%</td><td>{{ '%.1f'|format(row.untracked_lexical_occurrence_coverage*100) }}%</td><td>{{ '%.1f'|format(row.dense_segment_ratio*100) }}%</td></tr>{% endfor %}</tbody></table></div>
+<p>Abra um conteúdo para ver a dificuldade de cada trecho, itens novos e já vistos, e iniciar uma sessão de estudo.</p>
 {% endblock %}

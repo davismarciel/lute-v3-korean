@@ -1,7 +1,7 @@
 {% extends 'korean/base.html' %}{% block study_body %}
-<h2>Segment {{ segment.index+1 }} · technical detail</h2>
+<h2>Trecho {{ segment.index+1 }} · detalhes técnicos</h2>
 <p lang="ko">{{ segment.text }}</p>
-<p>This read-only diagnostic uses a fresh learner snapshot. It records no study or evidence.</p>
+<p>Esta análise consulta seus dados atuais. Ela não registra estudo nem observações.</p>
 <ul>{% for item in segment.effective_items %}<li>{{ item.identity }} — {{ item.kind }}</li>{% endfor %}</ul>
 <pre>{{ {'raw_items':segment.raw_items,'effective_items':segment.effective_items,'suppressed_overlap':segment.suppressed_overlap,'morphology':segment.morphology,'foreign':segment.foreign_surfaces}|tojson(indent=2) }}</pre>
 {% endblock %}

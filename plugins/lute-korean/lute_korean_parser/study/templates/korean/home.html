@@ -1,21 +1,21 @@
 {% extends 'korean/base.html' %}
 {% block study_body %}
-<h2>Your Korean study workspace</h2>
-<p>Sync observed Anki history, inspect your learner state, then choose and study input.</p>
+<h2>Seu espaço de estudos de coreano</h2>
+<p>Sincronize o histórico do Anki, consulte seu progresso e escolha um conteúdo para estudar.</p>
 <section class="study-summary">
 {% for kind, dimensions in overview.counts.items() %}
-<div><h3>{{ kind|title }} · reading suggestions</h3>
-{% for status, count in dimensions.reading.items() %}<p>{{ status|title }}: <strong>{{ count }}</strong></p>{% else %}<p>No items yet.</p>{% endfor %}
+<div><h3>{{ {'lexical':'Vocabulário','grammar':'Gramática','chunk':'Expressões'}.get(kind,kind) }} · sugestões de leitura</h3>
+{% for status, count in dimensions.reading.items() %}<p>{{ {'unknown':'Desconhecido','presented':'Apresentado','practicing':'Em prática','consolidated':'Consolidado','future':'Deixado para depois'}.get(status,status) }}: <strong>{{ count }}</strong></p>{% else %}<p>Nenhum item ainda.</p>{% endfor %}
 </div>{% endfor %}
 </section>
-<p>Listening: {{ 'inspect observed/manual dimensions' if overview.dimension_available.listening else 'insufficient evidence' }}.
-Production: {{ 'inspect observed/manual dimensions' if overview.dimension_available.production else 'insufficient evidence' }}.</p>
-<p>Manual assessments remain authoritative; the counts above are suggestions.</p>
-<p>Anki last successful sync: <strong>{{ anki.last_success or 'Not synced in this database' }}</strong>.
-{{ anki.counts.notes }} notes, {{ anki.counts.cards }} cards, {{ anki.counts.reviews }} reviews.</p>
-<div class="study-actions"><a class="study-button" href="{{ url_for('korean_study.anki') }}">Sync Anki</a><a class="study-button" href="{{ url_for('korean_study.analyze') }}">Analyze input</a></div>
-<h3>Recently analyzed candidates</h3>
-<p>Temporary candidates, not completed study. Open one to recalculate against your current state.</p>
-<ul>{% for token, entry in recent %}<li><a href="{{ url_for('korean_study.candidate',token=token) }}">{{ entry.content.name }}</a> — {{ entry.summary.fit if entry.summary else 'not analyzed' }} (last analysis)</li>{% else %}<li>Paste or upload input to begin. Analysis alone records no exposure.</li>{% endfor %}</ul>
-<details><summary>Snapshot diagnostics</summary><pre>{{ overview.snapshot|tojson(indent=2) }}</pre></details>
+<p>Compreensão auditiva: {{ 'consulte as avaliações registradas' if overview.dimension_available.listening else 'ainda não há dados suficientes' }}.
+Produção: {{ 'consulte as avaliações registradas' if overview.dimension_available.production else 'ainda não há dados suficientes' }}.</p>
+<p>As avaliações manuais continuam valendo; os números acima são sugestões.</p>
+<p>Última sincronização do Anki: <strong>{{ anki.last_success or 'Ainda não sincronizado neste banco de dados' }}</strong>.
+{{ anki.counts.notes }} notas, {{ anki.counts.cards }} cartões e {{ anki.counts.reviews }} revisões.</p>
+<div class="study-actions"><a class="study-button" href="{{ url_for('korean_study.anki') }}">Sincronizar Anki</a><a class="study-button" href="{{ url_for('korean_study.analyze') }}">Analisar conteúdo</a></div>
+<h3>Conteúdos analisados recentemente</h3>
+<p>Estes conteúdos são temporários e ainda não foram estudados. Abra um para recalcular a análise com seu progresso atual.</p>
+<ul>{% for token, entry in recent %}<li><a href="{{ url_for('korean_study.candidate',token=token) }}">{{ entry.content.name }}</a> — {{ {'comfortable':'Confortável','stretch':'Desafiador','difficult':'Difícil'}.get(entry.summary.fit,entry.summary.fit) if entry.summary else 'ainda não analisado' }} (última análise)</li>{% else %}<li>Cole um texto ou envie um arquivo para começar. A análise, por si só, não registra contato com o conteúdo.</li>{% endfor %}</ul>
+<details><summary>Diagnóstico dos dados</summary><pre>{{ overview.snapshot|tojson(indent=2) }}</pre></details>
 {% endblock %}

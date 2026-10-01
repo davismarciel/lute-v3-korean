@@ -1,22 +1,22 @@
 {% extends 'korean/base.html' %}{% from 'korean/macros.html' import csrf,observation,content_export with context %}
 {% block study_body %}
-<h2>Study: {{ study_session.name }}</h2>
-<p>Status: <strong>{{ study_session.status }}</strong>. Activity: {{ study_session.activity.replace('_',' ') }}.
-Started {{ study_session.started_at }}{% if study_session.completed_at %}; completed {{ study_session.completed_at }}{% endif %}.</p>
-<p>{{ study_session.consumed|length }} of {{ study_session.segments|length }} segments explicitly consumed; {{ study_session.exposure_count }} exposure links; {{ study_session.observation_ids|length }} factual observations.</p>
-<details><summary>Consumed segments / provenance</summary><ul>{% for c in study_session.consumed %}<li>Segment {{ c.segment_index+1 }} — {{ c.consumed_at }}{% if study_session.segments[c.segment_index].timestamp %}; {{ study_session.segments[c.segment_index].timestamp }}{% endif %}</li>{% else %}<li>No consumption recorded yet.</li>{% endfor %}</ul></details>
+<h2>Estudo: {{ study_session.name }}</h2>
+<p>Situação: <strong>{{ {'started':'Iniciada','partial':'Parcial','completed':'Concluída'}.get(study_session.status,study_session.status) }}</strong>. Atividade: {{ {'reading':'Leitura','listening_with_transcript':'Áudio com transcrição','listening':'Somente áudio','mixed':'Mista'}.get(study_session.activity,study_session.activity) }}.
+Iniciada em {{ study_session.started_at }}{% if study_session.completed_at %}; concluída em {{ study_session.completed_at }}{% endif %}.</p>
+<p>{{ study_session.consumed|length }} de {{ study_session.segments|length }} trechos marcados como estudados; {{ study_session.exposure_count }} registros de contato com o conteúdo; {{ study_session.observation_ids|length }} observações registradas.</p>
+<details><summary>Trechos estudados e registro da sessão</summary><ul>{% for c in study_session.consumed %}<li>Trecho {{ c.segment_index+1 }} — {{ c.consumed_at }}{% if study_session.segments[c.segment_index].timestamp %}; {{ study_session.segments[c.segment_index].timestamp }}{% endif %}</li>{% else %}<li>Nenhum trecho marcado ainda.</li>{% endfor %}</ul></details>
 {% if study_session.status != 'completed' %}
-<section class="consumption-form"><h3>Record what you actually consumed</h3>
-<p>Select an inclusive segment range. Later segments are not counted. Completing records exposure only, never recognition or consolidation.</p>
-{% if not study_session.transcript_read %}<p>Listening without reading the transcript: this session records consumption provenance only, with no token-based skill evidence.</p>{% endif %}
+<section class="consumption-form"><h3>Marque os trechos que você realmente estudou</h3>
+<p>Selecione o primeiro e o último trecho, incluindo ambos. Os trechos seguintes não serão contados. Concluir registra apenas contato com o conteúdo, não reconhecimento ou domínio.</p>
+{% if not study_session.transcript_read %}<p>Como você ouviu sem ler a transcrição, esta sessão registra apenas o conteúdo estudado, sem avaliar habilidades com base no texto.</p>{% endif %}
 <form method="post" action="{{ url_for('korean_study.consume',session_id=study_session.id) }}">{{ csrf() }}
-<label>From<select name="start">{% for s in study_session.segments %}<option value="{{ s.index }}">{{ s.index+1 }} · {{ s.timestamp or '' }} · {{ s.text[:45] }}</option>{% endfor %}</select></label>
-<label>Through<select name="end">{% for s in study_session.segments %}<option value="{{ s.index }}" {{ 'selected' if loop.last }}>{{ s.index+1 }} · {{ s.timestamp or '' }} · {{ s.text[:45] }}</option>{% endfor %}</select></label>
-<button name="finish" value="no">Save partial consumption</button><button name="finish" value="yes">Complete session for this consumed range</button>
-</form></section>{% else %}<p>This completed session is preserved. To study again, <a href="{{ url_for('korean_study.reopen',session_id=study_session.id) }}">open the content as a new candidate</a> and start a separate session.</p>{% endif %}
-<details><summary>Recent factual observations</summary><ul>{% for e in study_session.recent_observations %}<li><a href="{{ url_for('korean_study.item',item_id=e.item_id) }}">{{ e.identity }}</a> — {{ e.evidence_type }}, {{ e.dimension }}; {{ e.occurred_at }}; {{ e.context }}{% if e.metadata.notes %}<small>{{ e.metadata.notes }}</small>{% endif %}</li>{% else %}<li>No recognition, misses or production recorded.</li>{% endfor %}</ul></details>
-{% if tracked %}{{ observation(tracked,timestamp,event_key,study_session.id) }}{% else %}<p>Item-level observations require tracked items. Explicit transcript consumption can create the corresponding items first.</p>{% endif %}
+<label>De<select name="start">{% for s in study_session.segments %}<option value="{{ s.index }}">{{ s.index+1 }} · {{ s.timestamp or '' }} · {{ s.text[:45] }}</option>{% endfor %}</select></label>
+<label>Até<select name="end">{% for s in study_session.segments %}<option value="{{ s.index }}" {{ 'selected' if loop.last }}>{{ s.index+1 }} · {{ s.timestamp or '' }} · {{ s.text[:45] }}</option>{% endfor %}</select></label>
+<button name="finish" value="no">Salvar como estudo parcial</button><button name="finish" value="yes">Concluir sessão com estes trechos</button>
+</form></section>{% else %}<p>Esta sessão concluída foi preservada. Para estudar novamente, <a href="{{ url_for('korean_study.reopen',session_id=study_session.id) }}">abra novamente o conteúdo</a> e inicie uma nova sessão.</p>{% endif %}
+<details><summary>Observações recentes</summary><ul>{% for e in study_session.recent_observations %}<li><a href="{{ url_for('korean_study.item',item_id=e.item_id) }}">{{ e.identity }}</a> — {{ {'recognized':'Reconhecido','missed':'Não reconhecido','produced':'Produzido','manual_confirmation':'Confirmação manual','exposure':'Contato com o conteúdo'}.get(e.evidence_type,e.evidence_type) }}, {{ {'reading':'leitura','listening':'compreensão auditiva','production':'produção'}.get(e.dimension,e.dimension) }}; {{ e.occurred_at }}; {{ e.context }}{% if e.metadata.notes %}<small>{{ e.metadata.notes }}</small>{% endif %}</li>{% else %}<li>Nenhum reconhecimento, erro ou exemplo de produção registrado.</li>{% endfor %}</ul></details>
+{% if tracked %}{{ observation(tracked,timestamp,event_key,study_session.id) }}{% else %}<p>Para registrar observações, o item precisa estar acompanhado. Ler e marcar os trechos da transcrição pode adicionar os itens correspondentes.</p>{% endif %}
 {{ content_export(url_for('korean_study.export_session',session_id=study_session.id)) }}
-<p>The analysis below is recalculated from the current learner snapshot; viewing it records nothing.</p>
+<p>A análise abaixo usa seus dados atuais e é recalculada ao abrir. Apenas visualizá-la não registra nenhuma atividade.</p>
 {% include 'korean/report_body.html' %}
 {% endblock %}

@@ -1,14 +1,14 @@
 {% extends 'korean/base.html' %}{% from 'korean/macros.html' import csrf, content_export with context %}
 {% block study_body %}
 <h2>{{ report.content.name }}</h2>
-{% if input_warnings %}<p role="alert">Input formatting needs review: {{ input_warnings|join("; ") }}</p>{% endif %}
+{% if input_warnings %}<p role="alert">Verifique a formatação do conteúdo: {{ input_warnings|join("; ") }}</p>{% endif %}
 {% include 'korean/report_body.html' %}
-<div class="study-actions"><a href="{{ url_for('korean_study.home') }}">Leave as candidate / close</a></div>
-<details open><summary>Start an actual study session</summary>
-<p>Start saves a session, not recognition or exposure. Record the segments actually consumed when you finish.</p>
+<div class="study-actions"><a href="{{ url_for('korean_study.home') }}">Fechar análise</a></div>
+<details open><summary>Iniciar sessão de estudo</summary>
+<p>Iniciar cria uma sessão, mas ainda não registra contato com o conteúdo nem reconhecimento. Ao terminar, marque somente os trechos que estudou.</p>
 <form method="post" action="{{ url_for('korean_study.start') }}">{{ csrf() }}<input type="hidden" name="candidate_token" value="{{ token }}"><input type="hidden" name="request_key" value="{{ event_key }}">
-<label>Activity<select name="activity"><option value="reading">Reading</option><option value="listening_with_transcript">Listening with transcript</option><option value="listening">Listening only</option><option value="mixed">Mixed</option></select></label>
-<label><input type="checkbox" name="transcript_read" value="yes">For mixed activity: I will read/follow the Korean text</label>
-<label>Optional external reference<input name="external_reference" placeholder="Local episode reference"></label><button>Start study</button></form></details>
+<label>Atividade<select name="activity"><option value="reading">Leitura</option><option value="listening_with_transcript">Áudio com transcrição</option><option value="listening">Somente áudio</option><option value="mixed">Atividade mista</option></select></label>
+<label><input type="checkbox" name="transcript_read" value="yes">Na atividade mista, vou ler ou acompanhar o texto em coreano</label>
+<label>Referência opcional<input name="external_reference" placeholder="Referência do episódio"></label><button>Iniciar estudo</button></form></details>
 {{ content_export(url_for('korean_study.export_content',token=token)) }}
 {% endblock %}
